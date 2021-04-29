@@ -1,4 +1,4 @@
-module Rules (unfoldrM, drain) where
+module Operations (unfoldrM, drain) where
 
 import StreamK (IsStream, MonadAsync)
 import qualified StreamK as K
