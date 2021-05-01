@@ -94,8 +94,6 @@ import Control.Monad.Trans.Class (MonadTrans(lift))
 import Data.Kind (Type)
 import Control.Monad.Catch (MonadThrow)
 import Control.Monad.IO.Class (MonadIO(..))
-import Control.Monad.Trans.Control
-       (MonadBaseControl, control, StM, liftBaseDiscard)
 
 #if __GLASGOW_HASKELL__ < 808
 import Data.Semigroup (Semigroup(..))
@@ -161,7 +159,7 @@ newtype Stream (m :: Type -> Type) a =
 infixr 5 `consM`
 infixr 5 |:
 
-type MonadAsync m = (MonadIO m, MonadBaseControl IO m, MonadThrow m)
+type MonadAsync m = (MonadIO m, MonadThrow m)
 
 -- XXX Use a different SVar based on the stream type. But we need to make sure
 -- that we do not lose performance due to polymorphism.
