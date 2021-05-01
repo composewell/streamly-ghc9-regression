@@ -52,7 +52,7 @@ module StreamD
     -- , fold_
 
     -- * Right Folds
-    , foldrT
+    -- , foldrT
     , foldrM
     , foldrMx
     , foldr
@@ -96,8 +96,7 @@ where
 
 import Control.Applicative (liftA2)
 import Control.Monad (when)
-import Control.Monad.Catch (MonadThrow, throwM)
-import Control.Monad.Trans.Class (lift, MonadTrans)
+-- import Control.Monad.Trans.Class (lift, MonadTrans)
 import Data.Functor.Identity (Identity(..))
 -- import Fusion.Plugin.Types (Fuse(..))
 import GHC.Base (build)
@@ -393,6 +392,7 @@ foldrS f final (Stream step state) = go SPEC state
           Stop      -> final
           -}
 
+{-
 -- Right fold to some transformer (T) monad.  This can be useful to implement
 -- stateless combinators like map, filtering, insertions, takeWhile, dropWhile.
 --
@@ -408,6 +408,7 @@ foldrT f final (Stream step state) = go SPEC state
             Yield x s -> f x (go SPEC s)
             Skip s    -> go SPEC s
             Stop      -> final
+-}
 
 ------------------------------------------------------------------------------
 -- Left Folds

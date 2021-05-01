@@ -90,9 +90,9 @@ where
 #include "inline.hs"
 
 import Control.Monad (ap, (>=>))
-import Control.Monad.Trans.Class (MonadTrans(lift))
+-- import Control.Monad.Trans.Class (MonadTrans(lift))
 import Data.Kind (Type)
-import Control.Monad.Catch (MonadThrow)
+-- import Control.Monad.Catch (MonadThrow)
 import Control.Monad.IO.Class (MonadIO(..))
 
 #if __GLASGOW_HASKELL__ < 808
@@ -159,7 +159,7 @@ newtype Stream (m :: Type -> Type) a =
 infixr 5 `consM`
 infixr 5 |:
 
-type MonadAsync m = (MonadIO m, MonadThrow m)
+type MonadAsync m = (MonadIO m)
 
 -- XXX Use a different SVar based on the stream type. But we need to make sure
 -- that we do not lose performance due to polymorphism.
@@ -963,9 +963,11 @@ instance Monad m => Functor (Stream m) where
 -- Transformers
 -------------------------------------------------------------------------------
 
+{-
 instance MonadTrans Stream where
     {-# INLINE lift #-}
     lift = yieldM
+-}
 
 -------------------------------------------------------------------------------
 -- Nesting
