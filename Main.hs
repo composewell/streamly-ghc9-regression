@@ -1,8 +1,9 @@
 module Main (main) where
 
 import StreamK (IsStream, MonadAsync)
-import Operations (unfoldrM, drain)
+import Operations (unfoldrM, drain, postscan)
 import qualified StreamK
+import qualified Fold
 
 {-# INLINE sourceUnfoldrM #-}
 sourceUnfoldrM :: MonadAsync m => StreamK.Stream m Int
@@ -14,4 +15,5 @@ sourceUnfoldrM = unfoldrM step 0
         else return (Just (cnt, cnt + 1))
 
 main :: IO ()
-main = drain sourceUnfoldrM
+-- main = drain sourceUnfoldrM
+main = drain $ postscan Fold.sum sourceUnfoldrM

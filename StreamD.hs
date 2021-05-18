@@ -1,5 +1,8 @@
 {-# LANGUAGE CPP #-}
 {-# LANGUAGE PatternSynonyms #-}
+{-# LANGUAGE BangPatterns #-}
+{-# LANGUAGE ViewPatterns #-}
+{-# LANGUAGE ExistentialQuantification #-}
 
 #include "inline.hs"
 
@@ -77,6 +80,7 @@ module StreamD
     , take
     , takeWhile
     , takeWhileM
+    , postscanOnce
 
     -- * Nesting
     {-
@@ -111,6 +115,7 @@ import StreamK (State, adaptState, defState)
 
 -- ort qualified Streamly.Internal.Data.Fold.Type as FL
 import qualified StreamK as K
+import qualified Fold as FL
 
 ------------------------------------------------------------------------------
 -- The direct style stream type
@@ -1009,3 +1014,37 @@ drain (Stream step state) = go SPEC state
             Yield _ s -> go SPEC s
             Skip s    -> go SPEC s
             Stop      -> return ()
+
+------------------------------------------------------------------------------
+-- Scanning with a Fold
+------------------------------------------------------------------------------
+
+data ScanState s f = ScanInit s | ScanDo s !f | ScanDone
+
+{-# INLINE [1] postscanOnce #-}
+postscanOnce :: Monad m => FL.Fold m a b -> Stream m a -> Stream m b
+postscanOnce (FL.Fold fstep initial extract) (Stream sstep state) =
+    Stream step (ScanInit state)
+
+    where
+
+    {-# INLINE_LATE step #-}
+    step _ (ScanInit st) = do
+        res <- initial
+        return
+            $ case res of
+                  FL.Partial fs -> Skip $ ScanDo st fs
+                  FL.Done b -> Yield b ScanDone
+    step gst (ScanDo st fs) = do
+        res <- sstep (adaptState gst) st
+        case res of
+            Yield x s -> do
+                r <- fstep fs x
+                case r of
+                    FL.Partial fs1 -> do
+                        !b <- extract fs1
+                        return $ Yield b $ ScanDo s fs1
+                    FL.Done b -> return $ Yield b ScanDone
+            Skip s -> return $ Skip $ ScanDo s fs
+            Stop -> return Stop
+    step _ ScanDone = return Stop

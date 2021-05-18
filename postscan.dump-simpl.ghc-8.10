@@ -1,0 +1,45 @@
+
+==================== Tidy Core ====================
+
+Result size of Tidy Core
+  = {terms: 48, types: 56, coercions: 9, joins: 0/0}
+
+Rec {
+-- RHS size: {terms: 20, types: 12, coercions: 0, joins: 0/0}
+main_$sgo
+  = \ sc_sgTJ sc1_sgTH sc2_sgTI ->
+      case ># sc1_sgTH 100000# of {
+        __DEFAULT ->
+          main_$sgo sc_sgTJ (+# sc1_sgTH 1#) (+# sc2_sgTI sc1_sgTH);
+        1# -> (# sc_sgTJ, () #)
+      }
+end Rec }
+
+-- RHS size: {terms: 5, types: 2, coercions: 0, joins: 0/0}
+main1 = \ eta_B1 -> main_$sgo eta_B1 1# 0#
+
+-- RHS size: {terms: 1, types: 0, coercions: 3, joins: 0/0}
+main = main1 `cast` <Co:3>
+
+-- RHS size: {terms: 2, types: 1, coercions: 3, joins: 0/0}
+main2 = runMainIO1 (main1 `cast` <Co:3>)
+
+-- RHS size: {terms: 1, types: 0, coercions: 3, joins: 0/0}
+main = main2 `cast` <Co:3>
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+$trModule2 = "Main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+$trModule1 = TrNameS $trModule2
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+$trModule4 = "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+$trModule3 = TrNameS $trModule4
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+$trModule = Module $trModule3 $trModule1
+
+
