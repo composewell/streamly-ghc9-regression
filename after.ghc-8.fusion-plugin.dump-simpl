@@ -1,0 +1,143 @@
+
+==================== Tidy Core ====================
+
+Result size of Tidy Core
+  = {terms: 280, types: 256, coercions: 34, joins: 2/9}
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+$trModule4 = "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+$trModule3 = TrNameS $trModule4
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+$trModule2 = "Main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+$trModule1 = TrNameS $trModule2
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+$trModule = Module $trModule3 $trModule1
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+main3 = "/dev/null"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+main2 = unpackCString# main3
+
+-- RHS size: {terms: 253, types: 223, coercions: 25, joins: 2/9}
+main1
+  = \ s_a4FV ->
+      case openFile1 main2 WriteMode s_a4FV of
+      { (# ipv_a4FX, ipv1_a4FY #) ->
+      case newAlignedPinnedByteArray# 32752# 1# ipv_a4FX of
+      { (# ipv2_a4Gs, ipv3_a4Gt #) ->
+      let { ipv4_s4Ro = byteArrayContents# (ipv3_a4Gt `cast` <Co:5>) } in
+      joinrec {
+        $s$wgo_sorE sc_sorD sc1_sorC sc2_sory sc3_sorz sc4_sorA sc5_sorB
+          = case <=# sc1_sorC 0# of {
+              __DEFAULT ->
+                case writeWord8OffAddr# sc5_sorB 0# 123## sc_sorD of s2_a5Sl
+                { __DEFAULT ->
+                let { i1_snu2 = +# sc2_sory 1# } in
+                case <# i1_snu2 32752# of {
+                  __DEFAULT ->
+                    case minusAddr# (plusAddr# sc5_sorB 1#) sc3_sorz of wild_X3I {
+                      __DEFAULT ->
+                        case $whPutBuf' ipv1_a4FY (Ptr sc3_sorz) wild_X3I True s2_a5Sl of
+                        { (# ipv5_a5xK, ipv6_a5xL #) ->
+                        case touch# (PlainPtr sc4_sorA) ipv5_a5xK of s'_a5xC { __DEFAULT ->
+                        case newAlignedPinnedByteArray# 32752# 1# s'_a5xC of
+                        { (# ipv7_X4Jw, ipv8_X4Jy #) ->
+                        let { ipv9_X4Uv = byteArrayContents# (ipv8_X4Jy `cast` <Co:5>) } in
+                        jump $s$wgo1_sorl
+                          ipv7_X4Jw (-# sc1_sorC 1#) 0# ipv9_X4Uv ipv8_X4Jy ipv9_X4Uv
+                        }
+                        }
+                        };
+                      0# ->
+                        case newAlignedPinnedByteArray# 32752# 1# s2_a5Sl of
+                        { (# ipv5_X4Jo, ipv6_X4Jq #) ->
+                        let { ipv7_X4Un = byteArrayContents# (ipv6_X4Jq `cast` <Co:5>) } in
+                        jump $s$wgo1_sorl
+                          ipv5_X4Jo (-# sc1_sorC 1#) 0# ipv7_X4Un ipv6_X4Jq ipv7_X4Un
+                        }
+                    };
+                  1# ->
+                    jump $s$wgo_sorE
+                      s2_a5Sl
+                      (-# sc1_sorC 1#)
+                      i1_snu2
+                      sc3_sorz
+                      sc4_sorA
+                      (plusAddr# sc5_sorB 1#)
+                }
+                };
+              1# ->
+                case minusAddr# sc5_sorB sc3_sorz of wild_X2u {
+                  __DEFAULT ->
+                    case $whPutBuf' ipv1_a4FY (Ptr sc3_sorz) wild_X2u True sc_sorD of
+                    { (# ipv5_a5xK, ipv6_a5xL #) ->
+                    case touch# (PlainPtr sc4_sorA) ipv5_a5xK of s'_a5xC { __DEFAULT ->
+                    (# s'_a5xC, () #)
+                    }
+                    };
+                  0# -> (# sc_sorD, () #)
+                }
+            };
+        $s$wgo1_sorl sc_sork sc1_sorj sc2_sorf sc3_sorg sc4_sorh sc5_sori
+          = case <=# sc1_sorj 0# of {
+              __DEFAULT ->
+                case writeWord8OffAddr# sc5_sori 0# 123## sc_sork of s2_a5Sl
+                { __DEFAULT ->
+                let { i1_snu2 = +# sc2_sorf 1# } in
+                case <# i1_snu2 32752# of {
+                  __DEFAULT ->
+                    case minusAddr# (plusAddr# sc5_sori 1#) sc3_sorg of wild_X3I {
+                      __DEFAULT ->
+                        case $whPutBuf' ipv1_a4FY (Ptr sc3_sorg) wild_X3I True s2_a5Sl of
+                        { (# ipv5_a5xK, ipv6_a5xL #) ->
+                        case touch# (PlainPtr sc4_sorh) ipv5_a5xK of s'_a5xC { __DEFAULT ->
+                        case newAlignedPinnedByteArray# 32752# 1# s'_a5xC of
+                        { (# ipv7_X4Jw, ipv8_X4Jy #) ->
+                        let { ipv9_X4Uv = byteArrayContents# (ipv8_X4Jy `cast` <Co:5>) } in
+                        jump $s$wgo1_sorl
+                          ipv7_X4Jw (-# sc1_sorj 1#) 0# ipv9_X4Uv ipv8_X4Jy ipv9_X4Uv
+                        }
+                        }
+                        };
+                      0# ->
+                        case newAlignedPinnedByteArray# 32752# 1# s2_a5Sl of
+                        { (# ipv5_X4Jo, ipv6_X4Jq #) ->
+                        let { ipv7_X4Un = byteArrayContents# (ipv6_X4Jq `cast` <Co:5>) } in
+                        jump $s$wgo1_sorl
+                          ipv5_X4Jo (-# sc1_sorj 1#) 0# ipv7_X4Un ipv6_X4Jq ipv7_X4Un
+                        }
+                    };
+                  1# ->
+                    jump $s$wgo_sorE
+                      s2_a5Sl
+                      (-# sc1_sorj 1#)
+                      i1_snu2
+                      sc3_sorg
+                      sc4_sorh
+                      (plusAddr# sc5_sori 1#)
+                }
+                };
+              1# -> (# sc_sork, () #)
+            }; } in
+      jump $s$wgo1_sorl
+        ipv2_a4Gs 10000000# 0# ipv4_s4Ro ipv3_a4Gt ipv4_s4Ro
+      }
+      }
+
+-- RHS size: {terms: 1, types: 0, coercions: 3, joins: 0/0}
+main = main1 `cast` <Co:3>
+
+-- RHS size: {terms: 2, types: 1, coercions: 3, joins: 0/0}
+main4 = runMainIO1 (main1 `cast` <Co:3>)
+
+-- RHS size: {terms: 1, types: 0, coercions: 3, joins: 0/0}
+main = main4 `cast` <Co:3>
+
+

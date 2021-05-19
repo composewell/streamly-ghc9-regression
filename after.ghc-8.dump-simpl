@@ -1,0 +1,214 @@
+
+==================== Tidy Core ====================
+
+Result size of Tidy Core
+  = {terms: 432, types: 473, coercions: 44, joins: 4/14}
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+$trModule4 = "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+$trModule3 = TrNameS $trModule4
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+$trModule2 = "Main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+$trModule1 = TrNameS $trModule2
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+$trModule = Module $trModule3 $trModule1
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+lvl10_rnbB = "/dev/null"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl11_rnbC = unpackCString# lvl10_rnbB
+
+-- RHS size: {terms: 405, types: 440, coercions: 35, joins: 4/14}
+main1
+  = \ s_a4vY ->
+      case openFile1 lvl11_rnbC WriteMode s_a4vY of
+      { (# ipv_a4w0, ipv1_a4w1 #) ->
+      case newAlignedPinnedByteArray# 32752# 1# ipv_a4w0 of
+      { (# ipv2_a4wv, ipv3_a4ww #) ->
+      let { ipv4_s4Hr = byteArrayContents# (ipv3_a4ww `cast` <Co:5>) } in
+      join { $sexit_sn1p sc_sn1o _ _ = (# sc_sn1o, () #) } in
+      join {
+        exit_XQ w_smR2 ipv5_X4yQ
+          = case w_smR2 of {
+              ManyFirst ds3_d2Ml cs_a1rE -> (# ipv5_X4yQ, () #);
+              ManyLoop ss_a1rF cs_a1rG ->
+                case ss_a1rF of { Tuple' ds2_smVy r_smVz ->
+                case r_smVz of { ArrayUnsafe dt_smVC dt1_smVD dt2_smVE ->
+                case minusAddr# dt2_smVE dt_smVC of wild1_X2u {
+                  __DEFAULT ->
+                    case $whPutBuf' ipv1_a4w1 (Ptr dt_smVC) wild1_X2u True ipv5_X4yQ of
+                    { (# ipv6_a5ls, ipv7_a5lt #) ->
+                    case touch# dt1_smVD ipv6_a5ls of s'_a5lk { __DEFAULT ->
+                    (# s'_a5lk, () #)
+                    }
+                    };
+                  0# -> (# ipv5_X4yQ, () #)
+                }
+                }
+                }
+            } } in
+      joinrec {
+        $s$wgo_sn19 sc_sn18 sc1_sn17 sc2_sn13 sc3_sn14 sc4_sn15 sc5_sn16
+          = case <=# sc1_sn17 0# of {
+              __DEFAULT ->
+                case writeWord8OffAddr# sc5_sn16 0# 123## sc_sn18 of s2_a5Gh
+                { __DEFAULT ->
+                let { i1_smif = +# sc2_sn13 1# } in
+                case <# i1_smif 32752# of {
+                  __DEFAULT ->
+                    case minusAddr# (plusAddr# sc5_sn16 1#) sc3_sn14 of wild_X3I {
+                      __DEFAULT ->
+                        case $whPutBuf' ipv1_a4w1 (Ptr sc3_sn14) wild_X3I True s2_a5Gh of
+                        { (# ipv5_a5ls, ipv6_a5lt #) ->
+                        case touch# (PlainPtr sc4_sn15) ipv5_a5ls of s'_a5lk { __DEFAULT ->
+                        case newAlignedPinnedByteArray# 32752# 1# s'_a5lk of
+                        { (# ipv7_X4zz, ipv8_X4zB #) ->
+                        let { ipv9_X4Ky = byteArrayContents# (ipv8_X4zB `cast` <Co:5>) } in
+                        jump $s$wgo_sn19
+                          ipv7_X4zz (-# sc1_sn17 1#) 0# ipv9_X4Ky ipv8_X4zB ipv9_X4Ky
+                        }
+                        }
+                        };
+                      0# ->
+                        case newAlignedPinnedByteArray# 32752# 1# s2_a5Gh of
+                        { (# ipv5_X4zr, ipv6_X4zt #) ->
+                        let { ipv7_X4Kq = byteArrayContents# (ipv6_X4zt `cast` <Co:5>) } in
+                        jump $s$wgo_sn19
+                          ipv5_X4zr (-# sc1_sn17 1#) 0# ipv7_X4Kq ipv6_X4zt ipv7_X4Kq
+                        }
+                    };
+                  1# ->
+                    jump $wgo_smR9
+                      SPEC
+                      (ManyLoop
+                         (Tuple'
+                            (I# i1_smif)
+                            (ArrayUnsafe sc3_sn14 (PlainPtr sc4_sn15) (plusAddr# sc5_sn16 1#)))
+                         ())
+                      (-# sc1_sn17 1#)
+                      s2_a5Gh
+                }
+                };
+              1# -> (# sc_sn18, () #)
+            };
+        $wgo_smR9 w_smR1 w1_smR2 ww_smR7 w2_smR4
+          = case w_smR1 of { __DEFAULT ->
+            case <=# ww_smR7 0# of {
+              __DEFAULT ->
+                case w1_smR2 of {
+                  ManyFirst ss_a1ry cs_a1rz ->
+                    case ss_a1ry of { Tuple' i_smVH r_smVI ->
+                    case i_smVH of { I# x_smVL ->
+                    case r_smVI of { ArrayUnsafe dt_smVO dt1_smVP dt2_smVQ ->
+                    case writeWord8OffAddr# dt2_smVQ 0# 123## w2_smR4 of s2_a5Gh
+                    { __DEFAULT ->
+                    let { i1_smif = +# x_smVL 1# } in
+                    case <# i1_smif 32752# of {
+                      __DEFAULT ->
+                        case minusAddr# (plusAddr# dt2_smVQ 1#) dt_smVO of wild4_X3I {
+                          __DEFAULT ->
+                            case $whPutBuf' ipv1_a4w1 (Ptr dt_smVO) wild4_X3I True s2_a5Gh of
+                            { (# ipv5_a5ls, ipv6_a5lt #) ->
+                            case touch# dt1_smVP ipv5_a5ls of s'_a5lk { __DEFAULT ->
+                            case newAlignedPinnedByteArray# 32752# 1# s'_a5lk of
+                            { (# ipv7_X4zz, ipv8_X4zB #) ->
+                            let { ipv9_X4Ky = byteArrayContents# (ipv8_X4zB `cast` <Co:5>) } in
+                            jump $s$wgo_sn19
+                              ipv7_X4zz (-# ww_smR7 1#) 0# ipv9_X4Ky ipv8_X4zB ipv9_X4Ky
+                            }
+                            }
+                            };
+                          0# ->
+                            case newAlignedPinnedByteArray# 32752# 1# s2_a5Gh of
+                            { (# ipv5_X4zr, ipv6_X4zt #) ->
+                            let { ipv7_X4Kq = byteArrayContents# (ipv6_X4zt `cast` <Co:5>) } in
+                            jump $s$wgo_sn19
+                              ipv5_X4zr (-# ww_smR7 1#) 0# ipv7_X4Kq ipv6_X4zt ipv7_X4Kq
+                            }
+                        };
+                      1# ->
+                        jump $wgo_smR9
+                          SPEC
+                          (ManyLoop
+                             (Tuple'
+                                (I# i1_smif)
+                                (ArrayUnsafe dt_smVO dt1_smVP (plusAddr# dt2_smVQ 1#)))
+                             cs_a1rz)
+                          (-# ww_smR7 1#)
+                          s2_a5Gh
+                    }
+                    }
+                    }
+                    }
+                    };
+                  ManyLoop ss_a1rB cs_a1rC ->
+                    case ss_a1rB of { Tuple' i_smW0 r_smW1 ->
+                    case i_smW0 of { I# x_smW4 ->
+                    case r_smW1 of { ArrayUnsafe dt_smW7 dt1_smW8 dt2_smW9 ->
+                    case writeWord8OffAddr# dt2_smW9 0# 123## w2_smR4 of s2_a5Gh
+                    { __DEFAULT ->
+                    let { i1_smif = +# x_smW4 1# } in
+                    case <# i1_smif 32752# of {
+                      __DEFAULT ->
+                        case minusAddr# (plusAddr# dt2_smW9 1#) dt_smW7 of wild4_X3I {
+                          __DEFAULT ->
+                            case $whPutBuf' ipv1_a4w1 (Ptr dt_smW7) wild4_X3I True s2_a5Gh of
+                            { (# ipv5_a5ls, ipv6_a5lt #) ->
+                            case touch# dt1_smW8 ipv5_a5ls of s'_a5lk { __DEFAULT ->
+                            case newAlignedPinnedByteArray# 32752# 1# s'_a5lk of
+                            { (# ipv7_X4zz, ipv8_X4zB #) ->
+                            let { ipv9_X4Ky = byteArrayContents# (ipv8_X4zB `cast` <Co:5>) } in
+                            jump $s$wgo_sn19
+                              ipv7_X4zz (-# ww_smR7 1#) 0# ipv9_X4Ky ipv8_X4zB ipv9_X4Ky
+                            }
+                            }
+                            };
+                          0# ->
+                            case newAlignedPinnedByteArray# 32752# 1# s2_a5Gh of
+                            { (# ipv5_X4zr, ipv6_X4zt #) ->
+                            let { ipv7_X4Kq = byteArrayContents# (ipv6_X4zt `cast` <Co:5>) } in
+                            jump $s$wgo_sn19
+                              ipv5_X4zr (-# ww_smR7 1#) 0# ipv7_X4Kq ipv6_X4zt ipv7_X4Kq
+                            }
+                        };
+                      1# ->
+                        jump $wgo_smR9
+                          SPEC
+                          (ManyLoop
+                             (Tuple'
+                                (I# i1_smif)
+                                (ArrayUnsafe dt_smW7 dt1_smW8 (plusAddr# dt2_smW9 1#)))
+                             cs_a1rC)
+                          (-# ww_smR7 1#)
+                          s2_a5Gh
+                    }
+                    }
+                    }
+                    }
+                    }
+                };
+              1# -> jump exit_XQ w1_smR2 w2_smR4
+            }
+            }; } in
+      jump $s$wgo_sn19
+        ipv2_a4wv 10000000# 0# ipv4_s4Hr ipv3_a4ww ipv4_s4Hr
+      }
+      }
+
+-- RHS size: {terms: 1, types: 0, coercions: 3, joins: 0/0}
+main = main1 `cast` <Co:3>
+
+-- RHS size: {terms: 2, types: 1, coercions: 3, joins: 0/0}
+main2 = runMainIO1 (main1 `cast` <Co:3>)
+
+-- RHS size: {terms: 1, types: 0, coercions: 3, joins: 0/0}
+main = main2 `cast` <Co:3>
+
+

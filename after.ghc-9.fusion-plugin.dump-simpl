@@ -1,0 +1,305 @@
+
+==================== Tidy Core ====================
+
+Result size of Tidy Core
+  = {terms: 448, types: 818, coercions: 9, joins: 2/11}
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+$trModule4 = "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+$trModule3 = TrNameS $trModule4
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+$trModule2 = "Main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+$trModule1 = TrNameS $trModule2
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+$trModule = Module $trModule3 $trModule1
+
+-- RHS size: {terms: 6, types: 10, coercions: 0, joins: 0/0}
+lvl3_rhAc
+  = \ @s_igTp ds2_igUG ds3_igUH -> $WManyFirst ds2_igUG ds3_igUH
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl4_rhAd = I# 0#
+
+-- RHS size: {terms: 5, types: 10, coercions: 0, joins: 0/0}
+lvl5_rhAe = \ ds3_ih8D ds4_ih8E -> $WManyLoop ds3_ih8D ds4_ih8E
+
+-- RHS size: {terms: 5, types: 10, coercions: 0, joins: 0/0}
+lvl6_rhAf = \ ds2_igUZ ds3_igV0 -> $WManyFirst ds2_igUZ ds3_igV0
+
+Rec {
+-- RHS size: {terms: 17, types: 5, coercions: 0, joins: 0/0}
+go_rhAg
+  = \ addr_d2iZ z_d2j0 ->
+      case indexCharOffAddr# addr_d2iZ 0# of ch_d2j1 {
+        __DEFAULT ->
+          : (C# ch_d2j1) (go_rhAg (plusAddr# addr_d2iZ 1#) z_d2j0);
+        '\NUL'# -> z_d2j0
+      }
+end Rec }
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+lvl7_rhAh = "/dev/null"#
+
+-- RHS size: {terms: 3, types: 1, coercions: 0, joins: 0/0}
+lvl8_rhAi = go_rhAg lvl7_rhAh []
+
+-- RHS size: {terms: 380, types: 710, coercions: 0, joins: 2/11}
+main1
+  = \ s_a3Kq ->
+      case openFile1 lvl8_rhAi WriteMode s_a3Kq of
+      { (# ipv_a3Ks, ipv1_a3Kt #) ->
+      case newAlignedPinnedByteArray# 32752# 1# ipv_a3Ks of
+      { (# ipv2_ihad, ipv3_ihae #) ->
+      letrec {
+        $shandleSplitStep_shyU
+          = \ sc_shyC sc1_shyD sc2_shyE _ eta_X2 ->
+              case minusAddr# sc2_shyE sc_shyC of wild4_igUA {
+                __DEFAULT ->
+                  case keepAlive#
+                         sc1_shyD
+                         eta_X2
+                         (\ s2_igUB ->
+                            case $whPutBuf' ipv1_a3Kt (Ptr sc_shyC) wild4_igUA True s2_igUB of
+                            { (# ipv4_igUD, ipv5_igUE #) ->
+                            (# ipv4_igUD, () #)
+                            })
+                  of
+                  { (# ipv4_X1H, ipv5_X1I #) ->
+                  case newAlignedPinnedByteArray# 32752# 1# ipv4_X1H of
+                  { (# ipv6_X1K, ipv7_X1L #) ->
+                  let { ipv8_ihac = mutableByteArrayContents# ipv7_X1L } in
+                  handleSplitStep_shsS
+                    lvl3_rhAc
+                    ()
+                    (Partial
+                       (Tuple'
+                          lvl4_rhAd (ArrayUnsafe ipv8_ihac (PlainPtr ipv7_X1L) ipv8_ihac)))
+                    ipv6_X1K
+                  }
+                  };
+                0# ->
+                  case newAlignedPinnedByteArray# 32752# 1# eta_X2 of
+                  { (# ipv4_X4, ipv5_X5 #) ->
+                  let { ipv6_ihac = mutableByteArrayContents# ipv5_X5 } in
+                  handleSplitStep_shsS
+                    lvl3_rhAc
+                    ()
+                    (Partial
+                       (Tuple'
+                          lvl4_rhAd (ArrayUnsafe ipv6_ihac (PlainPtr ipv5_X5) ipv6_ihac)))
+                    ipv4_X4
+                  }
+              };
+        handleSplitStep_shsS
+          = \ branch_igUh cs_igUi sres_igUj eta_X2 ->
+              case sres_igUj of {
+                Partial ss1_igUl ->
+                  (# eta_X2,
+                     case branch_igUh ss1_igUl cs_igUi of dt_X0 { __DEFAULT ->
+                     Partial dt_X0
+                     } #);
+                Done sb_igUn ->
+                  case sb_igUn of { Array dt_shxr dt1_shxs dt2_shxt ->
+                  case minusAddr# dt2_shxt dt_shxr of wild4_igUA {
+                    __DEFAULT ->
+                      case keepAlive#
+                             dt1_shxs
+                             eta_X2
+                             (\ s2_igUB ->
+                                case $whPutBuf' ipv1_a3Kt (Ptr dt_shxr) wild4_igUA True s2_igUB of
+                                { (# ipv4_igUD, ipv5_igUE #) ->
+                                (# ipv4_igUD, () #)
+                                })
+                      of
+                      { (# ipv4_X1H, ipv5_X1I #) ->
+                      case newAlignedPinnedByteArray# 32752# 1# ipv4_X1H of
+                      { (# ipv6_X1K, ipv7_X1L #) ->
+                      let { ipv8_ihac = mutableByteArrayContents# ipv7_X1L } in
+                      handleSplitStep_shsS
+                        lvl3_rhAc
+                        ()
+                        (Partial
+                           (Tuple'
+                              lvl4_rhAd (ArrayUnsafe ipv8_ihac (PlainPtr ipv7_X1L) ipv8_ihac)))
+                        ipv6_X1K
+                      }
+                      };
+                    0# ->
+                      case newAlignedPinnedByteArray# 32752# 1# eta_X2 of
+                      { (# ipv4_X4, ipv5_X5 #) ->
+                      let { ipv6_ihac = mutableByteArrayContents# ipv5_X5 } in
+                      handleSplitStep_shsS
+                        lvl3_rhAc
+                        ()
+                        (Partial
+                           (Tuple'
+                              lvl4_rhAd (ArrayUnsafe ipv6_ihac (PlainPtr ipv5_X5) ipv6_ihac)))
+                        ipv4_X4
+                      }
+                  }
+                  }
+              }; } in
+      let { ipv4_ihac = mutableByteArrayContents# ipv3_ihae } in
+      join {
+        exit_X1H w_shxb w1_shxd
+          = case w_shxb of {
+              ManyFirst ds3_igV3 cs_igV4 -> (# w1_shxd, () #);
+              ManyLoop ss_igV6 cs_igV7 ->
+                case ss_igV6 of { Tuple' ds2_shxA r_shxB ->
+                case r_shxB of { ArrayUnsafe dt_shxE dt1_shxF dt2_shxG ->
+                case minusAddr# dt2_shxG dt_shxE of wild1_ihbD {
+                  __DEFAULT ->
+                    case keepAlive#
+                           dt1_shxF
+                           w1_shxd
+                           (\ s1_ihbE ->
+                              case $whPutBuf' ipv1_a3Kt (Ptr dt_shxE) wild1_ihbD True s1_ihbE of
+                              { (# ipv5_ihbG, ipv6_ihbH #) ->
+                              (# ipv5_ihbG, () #)
+                              })
+                    of
+                    { (# ipv5_X1Q, ipv6_X1R #) ->
+                    (# ipv5_X1Q, () #)
+                    };
+                  0# -> (# w1_shxd, () #)
+                }
+                }
+                }
+            } } in
+      joinrec {
+        $s$wgo_shym sc_shyl sc1_shyk sc2_shyj
+          = case <=# sc1_shyk 0# of {
+              __DEFAULT ->
+                case sc2_shyj of {
+                  ManyFirst ss_ih8z cs_ih8A ->
+                    case ss_ih8z of { Tuple' i_shxJ r_shxK ->
+                    case i_shxJ of { I# x_shxN ->
+                    case r_shxK of { ArrayUnsafe dt_shxQ dt1_shxR dt2_shxS ->
+                    case writeWord8OffAddr# dt2_shxS 0# 123##8 sc_shyl of s2_a4Df
+                    { __DEFAULT ->
+                    let { i1_shuP = +# x_shxN 1# } in
+                    case <# i1_shuP 32752# of {
+                      __DEFAULT ->
+                        case $shandleSplitStep_shyU
+                               dt_shxQ dt1_shxR (plusAddr# dt2_shxS 1#) cs_ih8A s2_a4Df
+                        of
+                        { (# ipv5_X1Q, ipv6_X1R #) ->
+                        case ipv6_X1R of {
+                          Partial fs3_igdT ->
+                            jump $s$wgo_shym ipv5_X1Q (-# sc1_shyk 1#) fs3_igdT;
+                          Done b1_igdV -> (# ipv5_X1Q, () #)
+                        }
+                        };
+                      1# ->
+                        jump $s$wgo_shym
+                          s2_a4Df
+                          (-# sc1_shyk 1#)
+                          (ManyLoop
+                             (Tuple'
+                                (I# i1_shuP)
+                                (ArrayUnsafe dt_shxQ dt1_shxR (plusAddr# dt2_shxS 1#)))
+                             ())
+                    }
+                    }
+                    }
+                    }
+                    };
+                  ManyLoop ss_ih8F cs_ih8G ->
+                    case ss_ih8F of { Tuple' i_shxW r_shxX ->
+                    case i_shxW of { I# x_shy0 ->
+                    case r_shxX of { ArrayUnsafe dt_shy3 dt1_shy4 dt2_shy5 ->
+                    case writeWord8OffAddr# dt2_shy5 0# 123##8 sc_shyl of s2_a4Df
+                    { __DEFAULT ->
+                    let { i1_shuP = +# x_shy0 1# } in
+                    case <# i1_shuP 32752# of {
+                      __DEFAULT ->
+                        case $shandleSplitStep_shyU
+                               dt_shy3 dt1_shy4 (plusAddr# dt2_shy5 1#) cs_ih8G s2_a4Df
+                        of
+                        { (# ipv5_X1Q, ipv6_X1R #) ->
+                        case ipv6_X1R of {
+                          Partial fs3_igdT ->
+                            jump $s$wgo_shym ipv5_X1Q (-# sc1_shyk 1#) fs3_igdT;
+                          Done b1_igdV -> (# ipv5_X1Q, () #)
+                        }
+                        };
+                      1# ->
+                        jump $s$wgo_shym
+                          s2_a4Df
+                          (-# sc1_shyk 1#)
+                          (ManyLoop
+                             (Tuple'
+                                (I# i1_shuP)
+                                (ArrayUnsafe dt_shy3 dt1_shy4 (plusAddr# dt2_shy5 1#)))
+                             ())
+                    }
+                    }
+                    }
+                    }
+                    }
+                };
+              1# -> jump exit_X1H sc2_shyj sc_shyl
+            }; } in
+      jump $s$wgo_shym
+        ipv2_ihad
+        10000000#
+        (ManyFirst
+           (Tuple'
+              lvl4_rhAd (ArrayUnsafe ipv4_ihac (PlainPtr ipv3_ihae) ipv4_ihac))
+           ())
+      }
+      }
+
+-- RHS size: {terms: 1, types: 0, coercions: 3, joins: 0/0}
+main = main1 `cast` <Co:3>
+
+-- RHS size: {terms: 2, types: 1, coercions: 3, joins: 0/0}
+main2 = runMainIO1 (main1 `cast` <Co:3>)
+
+-- RHS size: {terms: 1, types: 0, coercions: 3, joins: 0/0}
+main = main2 `cast` <Co:3>
+
+
+------ Local rules for imported ids --------
+"SPEC/Main fromStreamK @IO _" [0]
+    forall @a_X1G $dMonad_shsY.
+      fromStreamK $dMonad_shsY
+      = \ eta_iggj ->
+          UnStream
+            (\ gst_iggk m1_iggl ->
+               (m1_iggl `cast` <Co:3>)
+                 gst_iggk
+                 ((\ a1_X1H x_X1I s_a3Kx -> (# s_a3Kx, Yield a1_X1H x_X1I #))
+                  `cast` <Co:15>)
+                 ((\ a1_X1H s_a3Kx ->
+                     (# s_a3Kx,
+                        Yield
+                          a1_X1H ((\ @r_iggp _ _ _ stp_iggt -> stp_iggt) `cast` <Co:4>) #))
+                  `cast` <Co:10>)
+                 ((\ s_a3Kx -> (# s_a3Kx, Stop #)) `cast` <Co:7>))
+            eta_iggj
+"SPEC/Main replicate @Stream @IO _" [1]
+    forall @a_igVu $dIsStream_sht8 $dMonad_sht9.
+      replicate $dIsStream_sht8 $dMonad_sht9
+      = (\ n_igVx eta_igVy @r_idIb eta1_B0 eta2_B1 eta3_B2 eta4_B3 ->
+           let {
+             step1_igVA
+               = \ @p1_igVC _ eta6_igVE ->
+                   case eta6_igVE of { I# x1_igVG ->
+                   case <=# x1_igVG 0# of {
+                     __DEFAULT ->
+                       (\ s_a3Kq -> (# s_a3Kq, Yield eta_igVy (I# (-# x1_igVG 1#)) #))
+                       `cast` <Co:5>;
+                     1# -> (\ s_X1G -> (# s_X1G, Stop #)) `cast` <Co:5>
+                   }
+                   } } in
+           ((toStreamK $fMonadIO (UnStream step1_igVA n_igVx)) `cast` <Co:3>)
+             eta1_B0 eta2_B1 eta3_B2 eta4_B3)
+        `cast` <Co:10>
+
