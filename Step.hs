@@ -13,12 +13,12 @@ module Step
     )
 where
 
--- import Fusion.Plugin.Types (Fuse(..))
+import Fusion.Plugin.Types (Fuse(..))
 
 -- | A stream is a succession of 'Step's. A 'Yield' produces a single value and
 -- the next state of the stream. 'Stop' indicates there are no more values in
 -- the stream.
--- {-# ANN type Step Fuse #-}
+{-# ANN type Step Fuse #-}
 data Step s a = Yield a s | Skip s | Stop
 
 instance Functor (Step s) where

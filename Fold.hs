@@ -6,11 +6,14 @@ module Fold
       Step(..)
     , Fold (..)
     , sum
+    , chunksOf
+    , drainBy
     )
 where
 
 import Data.Bifunctor (Bifunctor(..))
-import Prelude hiding (sum)
+import Fusion.Plugin.Types (Fuse(..))
+import Prelude hiding (sum, take)
 
 ------------------------------------------------------------------------------
 -- Step of a fold
@@ -28,7 +31,7 @@ import Prelude hiding (sum)
 --
 -- /Pre-release/
 --
--- {-# ANN type Step Fuse #-}
+{-# ANN type Step Fuse #-}
 data Step s b
     = Partial !s
     | Done !b
@@ -98,6 +101,22 @@ data Fold m a b =
   -- | @Fold @ @ step @ @ initial @ @ extract@
   forall s. Fold (s -> a -> m (Step s b)) (m (Step s b)) (s -> m b)
 
+instance Functor m => Functor (Fold m a) where
+    {-# INLINE fmap #-}
+    fmap f (Fold step1 initial1 extract) = Fold step initial (fmap2 f extract)
+
+        where
+
+        initial = fmap2 f initial1
+        step s b = fmap2 f (step1 s b)
+        fmap2 g = fmap (fmap g)
+
+{-# INLINABLE lmapM #-}
+lmapM :: Monad m => (a -> m b) -> Fold m b r -> Fold m a r
+lmapM f (Fold step begin done) = Fold step' begin done
+    where
+    step' x a = f a >>= step x
+
 -- | Make a fold from a left fold style pure step function and initial value of
 -- the accumulator.
 --
@@ -133,3 +152,118 @@ foldl' step initial =
 {-# INLINE sum #-}
 sum :: (Monad m, Num a) => Fold m a a
 sum =  foldl' (+) 0
+
+data Tuple' a b = Tuple' !a !b deriving Show
+
+{-# INLINE take #-}
+take :: Monad m => Int -> Fold m a b -> Fold m a b
+take n (Fold fstep finitial fextract) = Fold step initial extract
+
+    where
+
+    initial = do
+        res <- finitial
+        case res of
+            Partial s ->
+                if n > 0
+                then return $ Partial $ Tuple' 0 s
+                else Done <$> fextract s
+            Done b -> return $ Done b
+
+    step (Tuple' i r) a = do
+        res <- fstep r a
+        case res of
+            Partial sres -> do
+                let i1 = i + 1
+                    s1 = Tuple' i1 sres
+                if i1 < n
+                then return $ Partial s1
+                else Done <$> fextract sres
+            Done bres -> return $ Done bres
+
+    extract (Tuple' _ r) = fextract r
+
+{-# ANN type ManyState Fuse #-}
+data ManyState s1 s2
+    = ManyFirst !s1 !s2
+    | ManyLoop !s1 !s2
+
+-- | Collect zero or more applications of a fold.  @many split collect@ applies
+-- the @split@ fold repeatedly on the input stream and accumulates zero or more
+-- fold results using @collect@.
+--
+-- >>> two = Fold.take 2 Fold.toList
+-- >>> twos = Fold.many two Fold.toList
+-- >>> Stream.fold twos $ Stream.fromList [1..10]
+-- [[1,2],[3,4],[5,6],[7,8],[9,10]]
+--
+-- Stops when @collect@ stops.
+--
+-- See also: "Streamly.Prelude.concatMap", "Streamly.Prelude.foldMany"
+--
+-- @since 0.8.0
+--
+{-# INLINE many #-}
+many :: Monad m => Fold m a b -> Fold m b c -> Fold m a c
+many (Fold sstep sinitial sextract) (Fold cstep cinitial cextract) =
+    Fold step initial extract
+
+    where
+
+    -- cs = collect state
+    -- ss = split state
+    -- cres = collect state result
+    -- sres = split state result
+    -- cb = collect done
+    -- sb = split done
+
+    -- Caution! There is mutual recursion here, inlining the right functions is
+    -- important.
+
+    {-# INLINE handleSplitStep #-}
+    handleSplitStep branch cs sres =
+        case sres of
+            Partial ss1 -> return $ Partial $ branch ss1 cs
+            Done sb -> runCollector ManyFirst cs sb
+
+    {-# INLINE handleCollectStep #-}
+    handleCollectStep branch cres =
+        case cres of
+            Partial cs -> do
+                sres <- sinitial
+                handleSplitStep branch cs sres
+            Done cb -> return $ Done cb
+
+    -- Do not inline this
+    runCollector branch cs sb = cstep cs sb >>= handleCollectStep branch
+
+    initial = cinitial >>= handleCollectStep ManyFirst
+
+    {-# INLINE step_ #-}
+    step_ ss cs a = do
+        sres <- sstep ss a
+        handleSplitStep ManyLoop cs sres
+
+    {-# INLINE step #-}
+    step (ManyFirst ss cs) a = step_ ss cs a
+    step (ManyLoop ss cs) a = step_ ss cs a
+
+    extract (ManyFirst _ cs) = cextract cs
+    extract (ManyLoop ss cs) = do
+        sb <- sextract ss
+        cres <- cstep cs sb
+        case cres of
+            Partial s -> cextract s
+            Done b -> return b
+
+{-# INLINE chunksOf #-}
+chunksOf :: Monad m => Int -> Fold m a b -> Fold m b c -> Fold m a c
+chunksOf n split = many (take n split)
+
+{-# INLINABLE drain #-}
+drain :: Monad m => Fold m a ()
+drain = foldl' (\_ _ -> ()) ()
+
+{-# INLINABLE drainBy #-}
+drainBy ::  Monad m => (a -> m b) -> Fold m a ()
+drainBy f = lmapM f drain

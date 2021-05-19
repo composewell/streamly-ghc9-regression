@@ -3,6 +3,7 @@
 {-# LANGUAGE BangPatterns #-}
 {-# LANGUAGE ViewPatterns #-}
 {-# LANGUAGE ExistentialQuantification #-}
+{-# LANGUAGE ScopedTypeVariables #-}
 
 #include "inline.hs"
 
@@ -40,6 +41,7 @@ module StreamD
     -- * From Values
     , yield
     , yieldM
+    , replicate
 
     -- * From Containers
     , fromList
@@ -51,8 +53,8 @@ module StreamD
     , fromStreamD
 
     -- * Running a 'Fold'
-    -- , fold
-    -- , fold_
+    , fold
+    , fold_
 
     -- * Right Folds
     -- , foldrT
@@ -81,6 +83,7 @@ module StreamD
     , takeWhile
     , takeWhileM
     , postscanOnce
+    , after_
 
     -- * Nesting
     {-
@@ -105,9 +108,9 @@ import Data.Functor.Identity (Identity(..))
 -- import Fusion.Plugin.Types (Fuse(..))
 import GHC.Base (build)
 import GHC.Types (SPEC(..))
-import Prelude hiding (map, mapM, foldr, take, concatMap, takeWhile)
+import Prelude hiding (map, mapM, foldr, take, concatMap, takeWhile, replicate)
 
--- import Streamly.Internal.Data.Fold.Type (Fold(..), Fold2(..))
+import Fold (Fold(..))
 import Step (Step (..))
 import StreamK (State, adaptState, defState)
 -- import Streamly.Internal.Data.SVar (State, adaptState, defState)
@@ -283,7 +286,6 @@ toStreamD = fromStreamK . K.toStream
 -- Running a 'Fold'
 ------------------------------------------------------------------------------
 
-{-
 {-# INLINE_NORMAL fold #-}
 fold :: (Monad m) => Fold m a b -> Stream m a -> m b
 fold fld strm = do
@@ -314,7 +316,6 @@ fold_ (Fold fstep begin done) (Stream step state) = do
                 b <- done fs
                 return $! (b, Stream (\ _ _ -> return Stop) ())
 
--}
 ------------------------------------------------------------------------------
 -- Right Folds
 ------------------------------------------------------------------------------
@@ -1048,3 +1049,32 @@ postscanOnce (FL.Fold fstep initial extract) (Stream sstep state) =
             Skip s -> return $ Skip $ ScanDo s fs
             Stop -> return Stop
     step _ ScanDone = return Stop
+
+{-# INLINE [1] replicateM #-}
+replicateM :: forall m a. Monad m => Int -> m a -> Stream m a
+replicateM n p = Stream step n
+  where
+    {-# INLINE_LATE step #-}
+    step _ (i :: Int)
+      | i <= 0    = return Stop
+      | otherwise = do
+          x <- p
+          return $ Yield x (i - 1)
+
+{-# INLINE [1] replicate #-}
+replicate :: Monad m => Int -> a -> Stream m a
+replicate n x = replicateM n (return x)
+
+{-# INLINE [1] after_ #-}
+after_ :: Monad m => m b -> Stream m a -> Stream m a
+after_ action (Stream step state) = Stream step' state
+
+    where
+
+    {-# INLINE_LATE step' #-}
+    step' gst st = do
+        res <- step gst st
+        case res of
+            Yield x s -> return $ Yield x s
+            Skip s    -> return $ Skip s
+            Stop      -> action >> return Stop
