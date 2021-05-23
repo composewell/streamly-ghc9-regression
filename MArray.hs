@@ -11,6 +11,7 @@ module MArray
     , writeNUnsafe
     , length
     , fromList
+    , fromListN
     , defaultChunkSize
     , read
     , shrinkToFit
@@ -32,9 +33,9 @@ import Fold (Fold(..))
 import Control.Monad.IO.Class (MonadIO(..))
 import Foreign.ForeignPtr.Unsafe (unsafeForeignPtrToPtr)
 import Foreign.ForeignPtr (withForeignPtr, touchForeignPtr)
-import Foreign.Ptr (plusPtr, minusPtr, castPtr, nullPtr)
+import Foreign.Ptr (plusPtr, minusPtr, castPtr)
 import Foreign.Storable (Storable(..))
-import GHC.Base (nullAddr#, realWorld#, build)
+import GHC.Base (realWorld#)
 import GHC.ForeignPtr (ForeignPtr(..))
 import GHC.IO (IO(IO), unsafePerformIO)
 import GHC.Ptr (Ptr(..))

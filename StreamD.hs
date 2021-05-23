@@ -102,7 +102,7 @@ module StreamD
 where
 
 import Control.Applicative (liftA2)
-import Control.Monad (when)
+-- import Control.Monad (when)
 -- import Control.Monad.Trans.Class (lift, MonadTrans)
 import Data.Functor.Identity (Identity(..))
 -- import Fusion.Plugin.Types (Fuse(..))

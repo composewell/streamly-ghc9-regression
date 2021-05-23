@@ -13,12 +13,9 @@ import Data.Word (Word8)
 import Foreign.Storable (Storable(..))
 import Foreign.ForeignPtr.Unsafe (unsafeForeignPtrToPtr)
 import Foreign.ForeignPtr (withForeignPtr)
-import Foreign.Ptr (plusPtr, minusPtr, castPtr, nullPtr)
-import GHC.ForeignPtr (ForeignPtr(..), newForeignPtr_)
+import Foreign.Ptr (plusPtr, minusPtr)
 import GHC.ForeignPtr (mallocPlainForeignPtrBytes)
-import GHC.IO (IO(IO), unsafePerformIO)
-import GHC.Ptr (Ptr(..))
-import System.IO (Handle, hGetBufSome, hPutBuf, stdin, stdout)
+import System.IO (Handle, hGetBufSome, hPutBuf)
 import Unfold (Unfold(..))
 import Fold (Fold(..))
 import Array (Array(..))
@@ -26,7 +23,6 @@ import qualified MArray as MA
 import qualified Fold as FL
 import qualified Unfold as UF
 import qualified StreamD as D
-import qualified Ring as RB
 import qualified Array as A
 import Prelude hiding (length, read)
 
