@@ -34,7 +34,7 @@ module StreamD
     , uncons
 
     -- * From Unfold
---     , unfold
+    , unfold
     , unfoldrM
     , drain
 
@@ -86,9 +86,9 @@ module StreamD
     , after_
 
     -- * Nesting
-    {-
-    , ConcatMapUState (..)
+    -- , ConcatMapUState (..)
     , unfoldMany
+    {-
     , concatMap
     , concatMapM
     , FoldMany (..) -- for inspection testing
@@ -110,6 +110,7 @@ import GHC.Base (build)
 import GHC.Types (SPEC(..))
 import Prelude hiding (map, mapM, foldr, take, concatMap, takeWhile, replicate)
 
+import Unfold (Unfold(..))
 import Fold (Fold(..))
 import Step (Step (..))
 import StreamK (State, adaptState, defState)
@@ -181,7 +182,6 @@ uncons (UnStream step state) = go state
 -- From 'Unfold'
 ------------------------------------------------------------------------------
 
-{-
 data UnfoldState s = UnfoldNothing | UnfoldJust s
 
 -- | Convert an 'Unfold' into a 'Stream' by supplying it a seed.
@@ -198,7 +198,6 @@ unfold (Unfold ustep inject) seed = Stream step UnfoldNothing
             Yield x s -> Yield x (UnfoldJust s)
             Skip s    -> Skip (UnfoldJust s)
             Stop      -> Stop
--}
 
 ------------------------------------------------------------------------------
 -- From Values
@@ -710,7 +709,6 @@ instance Applicative f => Applicative (Stream f) where
     {-# INLINE (<*) #-}
     (<*) = apDiscardSnd
 
-{-
 ------------------------------------------------------------------------------
 -- Combine N Streams - unfoldMany
 ------------------------------------------------------------------------------
@@ -751,6 +749,7 @@ unfoldMany (Unfold istep inject) (Stream ostep ost) =
             Skip i'    -> Skip (ConcatMapUInner o i')
             Stop       -> Skip (ConcatMapUOuter o)
 
+{-
 ------------------------------------------------------------------------------
 -- Combine N Streams - concatMap
 ------------------------------------------------------------------------------

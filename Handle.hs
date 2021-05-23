@@ -2,7 +2,8 @@
 {-# LANGUAGE RecordWildCards #-}
 module Handle
     (
-     write
+      write
+    , read
     )
 
 where
@@ -14,39 +15,24 @@ import Foreign.ForeignPtr.Unsafe (unsafeForeignPtrToPtr)
 import Foreign.ForeignPtr (withForeignPtr)
 import Foreign.Ptr (plusPtr, minusPtr, castPtr, nullPtr)
 import GHC.ForeignPtr (ForeignPtr(..), newForeignPtr_)
+import GHC.ForeignPtr (mallocPlainForeignPtrBytes)
+import GHC.IO (IO(IO), unsafePerformIO)
 import GHC.Ptr (Ptr(..))
 import System.IO (Handle, hGetBufSome, hPutBuf, stdin, stdout)
+import Unfold (Unfold(..))
 import Fold (Fold(..))
+import Array (Array(..))
 import qualified MArray as MA
 import qualified Fold as FL
-import Prelude hiding (length)
-
-data Array a =
-    Array
-    { aStart :: {-# UNPACK #-} !(ForeignPtr a) -- first address
-    , aEnd   :: {-# UNPACK #-} !(Ptr a)        -- first unused addres
-    }
-
-{-# INLINE unsafeFreeze #-}
-unsafeFreeze :: MA.Array a -> Array a
-unsafeFreeze (MA.Array as ae _) = Array as ae
-
-{-# INLINE [1] writeNUnsafe #-}
-writeNUnsafe :: forall m a. (MonadIO m, Storable a)
-    => Int -> Fold m a (Array a)
-writeNUnsafe n = unsafeFreeze <$> MA.writeNUnsafe n
-
-{-# INLINE unsafeThaw #-}
-unsafeThaw :: Array a -> MA.Array a
-unsafeThaw (Array as ae) = MA.Array as ae ae
-
-{-# INLINE length #-}
-length :: forall a. Storable a => Array a -> Int
-length arr =  MA.length (unsafeThaw arr)
+import qualified Unfold as UF
+import qualified StreamD as D
+import qualified Ring as RB
+import qualified Array as A
+import Prelude hiding (length, read)
 
 {-# INLINABLE writeArray #-}
 writeArray :: Storable a => Handle -> Array a -> IO ()
-writeArray _ arr | length arr == 0 = return ()
+writeArray _ arr | A.length arr == 0 = return ()
 writeArray h Array{..} = withForeignPtr aStart $ \p -> hPutBuf h p aLen
     where
     aLen =
@@ -59,21 +45,40 @@ writeChunks h = FL.drainBy (liftIO . writeArray h)
 
 {-# INLINE writeWithBufferOf #-}
 writeWithBufferOf :: MonadIO m => Int -> Handle -> Fold m Word8 ()
-writeWithBufferOf n h = FL.chunksOf n (writeNUnsafe n) (writeChunks h)
-
-allocOverhead :: Int
-allocOverhead = 2 * sizeOf (undefined :: Int)
-
-mkChunkSize :: Int -> Int
-mkChunkSize n = let size = n - allocOverhead in max size 0
-
-mkChunkSizeKB :: Int -> Int
-mkChunkSizeKB n = mkChunkSize (n * k)
-   where k = 1024
-
-defaultChunkSize :: Int
-defaultChunkSize = mkChunkSizeKB 32
+writeWithBufferOf n h = FL.chunksOf n (A.writeNUnsafe n) (writeChunks h)
 
 {-# INLINE write #-}
 write :: MonadIO m => Handle -> Fold m Word8 ()
-write = writeWithBufferOf defaultChunkSize
+write = writeWithBufferOf MA.defaultChunkSize
+
+{-# INLINABLE readArrayUpto #-}
+readArrayUpto :: Int -> Handle -> IO (Array Word8)
+readArrayUpto size h = do
+    ptr <- mallocPlainForeignPtrBytes size
+    -- ptr <- mallocPlainForeignPtrAlignedBytes size (alignment (undefined :: Word8))
+    withForeignPtr ptr $ \p -> do
+        n <- hGetBufSome h p size
+        -- XXX shrink only if the diff is significant
+        return $
+            A.unsafeFreezeWithShrink $
+            MA.mutableArray ptr (p `plusPtr` n) (p `plusPtr` size)
+
+{-# INLINE [1] readChunksWithBufferOf #-}
+readChunksWithBufferOf :: MonadIO m => Unfold m (Int, Handle) (Array Word8)
+readChunksWithBufferOf = Unfold step return
+    where
+    {-# INLINE [0] step #-}
+    step (size, h) = do
+        arr <- liftIO $ readArrayUpto size h
+        return $
+            case A.length arr of
+                0 -> D.Stop
+                _ -> D.Yield arr (size, h)
+
+{-# INLINE readWithBufferOf #-}
+readWithBufferOf :: MonadIO m => Unfold m (Int, Handle) Word8
+readWithBufferOf = UF.many readChunksWithBufferOf A.read
+
+{-# INLINE read #-}
+read :: MonadIO m => Unfold m Handle Word8
+read = UF.supplyFirst MA.defaultChunkSize readWithBufferOf

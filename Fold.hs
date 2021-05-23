@@ -7,6 +7,7 @@ module Fold
     , Fold (..)
     , sum
     , chunksOf
+    , drain
     , drainBy
     )
 where

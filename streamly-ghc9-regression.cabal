@@ -28,7 +28,8 @@ executable main
   if flag(fusion-plugin)
       ghc-options: -fplugin Fusion.Plugin
 
-  other-modules: StreamK, Operations, StreamD, Step, Serial, Fold, Handle, MArray
+  other-modules: StreamK, Operations, StreamD, Step, Serial, Fold, Handle,
+              MArray, Unfold, Ring, Array
   default-extensions:
         BangPatterns
         CApiFFI
