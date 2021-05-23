@@ -1,3 +1,4 @@
+{-# LANGUAGE CPP #-}
 {-# LANGUAGE TupleSections #-}
 {-# LANGUAGE ExistentialQuantification  #-}
 module Unfold
@@ -10,7 +11,9 @@ module Unfold
 where
 
 import Step (Step(..))
+#ifdef FUSION_PLUGIN
 import Fusion.Plugin.Types (Fuse(..))
+#endif
 
 data Unfold m a b =
     -- | @Unfold step inject@
@@ -24,7 +27,9 @@ lmap f (Unfold ustep uinject) = Unfold ustep (uinject Prelude.. f)
 supplyFirst :: a -> Unfold m (a, b) c -> Unfold m b c
 supplyFirst a = lmap (a, )
 
+#ifdef FUSION_PLUGIN
 {-# ANN type ConcatState Fuse #-}
+#endif
 data ConcatState s1 s2 = ConcatOuter s1 | ConcatInner s1 s2
 
 -- | Apply the second unfold to each output element of the first unfold and

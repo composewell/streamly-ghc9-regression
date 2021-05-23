@@ -1,3 +1,4 @@
+{-# LANGUAGE CPP #-}
 {-# LANGUAGE BangPatterns #-}
 {-# LANGUAGE RankNTypes #-}
 {-# LANGUAGE ScopedTypeVariables #-}
@@ -15,7 +16,9 @@ import Array (Array)
 import StreamK (IsStream, MonadAsync, adaptState)
 import Step (Step(..))
 import Unfold (Unfold)
+#ifdef FUSION_PLUGIN
 import Fusion.Plugin.Types (Fuse(..))
+#endif
 import qualified StreamK as K
 import qualified StreamD as D
 import qualified Serial
@@ -69,7 +72,9 @@ after_ action xs = D.fromStreamD $ D.after_ action $ D.toStreamD xs
 unfold :: (IsStream t, Monad m) => Unfold m a b -> a -> t m b
 unfold unf x = D.fromStreamD $ D.unfold unf x
 
+#ifdef FUSION_PLUGIN
 {-# ANN type SplitOnSeqState Fuse #-}
+#endif
 data SplitOnSeqState rb rh ck w fs s b x =
       SplitOnSeqInit
     | SplitOnSeqYield b (SplitOnSeqState rb rh ck w fs s b x)

@@ -1,3 +1,4 @@
+{-# LANGUAGE CPP #-}
 {-# LANGUAGE ExistentialQuantification #-}
 
 module Fold
@@ -13,7 +14,9 @@ module Fold
 where
 
 import Data.Bifunctor (Bifunctor(..))
+#ifdef FUSION_PLUGIN
 import Fusion.Plugin.Types (Fuse(..))
+#endif
 import Prelude hiding (sum, take)
 
 ------------------------------------------------------------------------------
@@ -32,7 +35,9 @@ import Prelude hiding (sum, take)
 --
 -- /Pre-release/
 --
+#ifdef FUSION_PLUGIN
 {-# ANN type Step Fuse #-}
+#endif
 data Step s b
     = Partial !s
     | Done !b
@@ -184,7 +189,9 @@ take n (Fold fstep finitial fextract) = Fold step initial extract
 
     extract (Tuple' _ r) = fextract r
 
+#ifdef FUSION_PLUGIN
 {-# ANN type ManyState Fuse #-}
+#endif
 data ManyState s1 s2
     = ManyFirst !s1 !s2
     | ManyLoop !s1 !s2
