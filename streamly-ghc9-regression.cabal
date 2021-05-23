@@ -14,7 +14,6 @@ executable main
   main-is:             Main.hs
   build-depends: base -any
               , ghc-prim
-              , fusion-plugin-types
   if flag(fusion-plugin)
     build-depends:
               fusion-plugin
@@ -28,6 +27,8 @@ executable main
                -- -dsuppress-all
                -- -fforce-recomp
   if flag(fusion-plugin)
+      build-depends: fusion-plugin-types
+      cpp-options: -DFUSION_PLUGIN
       ghc-options: -fplugin Fusion.Plugin
 
   other-modules: StreamK, Operations, StreamD, Step, Serial, Fold, Handle, MArray
