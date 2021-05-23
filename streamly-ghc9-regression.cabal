@@ -12,10 +12,12 @@ flag fusion-plugin
 
 executable main
   main-is:             Main.hs
-  build-depends:       base -any
+  build-depends: base -any
               , ghc-prim
               , fusion-plugin-types
-              , fusion-plugin
+  if flag(fusion-plugin)
+    build-depends:
+              fusion-plugin
   default-language:    Haskell2010
   ghc-options: -O2
                -fdicts-strict
