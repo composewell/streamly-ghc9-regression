@@ -1,0 +1,2195 @@
+
+==================== Tidy Core ====================
+
+Result size of Tidy Core
+  = {terms: 3,487, types: 5,440, coercions: 214, joins: 41/73}
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+$trModule2 = "Main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+$trModule1 = TrNameS $trModule2
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+$trModule4 = "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+$trModule3 = TrNameS $trModule4
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+$trModule = Module $trModule3 $trModule1
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl1_rFJN = W# 18446744073709551615##
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl11_rFK4 = unpackCString# $trModule4
+
+-- RHS size: {terms: 2, types: 3, coercions: 0, joins: 0/0}
+lvl29_rFKo = State False
+
+Rec {
+-- RHS size: {terms: 29, types: 19, coercions: 3, joins: 0/0}
+$wgo
+  = \ w_sDcn ww_sDcw @ r_sDcp w1_sDcs ->
+      (w_sDcn `cast` <Co:3>)
+        lvl29_rFKo
+        (\ a1_a3XC x1_a3XD ->
+           case a1_a3XC of { I# y_a2SN ->
+           $wgo x1_a3XD (+# ww_sDcw y_a2SN) w1_sDcs
+           })
+        (\ a1_a3Zn ->
+           w1_sDcs (case a1_a3Zn of { I# y_a2SN -> I# (+# ww_sDcw y_a2SN) }))
+        (w1_sDcs (I# ww_sDcw))
+end Rec }
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+lvl30_rFKp = "undefined"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl31_rFKq = unpackCString# lvl30_rFKp
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+lvl32_rFKr = "StreamK"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl33_rFKs = unpackCString# lvl32_rFKr
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+lvl34_rFKt = "./StreamK.hs"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl35_rFKu = unpackCString# lvl34_rFKt
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl36_rFKv = I# 818#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl37_rFKw = I# 30#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl38_rFKx = I# 39#
+
+-- RHS size: {terms: 8, types: 0, coercions: 0, joins: 0/0}
+lvl39_rFKy
+  = SrcLoc
+      lvl11_rFK4
+      lvl33_rFKs
+      lvl35_rFKu
+      lvl36_rFKv
+      lvl37_rFKw
+      lvl36_rFKv
+      lvl38_rFKx
+
+-- RHS size: {terms: 4, types: 0, coercions: 0, joins: 0/0}
+lvl40_rFKz = PushCallStack lvl31_rFKq lvl39_rFKy EmptyCallStack
+
+-- RHS size: {terms: 2, types: 5, coercions: 4, joins: 0/0}
+$sfromList12 = undefined (lvl40_rFKz `cast` <Co:4>)
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl41_rFKA = I# 40#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl42_rFKB = I# 49#
+
+-- RHS size: {terms: 8, types: 0, coercions: 0, joins: 0/0}
+lvl43_rFKC
+  = SrcLoc
+      lvl11_rFK4
+      lvl33_rFKs
+      lvl35_rFKu
+      lvl36_rFKv
+      lvl41_rFKA
+      lvl36_rFKv
+      lvl42_rFKB
+
+-- RHS size: {terms: 4, types: 0, coercions: 0, joins: 0/0}
+lvl44_rFKD = PushCallStack lvl31_rFKq lvl43_rFKC EmptyCallStack
+
+-- RHS size: {terms: 2, types: 7, coercions: 4, joins: 0/0}
+$sfromList11 = undefined (lvl44_rFKD `cast` <Co:4>)
+
+-- RHS size: {terms: 5, types: 10, coercions: 0, joins: 0/0}
+$sfromList10 = \ x1_a2ON s1_Xkcd -> (# s1_Xkcd, x1_a2ON #)
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl45_rFKE = I# 57#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl46_rFKF = I# 66#
+
+-- RHS size: {terms: 8, types: 0, coercions: 0, joins: 0/0}
+lvl47_rFKG
+  = SrcLoc
+      lvl11_rFK4
+      lvl33_rFKs
+      lvl35_rFKu
+      lvl36_rFKv
+      lvl45_rFKE
+      lvl36_rFKv
+      lvl46_rFKF
+
+-- RHS size: {terms: 4, types: 0, coercions: 0, joins: 0/0}
+lvl48_rFKH = PushCallStack lvl31_rFKq lvl47_rFKG EmptyCallStack
+
+-- RHS size: {terms: 2, types: 3, coercions: 4, joins: 0/0}
+$sfromList9 = undefined (lvl48_rFKH `cast` <Co:4>)
+
+-- RHS size: {terms: 6, types: 20, coercions: 0, joins: 0/0}
+$sfromList7 = \ @ r_a4Nf _ _ _ stp_a3WO -> stp_a3WO
+
+-- RHS size: {terms: 24, types: 41, coercions: 10, joins: 0/2}
+$sgo1_rFKJ
+  = \ sc_sEHg sc1_sEHc sc2_sEHd sc3_sEHe sc4_sEHf ->
+      let { x_sEUj = PlainPtr sc2_sEHd } in
+      let { x1_accd = Array sc1_sEHc x_sEUj sc3_sEHe sc4_sEHf } in
+      (# sc_sEHg,
+         (\ @ r1_X4QS _ yld_X40r _ _ ->
+            yld_X40r x1_accd ($sfromList7 `cast` <Co:5>))
+         `cast` <Co:5> #)
+
+Rec {
+-- RHS size: {terms: 20, types: 19, coercions: 5, joins: 0/1}
+$sgo2_rFKK
+  = \ sc_sEGY sc1_sEGX ->
+      case newAlignedPinnedByteArray# 32752# 1# sc_sEGY of
+      { (# ipv_ak1l, ipv1_ak1m #) ->
+      let { ipv2_skQa = byteArrayContents# (ipv1_ak1m `cast` <Co:5>) } in
+      $sfromList_$sgo
+        ipv_ak1l
+        sc1_sEGX
+        ipv2_skQa
+        ipv1_ak1m
+        ipv2_skQa
+        (plusAddr# ipv2_skQa 32752#)
+      }
+
+-- RHS size: {terms: 57, types: 40, coercions: 0, joins: 0/1}
+$sfromList_$sgo
+  = \ sc_sEH5 sc1_sEH0 sc2_sEH1 sc3_sEH2 sc4_sEH3 sc5_sEH4 ->
+      case sc1_sEH0 of {
+        [] -> $sgo1_rFKJ sc_sEH5 sc2_sEH1 sc3_sEH2 sc4_sEH3 sc5_sEH4;
+        : x_acbm xs_acbn ->
+          case x_acbm of { W8# x1_ayqm ->
+          case writeWord8OffAddr# sc4_sEH3 0# x1_ayqm sc_sEH5 of s2_ayqo
+          { __DEFAULT ->
+          let { end'_sB07 = plusAddr# sc4_sEH3 1# } in
+          case ltAddr# end'_sB07 sc5_sEH4 of {
+            __DEFAULT ->
+              go_rFKL
+                SPEC
+                (GroupYield
+                   (ForeignPtr sc2_sEH1 (PlainPtr sc3_sEH2))
+                   (Ptr end'_sB07)
+                   (Ptr sc5_sEH4)
+                   (GroupStart xs_acbn))
+                s2_ayqo;
+            1# ->
+              $sfromList_$sgo
+                s2_ayqo xs_acbn sc2_sEH1 sc3_sEH2 end'_sB07 sc5_sEH4
+          }
+          }
+          }
+      }
+
+-- RHS size: {terms: 121, types: 192, coercions: 15, joins: 0/3}
+go_rFKL
+  = \ ds1_ddub st_accb eta_B1 ->
+      case ds1_ddub of { __DEFAULT ->
+      case st_accb of {
+        GroupStart st1_aj7a ->
+          case newAlignedPinnedByteArray# 32752# 1# eta_B1 of
+          { (# ipv_ak1l, ipv1_ak1m #) ->
+          let { ipv2_skQa = byteArrayContents# (ipv1_ak1m `cast` <Co:5>) } in
+          $sfromList_$sgo
+            ipv_ak1l
+            st1_aj7a
+            ipv2_skQa
+            ipv1_ak1m
+            ipv2_skQa
+            (plusAddr# ipv2_skQa 32752#)
+          };
+        GroupBuffer st1_aj7f start_aj7g end_aj7h bound_aj7i ->
+          case st1_aj7f of {
+            [] ->
+              go_rFKL
+                SPEC
+                (GroupYield start_aj7g end_aj7h bound_aj7i GroupFinish)
+                eta_B1;
+            : x_acbm xs_acbn ->
+              case end_aj7h of { Ptr a_ayqj ->
+              case x_acbm of { W8# x1_ayqm ->
+              case writeWord8OffAddr# a_ayqj 0# x1_ayqm eta_B1 of s2_ayqo
+              { __DEFAULT ->
+              case bound_aj7i of wild4_akjM { Ptr b1_akjN ->
+              let { end'_sB07 = plusAddr# a_ayqj 1# } in
+              case ltAddr# end'_sB07 b1_akjN of {
+                __DEFAULT ->
+                  go_rFKL
+                    SPEC
+                    (GroupYield
+                       start_aj7g (Ptr end'_sB07) wild4_akjM (GroupStart xs_acbn))
+                    s2_ayqo;
+                1# ->
+                  go_rFKL
+                    SPEC
+                    (GroupBuffer xs_acbn start_aj7g (Ptr end'_sB07) wild4_akjM)
+                    s2_ayqo
+              }
+              }
+              }
+              }
+              }
+          };
+        GroupYield start_aj7o end_aj7p bound_aj7q next_aj7r ->
+          case go_rFKL SPEC next_aj7r eta_B1 of
+          { (# ipv2_akmN, ipv3_akmO #) ->
+          let {
+            x_accd
+              = case start_aj7o of { ForeignPtr dt1_aj9h dt2_aj9i ->
+                case end_aj7p of { Ptr dt4_aj9j ->
+                case bound_aj7q of { Ptr dt6_aj9k ->
+                Array dt1_aj9h dt2_aj9i dt4_aj9j dt6_aj9k
+                }
+                }
+                } } in
+          (# ipv2_akmN,
+             (\ @ r1_X4QS _ yld_X40r _ _ -> yld_X40r x_accd ipv3_akmO)
+             `cast` <Co:5> #)
+          };
+        GroupFinish -> (# eta_B1, $sfromList7 `cast` <Co:5> #)
+      }
+      }
+end Rec }
+
+-- RHS size: {terms: 8, types: 27, coercions: 0, joins: 0/0}
+$sfromList8
+  = \ a1_a3Xn x_a3Xo s_ak4v -> (# s_ak4v, Yield a1_a3Xn x_a3Xo #)
+
+-- RHS size: {terms: 7, types: 23, coercions: 5, joins: 0/0}
+$sfromList6
+  = \ a1_acbu s_ak4v ->
+      (# s_ak4v, Yield a1_acbu ($sfromList7 `cast` <Co:5>) #)
+
+-- RHS size: {terms: 4, types: 21, coercions: 0, joins: 0/0}
+$sfromList5 = \ s_ak4v -> (# s_ak4v, Stop #)
+
+-- RHS size: {terms: 3, types: 6, coercions: 0, joins: 0/0}
+$sfromList4 = \ @ r_a55C -> foldStream $fIsStreamStream
+
+-- RHS size: {terms: 16, types: 27, coercions: 0, joins: 0/0}
+$sfromList3
+  = \ x_a3ZM ys_a3ZN @ r_a3Ta _ eta1_B3 _ _ ->
+      eta1_B3
+        (case x_a3ZM of { Array dt_dk0p dt1_dk0q dt2_dk0r dt3_dk0s ->
+         I# (minusAddr# dt2_dk0r dt_dk0p)
+         })
+        ys_a3ZN
+
+-- RHS size: {terms: 6, types: 16, coercions: 0, joins: 0/0}
+$sfromList2 = \ @ r_X4Rc _ _ _ stp_X40P -> stp_X40P
+
+-- RHS size: {terms: 207, types: 306, coercions: 89, joins: 3/5}
+$sfromList1
+  = \ xs_aj7U ->
+      case runRW#
+             (\ s_ajWU ->
+                case noDuplicate# s_ajWU of s'_ajWV { __DEFAULT ->
+                case newAlignedPinnedByteArray# 32752# 1# s'_ajWV of
+                { (# ipv_ak1l, ipv1_ak1m #) ->
+                let { ipv2_skQa = byteArrayContents# (ipv1_ak1m `cast` <Co:5>) } in
+                case $sfromList_$sgo
+                       ipv_ak1l
+                       xs_aj7U
+                       ipv2_skQa
+                       ipv1_ak1m
+                       ipv2_skQa
+                       (plusAddr# ipv2_skQa 32752#)
+                of
+                { (# ipv4_a6WT, ipv5_a6WU #) ->
+                join {
+                  get2_szWv m2_X45e
+                    = case (((m2_X45e `cast` <Co:3>)
+                               $sfromList12 $sfromList11 ($sfromList10 `cast` <Co:5>) $sfromList9)
+                            `cast` <Co:2>)
+                             ipv4_a6WT
+                      of
+                      { (# ipv6_X70Y, ipv3_X710 #) ->
+                      case ipv3_X710 of { I# x_ak7n ->
+                      case <# x_ak7n 0# of {
+                        __DEFAULT ->
+                          case newAlignedPinnedByteArray# x_ak7n 1# ipv6_X70Y of
+                          { (# ipv7_Xk5F, ipv8_Xk5H #) ->
+                          let { ipv9_skOo = byteArrayContents# (ipv8_Xk5H `cast` <Co:5>) } in
+                          joinrec {
+                            $s$wgo_sEGz sc_sEGu
+                                        sc1_sEGt
+                                        sc2_sEGp
+                                        sc3_sEGq
+                                        sc4_sEGr
+                                        sc5_sEGs
+                                        sc6_sEGo
+                              = case <# sc1_sEGt x_ak7n of {
+                                  __DEFAULT ->
+                                    (# sc_sEGu,
+                                       Array
+                                         ipv9_skOo
+                                         (PlainPtr ipv8_Xk5H)
+                                         sc6_sEGo
+                                         (plusAddr# ipv9_skOo x_ak7n) #);
+                                  1# ->
+                                    case eqAddr# sc5_sEGs sc3_sEGq of {
+                                      __DEFAULT ->
+                                        case readWord8OffAddr# sc5_sEGs 0# realWorld# of
+                                        { (# ipv10_aysc, ipv11_aysd #) ->
+                                        case writeWord8OffAddr# sc6_sEGo 0# ipv11_aysd sc_sEGu
+                                        of s2_ayqo
+                                        { __DEFAULT ->
+                                        jump $s$wgo_sEGz
+                                          s2_ayqo
+                                          (+# sc1_sEGt 1#)
+                                          sc2_sEGp
+                                          sc3_sEGq
+                                          sc4_sEGr
+                                          (plusAddr# sc5_sEGs 1#)
+                                          (plusAddr# sc6_sEGo 1#)
+                                        }
+                                        };
+                                      1# ->
+                                        case touch# sc4_sEGr realWorld# of { __DEFAULT ->
+                                        jump $s$wgo1_sEGn sc_sEGu sc1_sEGt sc2_sEGp sc6_sEGo
+                                        }
+                                    }
+                                };
+                            $s$wgo1_sEGn sc_sEGm sc1_sEGl sc2_sEGk sc3_sEGj
+                              = case <# sc1_sEGl x_ak7n of {
+                                  __DEFAULT ->
+                                    (# sc_sEGm,
+                                       Array
+                                         ipv9_skOo
+                                         (PlainPtr ipv8_Xk5H)
+                                         sc3_sEGj
+                                         (plusAddr# ipv9_skOo x_ak7n) #);
+                                  1# ->
+                                    case (((sc2_sEGk `cast` <Co:4>)
+                                             adaptState1
+                                             ($sfromList8 `cast` <Co:17>)
+                                             ($sfromList6 `cast` <Co:12>)
+                                             ($sfromList5 `cast` <Co:9>))
+                                          `cast` <Co:8>)
+                                           sc_sEGm
+                                    of
+                                    { (# ipv10_X71m, ipv11_X71o #) ->
+                                    case ipv11_X71o of {
+                                      Yield a2_acgP o'_acgQ ->
+                                        case a2_acgP of
+                                        { Array dt_dk09 dt1_dk0a dt2_dk0b dt3_dk0c ->
+                                        jump $s$wgo_sEGz
+                                          ipv10_X71m
+                                          sc1_sEGl
+                                          o'_acgQ
+                                          dt2_dk0b
+                                          dt1_dk0a
+                                          dt_dk09
+                                          sc3_sEGj
+                                        };
+                                      Skip o'_acgS ->
+                                        jump $s$wgo1_sEGn ipv10_X71m sc1_sEGl o'_acgS sc3_sEGj;
+                                      Stop ->
+                                        (# ipv10_X71m,
+                                           Array
+                                             ipv9_skOo
+                                             (PlainPtr ipv8_Xk5H)
+                                             sc3_sEGj
+                                             (plusAddr# ipv9_skOo x_ak7n) #)
+                                    }
+                                    }
+                                }; } in
+                          jump $s$wgo1_sEGn ipv7_Xk5F 0# ipv5_a6WU ipv9_skOo
+                          };
+                        1# -> case mallocPlainForeignPtrAlignedBytes2 of wild1_00 { }
+                      }
+                      }
+                      } } in
+                jump get2_szWv
+                  ((\ @ r_sDcp _ _ w2_sDcs _ ->
+                      $wgo
+                        (foldrSWith
+                           $fIsStreamStream
+                           $sfromList4
+                           ($sfromList3 `cast` <Co:11>)
+                           ($sfromList2 `cast` <Co:4>)
+                           ipv5_a6WU)
+                        0#
+                        w2_sDcs)
+                   `cast` <Co:4>)
+                }
+                }
+                })
+      of
+      { (# ipv_ajWX, ipv1_ajWY #) ->
+      ipv1_ajWY
+      }
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+lvl49_rFKM = "aa"#
+
+-- RHS size: {terms: 12, types: 6, coercions: 0, joins: 0/0}
+lvl50_rFKN
+  = \ x_azFt ys_azFu ->
+      : (case x_azFt of { C# c#_azEY ->
+         W8# (narrow8Word# (int2Word# (ord# c#_azEY)))
+         })
+        ys_azFu
+
+-- RHS size: {terms: 4, types: 3, coercions: 0, joins: 0/0}
+lvl51_rFKO = unpackFoldrCString# lvl49_rFKM lvl50_rFKN []
+
+-- RHS size: {terms: 8, types: 7, coercions: 0, joins: 0/0}
+patArr_rFKP
+  = case $sfromList1 lvl51_rFKO of
+    { Array dt_dppi dt1_dppj dt2_dppk dt3_dppl ->
+    Array dt_dppi dt1_dppj dt2_dppk
+    }
+
+-- RHS size: {terms: 7, types: 5, coercions: 0, joins: 0/0}
+patLen_rFKQ
+  = case patArr_rFKP of { Array dt_dppf dt1_dppg dt2_dpph ->
+    I# (minusAddr# dt2_dpph dt_dppf)
+    }
+
+-- RHS size: {terms: 28, types: 8, coercions: 0, joins: 0/1}
+wordMask_rFKR
+  = case patLen_rFKQ of { I# y_ak7q ->
+    let { i#_ataz = *# 8# y_ak7q } in
+    case >=# i#_ataz 0# of {
+      __DEFAULT -> case overflowError of wild_00 { };
+      1# ->
+        case >=# i#_ataz 64# of {
+          __DEFAULT -> W# (minusWord# (uncheckedShiftL# 1## i#_ataz) 1##);
+          1# -> lvl1_rFJN
+        }
+    }
+    }
+
+-- RHS size: {terms: 42, types: 29, coercions: 0, joins: 1/1}
+wordPat_rFKS
+  = case wordMask_rFKR of { W# x#_ataQ ->
+    case patArr_rFKP of { Array dt_dppf dt1_dppg dt2_dpph ->
+    joinrec {
+      $s$wgo_sEGf sc_sEGe sc1_sEGd
+        = case eqAddr# sc_sEGe dt2_dpph of {
+            __DEFAULT ->
+              case readWord8OffAddr# sc_sEGe 0# realWorld# of
+              { (# ipv_aysc, ipv1_aysd #) ->
+              case touch# dt1_dppg ipv_aysc of { __DEFAULT ->
+              jump $s$wgo_sEGf
+                (plusAddr# sc_sEGe 1#)
+                (or# (uncheckedShiftL# sc1_sEGd 8#) ipv1_aysd)
+              }
+              };
+            1# -> W# (and# x#_ataQ sc1_sEGd)
+          }; } in
+    jump $s$wgo_sEGf dt_dppf 0##
+    }
+    }
+
+-- RHS size: {terms: 7, types: 2, coercions: 0, joins: 0/0}
+maxIndex_rFKT
+  = case patLen_rFKQ of { I# x_adPr -> I# (-# x_adPr 1#) }
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+lvl52_rFKU = "input.txt"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl53_rFKV = unpackCString# lvl52_rFKU
+
+-- RHS size: {terms: 2,720,
+              types: 4,265,
+              coercions: 66,
+              joins: 37/59}
+main1
+  = \ s_a6WR ->
+      case openFile1 lvl53_rFKV ReadMode s_a6WR of
+      { (# ipv_a6WT, ipv1_a6WU #) ->
+      let { lvl57_sDWh = (defaultChunkSize, ipv1_a6WU) } in
+      let { lvl58_sDWi = ConcatOuter lvl57_sDWh } in
+      let { lvl59_sDM7 = UnfoldJust lvl58_sDWi } in
+      joinrec {
+        $sgo3_sEDt sc_sEDs = jump $sgo4_sEDv sc_sEDs;
+        $sgo4_sEDv sc_sEDu
+          = join {
+              exit_X1X ww_sDdr ipv2_X71Z x1_asuM s2_asuN
+                = case x1_asuM of { W8# x#_aAcF ->
+                  case wordMask_rFKR of { W# y#_ataT ->
+                  case wordPat_rFKS of { W# y1_atbu ->
+                  let { x#1_ataQ = or# (uncheckedShiftL# ww_sDdr 8#) x#_aAcF } in
+                  case eqWord# (and# x#1_ataQ y#_ataT) y1_atbu of {
+                    __DEFAULT ->
+                      jump go1_sCi5
+                        SPEC (SplitOnSeqWordLoop (W# x#1_ataQ) s2_asuN ()) ipv2_X71Z;
+                    1# ->
+                      jump go1_sCi5
+                        SPEC (SplitOnSeqYield () (SplitOnSeqWordInit () s2_asuN)) ipv2_X71Z
+                  }
+                  }
+                  }
+                  } } in
+            join {
+              exit1_X1T ww_sDdn ww1_sDdr ipv2_X71Z
+                = case ww_sDdn of wild4_X2v {
+                    __DEFAULT ->
+                      jump go1_sCi5
+                        SPEC
+                        (SplitOnSeqWordDone (I# wild4_X2v) () (W# ww1_sDdr))
+                        ipv2_X71Z;
+                    0# ->
+                      jump go1_sCi5 SPEC (SplitOnSeqYield () SplitOnSeqDone) ipv2_X71Z
+                  } } in
+            joinrec {
+              $s$wgo_sEEX sc1_sEEW sc2_sEEV sc3_sEEU
+                = jump $wgo1_sDdt SPEC sc3_sEEU sc2_sEEV lvl59_sDM7 sc1_sEEW;
+              $wgo1_sDdt w_sDdg ww_sDdn ww1_sDdr w1_sDdj w2_sDdk
+                = case w_sDdg of { __DEFAULT ->
+                  join {
+                    $s$j_sEET sc1_sEEK sc2_sEEJ
+                      = jump $wgo1_sDdt SPEC ww_sDdn ww1_sDdr sc1_sEEK sc2_sEEJ } in
+                  join {
+                    $j_sB46 ipv2_X71Z ipv3_X721
+                      = case ipv3_X721 of {
+                          Yield x1_asuM s2_asuN ->
+                            case maxIndex_rFKT of { I# y_aqSJ ->
+                            case ==# ww_sDdn y_aqSJ of {
+                              __DEFAULT ->
+                                case x1_asuM of { W8# x#_aAcF ->
+                                let { sc1_sEDw = +# ww_sDdn 1# } in
+                                joinrec {
+                                  $s$wgo1_sEDZ sc2_sEDF sc3_sEDD sc4_sEDE sc5_sEDC sc6_sEDB
+                                    = case ((readArrayUpto (I# sc3_sEDD) sc4_sEDE) `cast` <Co:3>)
+                                             sc2_sEDF
+                                      of
+                                      { (# ipv4_X712, ipv5_X714 #) ->
+                                      case ipv5_X714 of { Array dt_dppf dt1_dppg dt2_dpph ->
+                                      case minusAddr# dt2_dpph dt_dppf of {
+                                        __DEFAULT ->
+                                          jump $s$wgo2_sEEH
+                                            ipv4_X712
+                                            sc3_sEDD
+                                            sc4_sEDE
+                                            dt2_dpph
+                                            dt1_dppg
+                                            dt_dppf
+                                            sc5_sEDC
+                                            sc6_sEDB;
+                                        0# -> jump exit1_X1T sc6_sEDB sc5_sEDC ipv4_X712
+                                      }
+                                      }
+                                      };
+                                  $s$wgo2_sEEH sc2_sEEa
+                                               sc3_sEE5
+                                               sc4_sEE6
+                                               sc5_sEE7
+                                               sc6_sEE8
+                                               sc7_sEE9
+                                               sc8_sEE4
+                                               sc9_sEE3
+                                    = case eqAddr# sc7_sEE9 sc5_sEE7 of {
+                                        __DEFAULT ->
+                                          case readWord8OffAddr# sc7_sEE9 0# realWorld# of
+                                          { (# ipv4_aysc, ipv5_aysd #) ->
+                                          case ==# sc9_sEE3 y_aqSJ of {
+                                            __DEFAULT ->
+                                              jump $s$wgo2_sEEH
+                                                sc2_sEEa
+                                                sc3_sEE5
+                                                sc4_sEE6
+                                                sc5_sEE7
+                                                sc6_sEE8
+                                                (plusAddr# sc7_sEE9 1#)
+                                                (or# (uncheckedShiftL# sc8_sEE4 8#) ipv5_aysd)
+                                                (+# sc9_sEE3 1#);
+                                            1# ->
+                                              case wordMask_rFKR of { W# y#_ataT ->
+                                              case wordPat_rFKS of { W# y1_atbu ->
+                                              let {
+                                                x#1_ataQ
+                                                  = or#
+                                                      (uncheckedShiftL# sc8_sEE4 8#) ipv5_aysd } in
+                                              case eqWord# (and# x#1_ataQ y#_ataT) y1_atbu of {
+                                                __DEFAULT ->
+                                                  jump go1_sCi5
+                                                    SPEC
+                                                    (SplitOnSeqWordLoop
+                                                       (W# x#1_ataQ)
+                                                       (UnfoldJust
+                                                          (ConcatInner
+                                                             (I# sc3_sEE5, sc4_sEE6)
+                                                             (ReadUState
+                                                                sc5_sEE7
+                                                                sc6_sEE8
+                                                                (plusAddr# sc7_sEE9 1#))))
+                                                       ())
+                                                    sc2_sEEa;
+                                                1# ->
+                                                  jump go1_sCi5
+                                                    SPEC
+                                                    (SplitOnSeqYield
+                                                       ()
+                                                       (SplitOnSeqWordInit
+                                                          ()
+                                                          (UnfoldJust
+                                                             (ConcatInner
+                                                                (I# sc3_sEE5, sc4_sEE6)
+                                                                (ReadUState
+                                                                   sc5_sEE7
+                                                                   sc6_sEE8
+                                                                   (plusAddr# sc7_sEE9 1#))))))
+                                                    sc2_sEEa
+                                              }
+                                              }
+                                              }
+                                          }
+                                          };
+                                        1# ->
+                                          case touch# sc6_sEE8 realWorld# of { __DEFAULT ->
+                                          jump $s$wgo1_sEDZ
+                                            sc2_sEEa sc3_sEE5 sc4_sEE6 sc8_sEE4 sc9_sEE3
+                                          }
+                                      }; } in
+                                joinrec {
+                                  $s$wgo3_sEEI sc2_sEEn sc3_sEEl sc4_sEEm sc5_sEEk sc6_sEEj
+                                    = case ((readArrayUpto sc3_sEEl sc4_sEEm) `cast` <Co:3>)
+                                             sc2_sEEn
+                                      of
+                                      { (# ipv4_X712, ipv5_X714 #) ->
+                                      case ipv5_X714 of { Array dt_dppf dt1_dppg dt2_dpph ->
+                                      case minusAddr# dt2_dpph dt_dppf of {
+                                        __DEFAULT ->
+                                          jump $s$wgo4_sEE0
+                                            ipv4_X712
+                                            sc3_sEEl
+                                            sc4_sEEm
+                                            dt2_dpph
+                                            dt1_dppg
+                                            dt_dppf
+                                            sc5_sEEk
+                                            sc6_sEEj;
+                                        0# -> jump exit1_X1T sc6_sEEj sc5_sEEk ipv4_X712
+                                      }
+                                      }
+                                      };
+                                  $s$wgo4_sEE0 sc2_sEDN
+                                               sc3_sEDI
+                                               sc4_sEDJ
+                                               sc5_sEDK
+                                               sc6_sEDL
+                                               sc7_sEDM
+                                               sc8_sEDH
+                                               sc9_sEDG
+                                    = case eqAddr# sc7_sEDM sc5_sEDK of {
+                                        __DEFAULT ->
+                                          case readWord8OffAddr# sc7_sEDM 0# realWorld# of
+                                          { (# ipv4_aysc, ipv5_aysd #) ->
+                                          case ==# sc9_sEDG y_aqSJ of {
+                                            __DEFAULT ->
+                                              jump $s$wgo4_sEE0
+                                                sc2_sEDN
+                                                sc3_sEDI
+                                                sc4_sEDJ
+                                                sc5_sEDK
+                                                sc6_sEDL
+                                                (plusAddr# sc7_sEDM 1#)
+                                                (or# (uncheckedShiftL# sc8_sEDH 8#) ipv5_aysd)
+                                                (+# sc9_sEDG 1#);
+                                            1# ->
+                                              case wordMask_rFKR of { W# y#_ataT ->
+                                              case wordPat_rFKS of { W# y1_atbu ->
+                                              let {
+                                                x#1_ataQ
+                                                  = or#
+                                                      (uncheckedShiftL# sc8_sEDH 8#) ipv5_aysd } in
+                                              case eqWord# (and# x#1_ataQ y#_ataT) y1_atbu of {
+                                                __DEFAULT ->
+                                                  jump go1_sCi5
+                                                    SPEC
+                                                    (SplitOnSeqWordLoop
+                                                       (W# x#1_ataQ)
+                                                       (UnfoldJust
+                                                          (ConcatInner
+                                                             (sc3_sEDI, sc4_sEDJ)
+                                                             (ReadUState
+                                                                sc5_sEDK
+                                                                sc6_sEDL
+                                                                (plusAddr# sc7_sEDM 1#))))
+                                                       ())
+                                                    sc2_sEDN;
+                                                1# ->
+                                                  jump go1_sCi5
+                                                    SPEC
+                                                    (SplitOnSeqYield
+                                                       ()
+                                                       (SplitOnSeqWordInit
+                                                          ()
+                                                          (UnfoldJust
+                                                             (ConcatInner
+                                                                (sc3_sEDI, sc4_sEDJ)
+                                                                (ReadUState
+                                                                   sc5_sEDK
+                                                                   sc6_sEDL
+                                                                   (plusAddr# sc7_sEDM 1#))))))
+                                                    sc2_sEDN
+                                              }
+                                              }
+                                              }
+                                          }
+                                          };
+                                        1# ->
+                                          case touch# sc6_sEDL realWorld# of { __DEFAULT ->
+                                          jump $s$wgo3_sEEI
+                                            sc2_sEDN sc3_sEDI sc4_sEDJ sc8_sEDH sc9_sEDG
+                                          }
+                                      }; } in
+                                join {
+                                  $s$wgo5_sEE2 sc2_sEDY sc3_sEDX sc4_sEDW sc5_sEDV
+                                    = case sc3_sEDX of { (size_axW3, h_axW4) ->
+                                      case ((readArrayUpto size_axW3 h_axW4) `cast` <Co:3>) sc2_sEDY
+                                      of
+                                      { (# ipv4_X712, ipv5_X714 #) ->
+                                      case ipv5_X714 of { Array dt_dppf dt1_dppg dt2_dpph ->
+                                      case minusAddr# dt2_dpph dt_dppf of {
+                                        __DEFAULT ->
+                                          jump $s$wgo4_sEE0
+                                            ipv4_X712
+                                            size_axW3
+                                            h_axW4
+                                            dt2_dpph
+                                            dt1_dppg
+                                            dt_dppf
+                                            sc4_sEDW
+                                            sc5_sEDV;
+                                        0# -> jump exit1_X1T sc5_sEDV sc4_sEDW ipv4_X712
+                                      }
+                                      }
+                                      }
+                                      } } in
+                                joinrec {
+                                  $s$wgo6_sEE1 sc2_sEDU
+                                               sc3_sEDQ
+                                               sc4_sEDR
+                                               sc5_sEDS
+                                               sc6_sEDT
+                                               sc7_sEDP
+                                               sc8_sEDO
+                                    = case eqAddr# sc6_sEDT sc4_sEDR of {
+                                        __DEFAULT ->
+                                          case readWord8OffAddr# sc6_sEDT 0# realWorld# of
+                                          { (# ipv4_aysc, ipv5_aysd #) ->
+                                          case ==# sc8_sEDO y_aqSJ of {
+                                            __DEFAULT ->
+                                              jump $s$wgo6_sEE1
+                                                sc2_sEDU
+                                                sc3_sEDQ
+                                                sc4_sEDR
+                                                sc5_sEDS
+                                                (plusAddr# sc6_sEDT 1#)
+                                                (or# (uncheckedShiftL# sc7_sEDP 8#) ipv5_aysd)
+                                                (+# sc8_sEDO 1#);
+                                            1# ->
+                                              case wordMask_rFKR of { W# y#_ataT ->
+                                              case wordPat_rFKS of { W# y1_atbu ->
+                                              let {
+                                                x#1_ataQ
+                                                  = or#
+                                                      (uncheckedShiftL# sc7_sEDP 8#) ipv5_aysd } in
+                                              case eqWord# (and# x#1_ataQ y#_ataT) y1_atbu of {
+                                                __DEFAULT ->
+                                                  jump go1_sCi5
+                                                    SPEC
+                                                    (SplitOnSeqWordLoop
+                                                       (W# x#1_ataQ)
+                                                       (UnfoldJust
+                                                          (ConcatInner
+                                                             sc3_sEDQ
+                                                             (ReadUState
+                                                                sc4_sEDR
+                                                                sc5_sEDS
+                                                                (plusAddr# sc6_sEDT 1#))))
+                                                       ())
+                                                    sc2_sEDU;
+                                                1# ->
+                                                  jump go1_sCi5
+                                                    SPEC
+                                                    (SplitOnSeqYield
+                                                       ()
+                                                       (SplitOnSeqWordInit
+                                                          ()
+                                                          (UnfoldJust
+                                                             (ConcatInner
+                                                                sc3_sEDQ
+                                                                (ReadUState
+                                                                   sc4_sEDR
+                                                                   sc5_sEDS
+                                                                   (plusAddr# sc6_sEDT 1#))))))
+                                                    sc2_sEDU
+                                              }
+                                              }
+                                              }
+                                          }
+                                          };
+                                        1# ->
+                                          case touch# sc5_sEDS realWorld# of { __DEFAULT ->
+                                          jump $s$wgo5_sEE2 sc2_sEDU sc3_sEDQ sc7_sEDP sc8_sEDO
+                                          }
+                                      }; } in
+                                case s2_asuN of {
+                                  UnfoldNothing ->
+                                    case ((readArrayUpto (I# 32752#) ipv1_a6WU) `cast` <Co:3>)
+                                           ipv2_X71Z
+                                    of
+                                    { (# ipv4_X712, ipv5_X714 #) ->
+                                    case ipv5_X714 of { Array dt_dppf dt1_dppg dt2_dpph ->
+                                    case minusAddr# dt2_dpph dt_dppf of {
+                                      __DEFAULT ->
+                                        jump $s$wgo2_sEEH
+                                          ipv4_X712
+                                          32752#
+                                          ipv1_a6WU
+                                          dt2_dpph
+                                          dt1_dppg
+                                          dt_dppf
+                                          (or# (uncheckedShiftL# ww1_sDdr 8#) x#_aAcF)
+                                          sc1_sEDw;
+                                      0# ->
+                                        case sc1_sEDw of wild6_X2v {
+                                          __DEFAULT ->
+                                            jump go1_sCi5
+                                              SPEC
+                                              (SplitOnSeqWordDone
+                                                 (I# wild6_X2v)
+                                                 ()
+                                                 (W# (or# (uncheckedShiftL# ww1_sDdr 8#) x#_aAcF)))
+                                              ipv4_X712;
+                                          0# ->
+                                            jump go1_sCi5
+                                              SPEC (SplitOnSeqYield () SplitOnSeqDone) ipv4_X712
+                                        }
+                                    }
+                                    }
+                                    };
+                                  UnfoldJust st_acba ->
+                                    case st_acba of {
+                                      ConcatOuter st1_abKh ->
+                                        case st1_abKh of { (size_axW3, h_axW4) ->
+                                        case ((readArrayUpto size_axW3 h_axW4) `cast` <Co:3>)
+                                               ipv2_X71Z
+                                        of
+                                        { (# ipv4_X712, ipv5_X714 #) ->
+                                        case ipv5_X714 of { Array dt_dppf dt1_dppg dt2_dpph ->
+                                        case minusAddr# dt2_dpph dt_dppf of {
+                                          __DEFAULT ->
+                                            jump $s$wgo4_sEE0
+                                              ipv4_X712
+                                              size_axW3
+                                              h_axW4
+                                              dt2_dpph
+                                              dt1_dppg
+                                              dt_dppf
+                                              (or# (uncheckedShiftL# ww1_sDdr 8#) x#_aAcF)
+                                              sc1_sEDw;
+                                          0# ->
+                                            case sc1_sEDw of wild9_X2v {
+                                              __DEFAULT ->
+                                                jump go1_sCi5
+                                                  SPEC
+                                                  (SplitOnSeqWordDone
+                                                     (I# wild9_X2v)
+                                                     ()
+                                                     (W#
+                                                        (or#
+                                                           (uncheckedShiftL# ww1_sDdr 8#) x#_aAcF)))
+                                                  ipv4_X712;
+                                              0# ->
+                                                jump go1_sCi5
+                                                  SPEC (SplitOnSeqYield () SplitOnSeqDone) ipv4_X712
+                                            }
+                                        }
+                                        }
+                                        }
+                                        };
+                                      ConcatInner ost_abKn ist_abKo ->
+                                        case ist_abKo of { ReadUState dt_dk0d dt1_dk0e dt2_dk0f ->
+                                        case eqAddr# dt2_dk0f dt_dk0d of {
+                                          __DEFAULT ->
+                                            case readWord8OffAddr# dt2_dk0f 0# realWorld# of
+                                            { (# ipv4_aysc, ipv5_aysd #) ->
+                                            case ==# sc1_sEDw y_aqSJ of {
+                                              __DEFAULT ->
+                                                jump $s$wgo6_sEE1
+                                                  ipv2_X71Z
+                                                  ost_abKn
+                                                  dt_dk0d
+                                                  dt1_dk0e
+                                                  (plusAddr# dt2_dk0f 1#)
+                                                  (or#
+                                                     (uncheckedShiftL#
+                                                        (or# (uncheckedShiftL# ww1_sDdr 8#) x#_aAcF)
+                                                        8#)
+                                                     ipv5_aysd)
+                                                  (+# sc1_sEDw 1#);
+                                              1# ->
+                                                case wordMask_rFKR of { W# y#_ataT ->
+                                                case wordPat_rFKS of { W# y1_atbu ->
+                                                let {
+                                                  x#1_ataQ
+                                                    = or#
+                                                        (uncheckedShiftL#
+                                                           (or#
+                                                              (uncheckedShiftL# ww1_sDdr 8#)
+                                                              x#_aAcF)
+                                                           8#)
+                                                        ipv5_aysd } in
+                                                case eqWord# (and# x#1_ataQ y#_ataT) y1_atbu of {
+                                                  __DEFAULT ->
+                                                    jump go1_sCi5
+                                                      SPEC
+                                                      (SplitOnSeqWordLoop
+                                                         (W# x#1_ataQ)
+                                                         (UnfoldJust
+                                                            (ConcatInner
+                                                               ost_abKn
+                                                               (ReadUState
+                                                                  dt_dk0d
+                                                                  dt1_dk0e
+                                                                  (plusAddr# dt2_dk0f 1#))))
+                                                         ())
+                                                      ipv2_X71Z;
+                                                  1# ->
+                                                    jump go1_sCi5
+                                                      SPEC
+                                                      (SplitOnSeqYield
+                                                         ()
+                                                         (SplitOnSeqWordInit
+                                                            ()
+                                                            (UnfoldJust
+                                                               (ConcatInner
+                                                                  ost_abKn
+                                                                  (ReadUState
+                                                                     dt_dk0d
+                                                                     dt1_dk0e
+                                                                     (plusAddr# dt2_dk0f 1#))))))
+                                                      ipv2_X71Z
+                                                }
+                                                }
+                                                }
+                                            }
+                                            };
+                                          1# ->
+                                            case touch# dt1_dk0e realWorld# of { __DEFAULT ->
+                                            case ost_abKn of { (size_axW3, h_axW4) ->
+                                            case ((readArrayUpto size_axW3 h_axW4) `cast` <Co:3>)
+                                                   ipv2_X71Z
+                                            of
+                                            { (# ipv4_X712, ipv5_X714 #) ->
+                                            case ipv5_X714 of { Array dt4_dppf dt5_dppg dt6_dpph ->
+                                            case minusAddr# dt6_dpph dt4_dppf of {
+                                              __DEFAULT ->
+                                                jump $s$wgo4_sEE0
+                                                  ipv4_X712
+                                                  size_axW3
+                                                  h_axW4
+                                                  dt6_dpph
+                                                  dt5_dppg
+                                                  dt4_dppf
+                                                  (or# (uncheckedShiftL# ww1_sDdr 8#) x#_aAcF)
+                                                  sc1_sEDw;
+                                              0# ->
+                                                case sc1_sEDw of wild10_X2v {
+                                                  __DEFAULT ->
+                                                    jump go1_sCi5
+                                                      SPEC
+                                                      (SplitOnSeqWordDone
+                                                         (I# wild10_X2v)
+                                                         ()
+                                                         (W#
+                                                            (or#
+                                                               (uncheckedShiftL# ww1_sDdr 8#)
+                                                               x#_aAcF)))
+                                                      ipv4_X712;
+                                                  0# ->
+                                                    jump go1_sCi5
+                                                      SPEC
+                                                      (SplitOnSeqYield () SplitOnSeqDone)
+                                                      ipv4_X712
+                                                }
+                                            }
+                                            }
+                                            }
+                                            }
+                                            }
+                                        }
+                                        }
+                                    }
+                                }
+                                };
+                              1# -> jump exit_X1X ww1_sDdr ipv2_X71Z x1_asuM s2_asuN
+                            }
+                            };
+                          Skip s2_asuR ->
+                            jump $wgo1_sDdt SPEC ww_sDdn ww1_sDdr s2_asuR ipv2_X71Z;
+                          Stop -> jump exit1_X1T ww_sDdn ww1_sDdr ipv2_X71Z
+                        } } in
+                  case w1_sDdj of {
+                    UnfoldNothing ->
+                      jump $wgo1_sDdt SPEC ww_sDdn ww1_sDdr lvl59_sDM7 w2_sDdk;
+                    UnfoldJust st_acba ->
+                      case st_acba of {
+                        ConcatOuter st1_abKh ->
+                          case st1_abKh of wild_Xv { (size_axW3, h_axW4) ->
+                          case ((readArrayUpto size_axW3 h_axW4) `cast` <Co:3>) w2_sDdk of
+                          { (# ipv2_X712, ipv3_X714 #) ->
+                          case ipv3_X714 of { Array dt_dppf dt1_dppg dt2_dpph ->
+                          case minusAddr# dt2_dpph dt_dppf of {
+                            __DEFAULT ->
+                              jump $wgo1_sDdt
+                                SPEC
+                                ww_sDdn
+                                ww1_sDdr
+                                (UnfoldJust
+                                   (ConcatInner wild_Xv (ReadUState dt2_dpph dt1_dppg dt_dppf)))
+                                ipv2_X712;
+                            0# -> jump $j_sB46 ipv2_X712 Stop
+                          }
+                          }
+                          }
+                          };
+                        ConcatInner ost_abKn ist_abKo ->
+                          case ist_abKo of { ReadUState dt_dk0d dt1_dk0e dt2_dk0f ->
+                          case eqAddr# dt2_dk0f dt_dk0d of {
+                            __DEFAULT ->
+                              case readWord8OffAddr# dt2_dk0f 0# realWorld# of
+                              { (# ipv2_aysc, ipv3_aysd #) ->
+                              jump $j_sB46
+                                w2_sDdk
+                                (Yield
+                                   (W8# ipv3_aysd)
+                                   (UnfoldJust
+                                      (ConcatInner
+                                         ost_abKn
+                                         (ReadUState dt_dk0d dt1_dk0e (plusAddr# dt2_dk0f 1#)))))
+                              };
+                            1# ->
+                              case touch# dt1_dk0e realWorld# of { __DEFAULT ->
+                              jump $wgo1_sDdt
+                                SPEC ww_sDdn ww1_sDdr (UnfoldJust (ConcatOuter ost_abKn)) w2_sDdk
+                              }
+                          }
+                          }
+                      }
+                  }
+                  }; } in
+            jump $s$wgo_sEEX sc_sEDu 0## 0#;
+        go1_sCi5 ds2_ddKr st_ach9 eta_B1
+          = case ds2_ddKr of { __DEFAULT ->
+            case st_ach9 of {
+              SplitOnSeqInit -> jump $sgo4_sEDv eta_B1;
+              SplitOnSeqYield x1_asuq next_asur ->
+                jump go1_sCi5 SPEC next_asur eta_B1;
+              SplitOnSeqDone -> (# eta_B1, () #);
+              SplitOnSeqWordInit fs_asuF st0_asuG ->
+                join {
+                  exit_X1X ww_sDdr ipv2_X71Z x1_asuM s2_asuN
+                    = case x1_asuM of { W8# x#_aAcF ->
+                      case wordMask_rFKR of { W# y#_ataT ->
+                      case wordPat_rFKS of { W# y1_atbu ->
+                      let { x#1_ataQ = or# (uncheckedShiftL# ww_sDdr 8#) x#_aAcF } in
+                      case eqWord# (and# x#1_ataQ y#_ataT) y1_atbu of {
+                        __DEFAULT ->
+                          jump go1_sCi5
+                            SPEC (SplitOnSeqWordLoop (W# x#1_ataQ) s2_asuN fs_asuF) ipv2_X71Z;
+                        1# ->
+                          jump go1_sCi5
+                            SPEC
+                            (SplitOnSeqYield fs_asuF (SplitOnSeqWordInit () s2_asuN))
+                            ipv2_X71Z
+                      }
+                      }
+                      }
+                      } } in
+                join {
+                  exit1_X1T ww_sDdn ww1_sDdr ipv2_X71Z
+                    = case ww_sDdn of wild4_X2v {
+                        __DEFAULT ->
+                          jump go1_sCi5
+                            SPEC
+                            (SplitOnSeqWordDone (I# wild4_X2v) fs_asuF (W# ww1_sDdr))
+                            ipv2_X71Z;
+                        0# ->
+                          jump go1_sCi5
+                            SPEC (SplitOnSeqYield fs_asuF SplitOnSeqDone) ipv2_X71Z
+                      } } in
+                joinrec {
+                  $s$wgo_sEyF sc_sEyE sc1_sEyD sc2_sEyC sc3_sEyB
+                    = join {
+                        $s$j_sEA3 sc4_sEzU sc5_sEzT
+                          = jump $s$wgo_sEyF sc5_sEzT sc4_sEzU sc2_sEyC sc3_sEyB } in
+                      join {
+                        $j_sB46 ipv2_X71Z ipv3_X721
+                          = case ipv3_X721 of {
+                              Yield x1_asuM s2_asuN ->
+                                case maxIndex_rFKT of { I# y_aqSJ ->
+                                case ==# sc3_sEyB y_aqSJ of {
+                                  __DEFAULT ->
+                                    case x1_asuM of { W8# x#_aAcF ->
+                                    let { sc4_sEyG = +# sc3_sEyB 1# } in
+                                    joinrec {
+                                      $s$wgo1_sEz9 sc5_sEyP sc6_sEyN sc7_sEyO sc8_sEyM sc9_sEyL
+                                        = case ((readArrayUpto (I# sc6_sEyN) sc7_sEyO)
+                                                `cast` <Co:3>)
+                                                 sc5_sEyP
+                                          of
+                                          { (# ipv4_X712, ipv5_X714 #) ->
+                                          case ipv5_X714 of { Array dt_dppf dt1_dppg dt2_dpph ->
+                                          case minusAddr# dt2_dpph dt_dppf of {
+                                            __DEFAULT ->
+                                              jump $s$wgo2_sEzR
+                                                ipv4_X712
+                                                sc6_sEyN
+                                                sc7_sEyO
+                                                dt2_dpph
+                                                dt1_dppg
+                                                dt_dppf
+                                                sc8_sEyM
+                                                sc9_sEyL;
+                                            0# -> jump exit1_X1T sc9_sEyL sc8_sEyM ipv4_X712
+                                          }
+                                          }
+                                          };
+                                      $s$wgo2_sEzR sc5_sEzk
+                                                   sc6_sEzf
+                                                   sc7_sEzg
+                                                   sc8_sEzh
+                                                   sc9_sEzi
+                                                   sc10_sEzj
+                                                   sc11_sEze
+                                                   sc12_sEzd
+                                        = case eqAddr# sc10_sEzj sc8_sEzh of {
+                                            __DEFAULT ->
+                                              case readWord8OffAddr# sc10_sEzj 0# realWorld# of
+                                              { (# ipv4_aysc, ipv5_aysd #) ->
+                                              case ==# sc12_sEzd y_aqSJ of {
+                                                __DEFAULT ->
+                                                  jump $s$wgo2_sEzR
+                                                    sc5_sEzk
+                                                    sc6_sEzf
+                                                    sc7_sEzg
+                                                    sc8_sEzh
+                                                    sc9_sEzi
+                                                    (plusAddr# sc10_sEzj 1#)
+                                                    (or# (uncheckedShiftL# sc11_sEze 8#) ipv5_aysd)
+                                                    (+# sc12_sEzd 1#);
+                                                1# ->
+                                                  case wordMask_rFKR of { W# y#_ataT ->
+                                                  case wordPat_rFKS of { W# y1_atbu ->
+                                                  let {
+                                                    x#1_ataQ
+                                                      = or#
+                                                          (uncheckedShiftL# sc11_sEze 8#)
+                                                          ipv5_aysd } in
+                                                  case eqWord# (and# x#1_ataQ y#_ataT) y1_atbu of {
+                                                    __DEFAULT ->
+                                                      jump go1_sCi5
+                                                        SPEC
+                                                        (SplitOnSeqWordLoop
+                                                           (W# x#1_ataQ)
+                                                           (UnfoldJust
+                                                              (ConcatInner
+                                                                 (I# sc6_sEzf, sc7_sEzg)
+                                                                 (ReadUState
+                                                                    sc8_sEzh
+                                                                    sc9_sEzi
+                                                                    (plusAddr# sc10_sEzj 1#))))
+                                                           fs_asuF)
+                                                        sc5_sEzk;
+                                                    1# ->
+                                                      jump go1_sCi5
+                                                        SPEC
+                                                        (SplitOnSeqYield
+                                                           fs_asuF
+                                                           (SplitOnSeqWordInit
+                                                              ()
+                                                              (UnfoldJust
+                                                                 (ConcatInner
+                                                                    (I# sc6_sEzf, sc7_sEzg)
+                                                                    (ReadUState
+                                                                       sc8_sEzh
+                                                                       sc9_sEzi
+                                                                       (plusAddr# sc10_sEzj 1#))))))
+                                                        sc5_sEzk
+                                                  }
+                                                  }
+                                                  }
+                                              }
+                                              };
+                                            1# ->
+                                              case touch# sc9_sEzi realWorld# of { __DEFAULT ->
+                                              jump $s$wgo1_sEz9
+                                                sc5_sEzk sc6_sEzf sc7_sEzg sc11_sEze sc12_sEzd
+                                              }
+                                          }; } in
+                                    joinrec {
+                                      $s$wgo3_sEzS sc5_sEzx sc6_sEzv sc7_sEzw sc8_sEzu sc9_sEzt
+                                        = case ((readArrayUpto sc6_sEzv sc7_sEzw) `cast` <Co:3>)
+                                                 sc5_sEzx
+                                          of
+                                          { (# ipv4_X712, ipv5_X714 #) ->
+                                          case ipv5_X714 of { Array dt_dppf dt1_dppg dt2_dpph ->
+                                          case minusAddr# dt2_dpph dt_dppf of {
+                                            __DEFAULT ->
+                                              jump $s$wgo4_sEza
+                                                ipv4_X712
+                                                sc6_sEzv
+                                                sc7_sEzw
+                                                dt2_dpph
+                                                dt1_dppg
+                                                dt_dppf
+                                                sc8_sEzu
+                                                sc9_sEzt;
+                                            0# -> jump exit1_X1T sc9_sEzt sc8_sEzu ipv4_X712
+                                          }
+                                          }
+                                          };
+                                      $s$wgo4_sEza sc5_sEyX
+                                                   sc6_sEyS
+                                                   sc7_sEyT
+                                                   sc8_sEyU
+                                                   sc9_sEyV
+                                                   sc10_sEyW
+                                                   sc11_sEyR
+                                                   sc12_sEyQ
+                                        = case eqAddr# sc10_sEyW sc8_sEyU of {
+                                            __DEFAULT ->
+                                              case readWord8OffAddr# sc10_sEyW 0# realWorld# of
+                                              { (# ipv4_aysc, ipv5_aysd #) ->
+                                              case ==# sc12_sEyQ y_aqSJ of {
+                                                __DEFAULT ->
+                                                  jump $s$wgo4_sEza
+                                                    sc5_sEyX
+                                                    sc6_sEyS
+                                                    sc7_sEyT
+                                                    sc8_sEyU
+                                                    sc9_sEyV
+                                                    (plusAddr# sc10_sEyW 1#)
+                                                    (or# (uncheckedShiftL# sc11_sEyR 8#) ipv5_aysd)
+                                                    (+# sc12_sEyQ 1#);
+                                                1# ->
+                                                  case wordMask_rFKR of { W# y#_ataT ->
+                                                  case wordPat_rFKS of { W# y1_atbu ->
+                                                  let {
+                                                    x#1_ataQ
+                                                      = or#
+                                                          (uncheckedShiftL# sc11_sEyR 8#)
+                                                          ipv5_aysd } in
+                                                  case eqWord# (and# x#1_ataQ y#_ataT) y1_atbu of {
+                                                    __DEFAULT ->
+                                                      jump go1_sCi5
+                                                        SPEC
+                                                        (SplitOnSeqWordLoop
+                                                           (W# x#1_ataQ)
+                                                           (UnfoldJust
+                                                              (ConcatInner
+                                                                 (sc6_sEyS, sc7_sEyT)
+                                                                 (ReadUState
+                                                                    sc8_sEyU
+                                                                    sc9_sEyV
+                                                                    (plusAddr# sc10_sEyW 1#))))
+                                                           fs_asuF)
+                                                        sc5_sEyX;
+                                                    1# ->
+                                                      jump go1_sCi5
+                                                        SPEC
+                                                        (SplitOnSeqYield
+                                                           fs_asuF
+                                                           (SplitOnSeqWordInit
+                                                              ()
+                                                              (UnfoldJust
+                                                                 (ConcatInner
+                                                                    (sc6_sEyS, sc7_sEyT)
+                                                                    (ReadUState
+                                                                       sc8_sEyU
+                                                                       sc9_sEyV
+                                                                       (plusAddr# sc10_sEyW 1#))))))
+                                                        sc5_sEyX
+                                                  }
+                                                  }
+                                                  }
+                                              }
+                                              };
+                                            1# ->
+                                              case touch# sc9_sEyV realWorld# of { __DEFAULT ->
+                                              jump $s$wgo3_sEzS
+                                                sc5_sEyX sc6_sEyS sc7_sEyT sc11_sEyR sc12_sEyQ
+                                              }
+                                          }; } in
+                                    join {
+                                      $s$wgo5_sEzc sc5_sEz8 sc6_sEz7 sc7_sEz6 sc8_sEz5
+                                        = case sc6_sEz7 of { (size_axW3, h_axW4) ->
+                                          case ((readArrayUpto size_axW3 h_axW4) `cast` <Co:3>)
+                                                 sc5_sEz8
+                                          of
+                                          { (# ipv4_X712, ipv5_X714 #) ->
+                                          case ipv5_X714 of { Array dt_dppf dt1_dppg dt2_dpph ->
+                                          case minusAddr# dt2_dpph dt_dppf of {
+                                            __DEFAULT ->
+                                              jump $s$wgo4_sEza
+                                                ipv4_X712
+                                                size_axW3
+                                                h_axW4
+                                                dt2_dpph
+                                                dt1_dppg
+                                                dt_dppf
+                                                sc7_sEz6
+                                                sc8_sEz5;
+                                            0# -> jump exit1_X1T sc8_sEz5 sc7_sEz6 ipv4_X712
+                                          }
+                                          }
+                                          }
+                                          } } in
+                                    joinrec {
+                                      $s$wgo6_sEzb sc5_sEz4
+                                                   sc6_sEz0
+                                                   sc7_sEz1
+                                                   sc8_sEz2
+                                                   sc9_sEz3
+                                                   sc10_sEyZ
+                                                   sc11_sEyY
+                                        = case eqAddr# sc9_sEz3 sc7_sEz1 of {
+                                            __DEFAULT ->
+                                              case readWord8OffAddr# sc9_sEz3 0# realWorld# of
+                                              { (# ipv4_aysc, ipv5_aysd #) ->
+                                              case ==# sc11_sEyY y_aqSJ of {
+                                                __DEFAULT ->
+                                                  jump $s$wgo6_sEzb
+                                                    sc5_sEz4
+                                                    sc6_sEz0
+                                                    sc7_sEz1
+                                                    sc8_sEz2
+                                                    (plusAddr# sc9_sEz3 1#)
+                                                    (or# (uncheckedShiftL# sc10_sEyZ 8#) ipv5_aysd)
+                                                    (+# sc11_sEyY 1#);
+                                                1# ->
+                                                  case wordMask_rFKR of { W# y#_ataT ->
+                                                  case wordPat_rFKS of { W# y1_atbu ->
+                                                  let {
+                                                    x#1_ataQ
+                                                      = or#
+                                                          (uncheckedShiftL# sc10_sEyZ 8#)
+                                                          ipv5_aysd } in
+                                                  case eqWord# (and# x#1_ataQ y#_ataT) y1_atbu of {
+                                                    __DEFAULT ->
+                                                      jump go1_sCi5
+                                                        SPEC
+                                                        (SplitOnSeqWordLoop
+                                                           (W# x#1_ataQ)
+                                                           (UnfoldJust
+                                                              (ConcatInner
+                                                                 sc6_sEz0
+                                                                 (ReadUState
+                                                                    sc7_sEz1
+                                                                    sc8_sEz2
+                                                                    (plusAddr# sc9_sEz3 1#))))
+                                                           fs_asuF)
+                                                        sc5_sEz4;
+                                                    1# ->
+                                                      jump go1_sCi5
+                                                        SPEC
+                                                        (SplitOnSeqYield
+                                                           fs_asuF
+                                                           (SplitOnSeqWordInit
+                                                              ()
+                                                              (UnfoldJust
+                                                                 (ConcatInner
+                                                                    sc6_sEz0
+                                                                    (ReadUState
+                                                                       sc7_sEz1
+                                                                       sc8_sEz2
+                                                                       (plusAddr# sc9_sEz3 1#))))))
+                                                        sc5_sEz4
+                                                  }
+                                                  }
+                                                  }
+                                              }
+                                              };
+                                            1# ->
+                                              case touch# sc8_sEz2 realWorld# of { __DEFAULT ->
+                                              jump $s$wgo5_sEzc
+                                                sc5_sEz4 sc6_sEz0 sc10_sEyZ sc11_sEyY
+                                              }
+                                          }; } in
+                                    case s2_asuN of {
+                                      UnfoldNothing ->
+                                        case ((readArrayUpto (I# 32752#) ipv1_a6WU) `cast` <Co:3>)
+                                               ipv2_X71Z
+                                        of
+                                        { (# ipv4_X712, ipv5_X714 #) ->
+                                        case ipv5_X714 of { Array dt_dppf dt1_dppg dt2_dpph ->
+                                        case minusAddr# dt2_dpph dt_dppf of {
+                                          __DEFAULT ->
+                                            jump $s$wgo2_sEzR
+                                              ipv4_X712
+                                              32752#
+                                              ipv1_a6WU
+                                              dt2_dpph
+                                              dt1_dppg
+                                              dt_dppf
+                                              (or# (uncheckedShiftL# sc2_sEyC 8#) x#_aAcF)
+                                              sc4_sEyG;
+                                          0# ->
+                                            case sc4_sEyG of wild8_X2v {
+                                              __DEFAULT ->
+                                                jump go1_sCi5
+                                                  SPEC
+                                                  (SplitOnSeqWordDone
+                                                     (I# wild8_X2v)
+                                                     fs_asuF
+                                                     (W#
+                                                        (or#
+                                                           (uncheckedShiftL# sc2_sEyC 8#) x#_aAcF)))
+                                                  ipv4_X712;
+                                              0# ->
+                                                jump go1_sCi5
+                                                  SPEC
+                                                  (SplitOnSeqYield fs_asuF SplitOnSeqDone)
+                                                  ipv4_X712
+                                            }
+                                        }
+                                        }
+                                        };
+                                      UnfoldJust st1_acba ->
+                                        case st1_acba of {
+                                          ConcatOuter st2_abKh ->
+                                            case st2_abKh of { (size_axW3, h_axW4) ->
+                                            case ((readArrayUpto size_axW3 h_axW4) `cast` <Co:3>)
+                                                   ipv2_X71Z
+                                            of
+                                            { (# ipv4_X712, ipv5_X714 #) ->
+                                            case ipv5_X714 of { Array dt_dppf dt1_dppg dt2_dpph ->
+                                            case minusAddr# dt2_dpph dt_dppf of {
+                                              __DEFAULT ->
+                                                jump $s$wgo4_sEza
+                                                  ipv4_X712
+                                                  size_axW3
+                                                  h_axW4
+                                                  dt2_dpph
+                                                  dt1_dppg
+                                                  dt_dppf
+                                                  (or# (uncheckedShiftL# sc2_sEyC 8#) x#_aAcF)
+                                                  sc4_sEyG;
+                                              0# ->
+                                                case sc4_sEyG of wild10_X2v {
+                                                  __DEFAULT ->
+                                                    jump go1_sCi5
+                                                      SPEC
+                                                      (SplitOnSeqWordDone
+                                                         (I# wild10_X2v)
+                                                         fs_asuF
+                                                         (W#
+                                                            (or#
+                                                               (uncheckedShiftL# sc2_sEyC 8#)
+                                                               x#_aAcF)))
+                                                      ipv4_X712;
+                                                  0# ->
+                                                    jump go1_sCi5
+                                                      SPEC
+                                                      (SplitOnSeqYield fs_asuF SplitOnSeqDone)
+                                                      ipv4_X712
+                                                }
+                                            }
+                                            }
+                                            }
+                                            };
+                                          ConcatInner ost_abKn ist_abKo ->
+                                            case ist_abKo of
+                                            { ReadUState dt_dk0d dt1_dk0e dt2_dk0f ->
+                                            case eqAddr# dt2_dk0f dt_dk0d of {
+                                              __DEFAULT ->
+                                                case readWord8OffAddr# dt2_dk0f 0# realWorld# of
+                                                { (# ipv4_aysc, ipv5_aysd #) ->
+                                                case ==# sc4_sEyG y_aqSJ of {
+                                                  __DEFAULT ->
+                                                    jump $s$wgo6_sEzb
+                                                      ipv2_X71Z
+                                                      ost_abKn
+                                                      dt_dk0d
+                                                      dt1_dk0e
+                                                      (plusAddr# dt2_dk0f 1#)
+                                                      (or#
+                                                         (uncheckedShiftL#
+                                                            (or#
+                                                               (uncheckedShiftL# sc2_sEyC 8#)
+                                                               x#_aAcF)
+                                                            8#)
+                                                         ipv5_aysd)
+                                                      (+# sc4_sEyG 1#);
+                                                  1# ->
+                                                    case wordMask_rFKR of { W# y#_ataT ->
+                                                    case wordPat_rFKS of { W# y1_atbu ->
+                                                    let {
+                                                      x#1_ataQ
+                                                        = or#
+                                                            (uncheckedShiftL#
+                                                               (or#
+                                                                  (uncheckedShiftL# sc2_sEyC 8#)
+                                                                  x#_aAcF)
+                                                               8#)
+                                                            ipv5_aysd } in
+                                                    case eqWord# (and# x#1_ataQ y#_ataT) y1_atbu
+                                                    of {
+                                                      __DEFAULT ->
+                                                        jump go1_sCi5
+                                                          SPEC
+                                                          (SplitOnSeqWordLoop
+                                                             (W# x#1_ataQ)
+                                                             (UnfoldJust
+                                                                (ConcatInner
+                                                                   ost_abKn
+                                                                   (ReadUState
+                                                                      dt_dk0d
+                                                                      dt1_dk0e
+                                                                      (plusAddr# dt2_dk0f 1#))))
+                                                             fs_asuF)
+                                                          ipv2_X71Z;
+                                                      1# ->
+                                                        jump go1_sCi5
+                                                          SPEC
+                                                          (SplitOnSeqYield
+                                                             fs_asuF
+                                                             (SplitOnSeqWordInit
+                                                                ()
+                                                                (UnfoldJust
+                                                                   (ConcatInner
+                                                                      ost_abKn
+                                                                      (ReadUState
+                                                                         dt_dk0d
+                                                                         dt1_dk0e
+                                                                         (plusAddr#
+                                                                            dt2_dk0f 1#))))))
+                                                          ipv2_X71Z
+                                                    }
+                                                    }
+                                                    }
+                                                }
+                                                };
+                                              1# ->
+                                                case touch# dt1_dk0e realWorld# of { __DEFAULT ->
+                                                case ost_abKn of { (size_axW3, h_axW4) ->
+                                                case ((readArrayUpto size_axW3 h_axW4)
+                                                      `cast` <Co:3>)
+                                                       ipv2_X71Z
+                                                of
+                                                { (# ipv4_X712, ipv5_X714 #) ->
+                                                case ipv5_X714 of
+                                                { Array dt4_dppf dt5_dppg dt6_dpph ->
+                                                case minusAddr# dt6_dpph dt4_dppf of {
+                                                  __DEFAULT ->
+                                                    jump $s$wgo4_sEza
+                                                      ipv4_X712
+                                                      size_axW3
+                                                      h_axW4
+                                                      dt6_dpph
+                                                      dt5_dppg
+                                                      dt4_dppf
+                                                      (or# (uncheckedShiftL# sc2_sEyC 8#) x#_aAcF)
+                                                      sc4_sEyG;
+                                                  0# ->
+                                                    case sc4_sEyG of wild11_X2v {
+                                                      __DEFAULT ->
+                                                        jump go1_sCi5
+                                                          SPEC
+                                                          (SplitOnSeqWordDone
+                                                             (I# wild11_X2v)
+                                                             fs_asuF
+                                                             (W#
+                                                                (or#
+                                                                   (uncheckedShiftL# sc2_sEyC 8#)
+                                                                   x#_aAcF)))
+                                                          ipv4_X712;
+                                                      0# ->
+                                                        jump go1_sCi5
+                                                          SPEC
+                                                          (SplitOnSeqYield fs_asuF SplitOnSeqDone)
+                                                          ipv4_X712
+                                                    }
+                                                }
+                                                }
+                                                }
+                                                }
+                                                }
+                                            }
+                                            }
+                                        }
+                                    }
+                                    };
+                                  1# -> jump exit_X1X sc2_sEyC ipv2_X71Z x1_asuM s2_asuN
+                                }
+                                };
+                              Skip s2_asuR ->
+                                jump $s$wgo_sEyF ipv2_X71Z s2_asuR sc2_sEyC sc3_sEyB;
+                              Stop -> jump exit1_X1T sc3_sEyB sc2_sEyC ipv2_X71Z
+                            } } in
+                      case sc1_sEyD of {
+                        UnfoldNothing ->
+                          jump $s$wgo_sEyF sc_sEyE lvl59_sDM7 sc2_sEyC sc3_sEyB;
+                        UnfoldJust st1_acba ->
+                          case st1_acba of {
+                            ConcatOuter st2_abKh ->
+                              case st2_abKh of wild_Xv { (size_axW3, h_axW4) ->
+                              case ((readArrayUpto size_axW3 h_axW4) `cast` <Co:3>) sc_sEyE of
+                              { (# ipv2_X712, ipv3_X714 #) ->
+                              case ipv3_X714 of { Array dt_dppf dt1_dppg dt2_dpph ->
+                              case minusAddr# dt2_dpph dt_dppf of {
+                                __DEFAULT ->
+                                  jump $s$wgo_sEyF
+                                    ipv2_X712
+                                    (UnfoldJust
+                                       (ConcatInner wild_Xv (ReadUState dt2_dpph dt1_dppg dt_dppf)))
+                                    sc2_sEyC
+                                    sc3_sEyB;
+                                0# -> jump $j_sB46 ipv2_X712 Stop
+                              }
+                              }
+                              }
+                              };
+                            ConcatInner ost_abKn ist_abKo ->
+                              case ist_abKo of { ReadUState dt_dk0d dt1_dk0e dt2_dk0f ->
+                              case eqAddr# dt2_dk0f dt_dk0d of {
+                                __DEFAULT ->
+                                  case readWord8OffAddr# dt2_dk0f 0# realWorld# of
+                                  { (# ipv2_aysc, ipv3_aysd #) ->
+                                  jump $j_sB46
+                                    sc_sEyE
+                                    (Yield
+                                       (W8# ipv3_aysd)
+                                       (UnfoldJust
+                                          (ConcatInner
+                                             ost_abKn
+                                             (ReadUState
+                                                dt_dk0d dt1_dk0e (plusAddr# dt2_dk0f 1#)))))
+                                  };
+                                1# ->
+                                  case touch# dt1_dk0e realWorld# of { __DEFAULT ->
+                                  jump $s$wgo_sEyF
+                                    sc_sEyE (UnfoldJust (ConcatOuter ost_abKn)) sc2_sEyC sc3_sEyB
+                                  }
+                              }
+                              }
+                          }
+                      }; } in
+                jump $s$wgo_sEyF eta_B1 st0_asuG 0## 0#;
+              SplitOnSeqWordLoop wrd0_asuU st0_asuV fs0_asuW ->
+                case wrd0_asuU of { W# ww1_sDMa ->
+                joinrec {
+                  $s$wgo_sECc sc_sEC0
+                              sc1_sEBV
+                              sc2_sEBW
+                              sc3_sEBX
+                              sc4_sEBY
+                              sc5_sEBZ
+                              sc6_sEBU
+                    = case eqAddr# sc5_sEBZ sc3_sEBX of {
+                        __DEFAULT ->
+                          case readWord8OffAddr# sc5_sEBZ 0# realWorld# of
+                          { (# ipv2_aysc, ipv3_aysd #) ->
+                          case wordMask_rFKR of { W# y#_ataT ->
+                          case wordPat_rFKS of { W# y_atbu ->
+                          let { x#_ataQ = or# (uncheckedShiftL# sc6_sEBU 8#) ipv3_aysd } in
+                          case eqWord# (and# x#_ataQ y#_ataT) y_atbu of {
+                            __DEFAULT ->
+                              joinrec {
+                                $s$wgo2_sECw sc7_sECv sc8_sECt sc9_sECu sc10_sECs
+                                  = case ((readArrayUpto (I# sc8_sECt) sc9_sECu) `cast` <Co:3>)
+                                           sc7_sECv
+                                    of
+                                    { (# ipv4_X712, ipv5_X714 #) ->
+                                    case ipv5_X714 of { Array dt_dppf dt1_dppg dt2_dpph ->
+                                    case minusAddr# dt2_dpph dt_dppf of {
+                                      __DEFAULT ->
+                                        jump $s$wgo3_sECk
+                                          ipv4_X712
+                                          sc8_sECt
+                                          sc9_sECu
+                                          dt2_dpph
+                                          dt1_dppg
+                                          dt_dppf
+                                          sc10_sECs;
+                                      0# ->
+                                        jump go1_sCi5
+                                          SPEC
+                                          (SplitOnSeqWordDone patLen_rFKQ () (W# sc10_sECs))
+                                          ipv4_X712
+                                    }
+                                    }
+                                    };
+                                $s$wgo3_sECk sc7_sECj
+                                             sc8_sECe
+                                             sc9_sECf
+                                             sc10_sECg
+                                             sc11_sECh
+                                             sc12_sECi
+                                             sc13_sECd
+                                  = case eqAddr# sc12_sECi sc10_sECg of {
+                                      __DEFAULT ->
+                                        case readWord8OffAddr# sc12_sECi 0# realWorld# of
+                                        { (# ipv4_Xyy0, ipv5_Xyy2 #) ->
+                                        let {
+                                          x#1_XtmG
+                                            = or# (uncheckedShiftL# sc13_sECd 8#) ipv5_Xyy2 } in
+                                        case eqWord# (and# x#1_XtmG y#_ataT) y_atbu of {
+                                          __DEFAULT ->
+                                            jump $s$wgo3_sECk
+                                              sc7_sECj
+                                              sc8_sECe
+                                              sc9_sECf
+                                              sc10_sECg
+                                              sc11_sECh
+                                              (plusAddr# sc12_sECi 1#)
+                                              x#1_XtmG;
+                                          1# ->
+                                            jump go1_sCi5
+                                              SPEC
+                                              (SplitOnSeqYield
+                                                 ()
+                                                 (SplitOnSeqWordInit
+                                                    ()
+                                                    (UnfoldJust
+                                                       (ConcatInner
+                                                          (I# sc8_sECe, sc9_sECf)
+                                                          (ReadUState
+                                                             sc10_sECg
+                                                             sc11_sECh
+                                                             (plusAddr# sc12_sECi 1#))))))
+                                              sc7_sECj
+                                        }
+                                        };
+                                      1# ->
+                                        case touch# sc11_sECh realWorld# of { __DEFAULT ->
+                                        jump $s$wgo2_sECw sc7_sECj sc8_sECe sc9_sECf sc13_sECd
+                                        }
+                                    }; } in
+                              jump $s$wgo3_sECk
+                                sc_sEC0
+                                sc1_sEBV
+                                sc2_sEBW
+                                sc3_sEBX
+                                sc4_sEBY
+                                (plusAddr# sc5_sEBZ 1#)
+                                x#_ataQ;
+                            1# ->
+                              jump go1_sCi5
+                                SPEC
+                                (SplitOnSeqYield
+                                   ()
+                                   (SplitOnSeqWordInit
+                                      ()
+                                      (UnfoldJust
+                                         (ConcatInner
+                                            (I# sc1_sEBV, sc2_sEBW)
+                                            (ReadUState
+                                               sc3_sEBX sc4_sEBY (plusAddr# sc5_sEBZ 1#))))))
+                                sc_sEC0
+                          }
+                          }
+                          }
+                          };
+                        1# ->
+                          case touch# sc4_sEBY realWorld# of { __DEFAULT ->
+                          jump $s$wgo1_sEBq sc_sEC0 sc1_sEBV sc2_sEBW sc6_sEBU
+                          }
+                      };
+                  $s$wgo1_sEBq sc_sEBf sc1_sEBd sc2_sEBe sc3_sEBc
+                    = case ((readArrayUpto (I# sc1_sEBd) sc2_sEBe) `cast` <Co:3>)
+                             sc_sEBf
+                      of
+                      { (# ipv2_X712, ipv3_X714 #) ->
+                      case ipv3_X714 of { Array dt_dppf dt1_dppg dt2_dpph ->
+                      case minusAddr# dt2_dpph dt_dppf of {
+                        __DEFAULT ->
+                          jump $s$wgo_sECc
+                            ipv2_X712 sc1_sEBd sc2_sEBe dt2_dpph dt1_dppg dt_dppf sc3_sEBc;
+                        0# ->
+                          jump go1_sCi5
+                            SPEC (SplitOnSeqWordDone patLen_rFKQ () (W# sc3_sEBc)) ipv2_X712
+                      }
+                      }
+                      }; } in
+                joinrec {
+                  $s$wgo2_sECE sc_sEC4 sc1_sEC2 sc2_sEC3 sc3_sEC1
+                    = case ((readArrayUpto sc1_sEC2 sc2_sEC3) `cast` <Co:3>) sc_sEC4 of
+                      { (# ipv2_X712, ipv3_X714 #) ->
+                      case ipv3_X714 of { Array dt_dppf dt1_dppg dt2_dpph ->
+                      case minusAddr# dt2_dpph dt_dppf of {
+                        __DEFAULT ->
+                          jump $s$wgo3_sEBr
+                            ipv2_X712 sc1_sEC2 sc2_sEC3 dt2_dpph dt1_dppg dt_dppf sc3_sEC1;
+                        0# ->
+                          jump go1_sCi5
+                            SPEC (SplitOnSeqWordDone patLen_rFKQ () (W# sc3_sEC1)) ipv2_X712
+                      }
+                      }
+                      };
+                  $s$wgo3_sEBr sc_sEBm
+                               sc1_sEBh
+                               sc2_sEBi
+                               sc3_sEBj
+                               sc4_sEBk
+                               sc5_sEBl
+                               sc6_sEBg
+                    = case eqAddr# sc5_sEBl sc3_sEBj of {
+                        __DEFAULT ->
+                          case readWord8OffAddr# sc5_sEBl 0# realWorld# of
+                          { (# ipv2_aysc, ipv3_aysd #) ->
+                          case wordMask_rFKR of { W# y#_ataT ->
+                          case wordPat_rFKS of { W# y_atbu ->
+                          let { x#_ataQ = or# (uncheckedShiftL# sc6_sEBg 8#) ipv3_aysd } in
+                          case eqWord# (and# x#_ataQ y#_ataT) y_atbu of {
+                            __DEFAULT ->
+                              joinrec {
+                                $s$wgo4_sEBL sc7_sEBK sc8_sEBI sc9_sEBJ sc10_sEBH
+                                  = case ((readArrayUpto sc8_sEBI sc9_sEBJ) `cast` <Co:3>) sc7_sEBK
+                                    of
+                                    { (# ipv4_X712, ipv5_X714 #) ->
+                                    case ipv5_X714 of { Array dt_dppf dt1_dppg dt2_dpph ->
+                                    case minusAddr# dt2_dpph dt_dppf of {
+                                      __DEFAULT ->
+                                        jump $s$wgo5_sEBz
+                                          ipv4_X712
+                                          sc8_sEBI
+                                          sc9_sEBJ
+                                          dt2_dpph
+                                          dt1_dppg
+                                          dt_dppf
+                                          sc10_sEBH;
+                                      0# ->
+                                        jump go1_sCi5
+                                          SPEC
+                                          (SplitOnSeqWordDone patLen_rFKQ () (W# sc10_sEBH))
+                                          ipv4_X712
+                                    }
+                                    }
+                                    };
+                                $s$wgo5_sEBz sc7_sEBy
+                                             sc8_sEBt
+                                             sc9_sEBu
+                                             sc10_sEBv
+                                             sc11_sEBw
+                                             sc12_sEBx
+                                             sc13_sEBs
+                                  = case eqAddr# sc12_sEBx sc10_sEBv of {
+                                      __DEFAULT ->
+                                        case readWord8OffAddr# sc12_sEBx 0# realWorld# of
+                                        { (# ipv4_Xyy0, ipv5_Xyy2 #) ->
+                                        let {
+                                          x#1_XtmG
+                                            = or# (uncheckedShiftL# sc13_sEBs 8#) ipv5_Xyy2 } in
+                                        case eqWord# (and# x#1_XtmG y#_ataT) y_atbu of {
+                                          __DEFAULT ->
+                                            jump $s$wgo5_sEBz
+                                              sc7_sEBy
+                                              sc8_sEBt
+                                              sc9_sEBu
+                                              sc10_sEBv
+                                              sc11_sEBw
+                                              (plusAddr# sc12_sEBx 1#)
+                                              x#1_XtmG;
+                                          1# ->
+                                            jump go1_sCi5
+                                              SPEC
+                                              (SplitOnSeqYield
+                                                 ()
+                                                 (SplitOnSeqWordInit
+                                                    ()
+                                                    (UnfoldJust
+                                                       (ConcatInner
+                                                          (sc8_sEBt, sc9_sEBu)
+                                                          (ReadUState
+                                                             sc10_sEBv
+                                                             sc11_sEBw
+                                                             (plusAddr# sc12_sEBx 1#))))))
+                                              sc7_sEBy
+                                        }
+                                        };
+                                      1# ->
+                                        case touch# sc11_sEBw realWorld# of { __DEFAULT ->
+                                        jump $s$wgo4_sEBL sc7_sEBy sc8_sEBt sc9_sEBu sc13_sEBs
+                                        }
+                                    }; } in
+                              jump $s$wgo5_sEBz
+                                sc_sEBm
+                                sc1_sEBh
+                                sc2_sEBi
+                                sc3_sEBj
+                                sc4_sEBk
+                                (plusAddr# sc5_sEBl 1#)
+                                x#_ataQ;
+                            1# ->
+                              jump go1_sCi5
+                                SPEC
+                                (SplitOnSeqYield
+                                   ()
+                                   (SplitOnSeqWordInit
+                                      ()
+                                      (UnfoldJust
+                                         (ConcatInner
+                                            (sc1_sEBh, sc2_sEBi)
+                                            (ReadUState
+                                               sc3_sEBj sc4_sEBk (plusAddr# sc5_sEBl 1#))))))
+                                sc_sEBm
+                          }
+                          }
+                          }
+                          };
+                        1# ->
+                          case touch# sc4_sEBk realWorld# of { __DEFAULT ->
+                          jump $s$wgo2_sECE sc_sEBm sc1_sEBh sc2_sEBi sc6_sEBg
+                          }
+                      }; } in
+                case st0_asuV of {
+                  UnfoldNothing ->
+                    jump $s$wgo1_sEBq eta_B1 32752# ipv1_a6WU ww1_sDMa;
+                  UnfoldJust st1_acba ->
+                    case st1_acba of {
+                      ConcatOuter st2_abKh ->
+                        case st2_abKh of { (size_axW3, h_axW4) ->
+                        case ((readArrayUpto size_axW3 h_axW4) `cast` <Co:3>) eta_B1 of
+                        { (# ipv2_X712, ipv3_X714 #) ->
+                        case ipv3_X714 of { Array dt_dppf dt1_dppg dt2_dpph ->
+                        case minusAddr# dt2_dpph dt_dppf of {
+                          __DEFAULT ->
+                            jump $s$wgo3_sEBr
+                              ipv2_X712 size_axW3 h_axW4 dt2_dpph dt1_dppg dt_dppf ww1_sDMa;
+                          0# ->
+                            jump go1_sCi5
+                              SPEC (SplitOnSeqWordDone patLen_rFKQ () (W# ww1_sDMa)) ipv2_X712
+                        }
+                        }
+                        }
+                        };
+                      ConcatInner ost_abKn ist_abKo ->
+                        case ist_abKo of { ReadUState dt_dk0d dt1_dk0e dt2_dk0f ->
+                        case eqAddr# dt2_dk0f dt_dk0d of {
+                          __DEFAULT ->
+                            case readWord8OffAddr# dt2_dk0f 0# realWorld# of
+                            { (# ipv2_aysc, ipv3_aysd #) ->
+                            case wordMask_rFKR of { W# y#_ataT ->
+                            case wordPat_rFKS of { W# y_atbu ->
+                            let { x#_ataQ = or# (uncheckedShiftL# ww1_sDMa 8#) ipv3_aysd } in
+                            case eqWord# (and# x#_ataQ y#_ataT) y_atbu of {
+                              __DEFAULT ->
+                                joinrec {
+                                  $s$wgo4_sEBb sc_sEBa
+                                               sc1_sEB5
+                                               sc2_sEB6
+                                               sc3_sEB7
+                                               sc4_sEB8
+                                               sc5_sEB9
+                                               sc6_sEB4
+                                    = case eqAddr# sc5_sEB9 sc3_sEB7 of {
+                                        __DEFAULT ->
+                                          case readWord8OffAddr# sc5_sEB9 0# realWorld# of
+                                          { (# ipv4_Xyy0, ipv5_Xyy2 #) ->
+                                          let {
+                                            x#1_XtmG
+                                              = or# (uncheckedShiftL# sc6_sEB4 8#) ipv5_Xyy2 } in
+                                          case eqWord# (and# x#1_XtmG y#_ataT) y_atbu of {
+                                            __DEFAULT ->
+                                              jump $s$wgo4_sEBb
+                                                sc_sEBa
+                                                sc1_sEB5
+                                                sc2_sEB6
+                                                sc3_sEB7
+                                                sc4_sEB8
+                                                (plusAddr# sc5_sEB9 1#)
+                                                x#1_XtmG;
+                                            1# ->
+                                              jump go1_sCi5
+                                                SPEC
+                                                (SplitOnSeqYield
+                                                   ()
+                                                   (SplitOnSeqWordInit
+                                                      ()
+                                                      (UnfoldJust
+                                                         (ConcatInner
+                                                            (sc1_sEB5, sc2_sEB6)
+                                                            (ReadUState
+                                                               sc3_sEB7
+                                                               sc4_sEB8
+                                                               (plusAddr# sc5_sEB9 1#))))))
+                                                sc_sEBa
+                                          }
+                                          };
+                                        1# ->
+                                          case touch# sc4_sEB8 realWorld# of { __DEFAULT ->
+                                          case ((readArrayUpto sc1_sEB5 sc2_sEB6) `cast` <Co:3>)
+                                                 sc_sEBa
+                                          of
+                                          { (# ipv4_X712, ipv5_X714 #) ->
+                                          case ipv5_X714 of { Array dt4_dppf dt5_dppg dt6_dpph ->
+                                          case minusAddr# dt6_dpph dt4_dppf of {
+                                            __DEFAULT ->
+                                              jump $s$wgo4_sEBb
+                                                ipv4_X712
+                                                sc1_sEB5
+                                                sc2_sEB6
+                                                dt6_dpph
+                                                dt5_dppg
+                                                dt4_dppf
+                                                sc6_sEB4;
+                                            0# ->
+                                              jump go1_sCi5
+                                                SPEC
+                                                (SplitOnSeqWordDone patLen_rFKQ () (W# sc6_sEB4))
+                                                ipv4_X712
+                                          }
+                                          }
+                                          }
+                                          }
+                                      }; } in
+                                join {
+                                  $s$wgo5_sEB3 sc_sEB2 sc1_sEB1 sc2_sEB0
+                                    = case sc1_sEB1 of { (size_axW3, h_axW4) ->
+                                      case ((readArrayUpto size_axW3 h_axW4) `cast` <Co:3>) sc_sEB2
+                                      of
+                                      { (# ipv4_X712, ipv5_X714 #) ->
+                                      case ipv5_X714 of { Array dt4_dppf dt5_dppg dt6_dpph ->
+                                      case minusAddr# dt6_dpph dt4_dppf of {
+                                        __DEFAULT ->
+                                          jump $s$wgo4_sEBb
+                                            ipv4_X712
+                                            size_axW3
+                                            h_axW4
+                                            dt6_dpph
+                                            dt5_dppg
+                                            dt4_dppf
+                                            sc2_sEB0;
+                                        0# ->
+                                          jump go1_sCi5
+                                            SPEC
+                                            (SplitOnSeqWordDone patLen_rFKQ () (W# sc2_sEB0))
+                                            ipv4_X712
+                                      }
+                                      }
+                                      }
+                                      } } in
+                                joinrec {
+                                  $s$wgo6_sEAT sc_sEAS sc1_sEAO sc2_sEAP sc3_sEAQ sc4_sEAR sc5_sEAN
+                                    = case eqAddr# sc4_sEAR sc2_sEAP of {
+                                        __DEFAULT ->
+                                          case readWord8OffAddr# sc4_sEAR 0# realWorld# of
+                                          { (# ipv4_Xyy0, ipv5_Xyy2 #) ->
+                                          let {
+                                            x#1_XtmG
+                                              = or# (uncheckedShiftL# sc5_sEAN 8#) ipv5_Xyy2 } in
+                                          case eqWord# (and# x#1_XtmG y#_ataT) y_atbu of {
+                                            __DEFAULT ->
+                                              jump $s$wgo6_sEAT
+                                                sc_sEAS
+                                                sc1_sEAO
+                                                sc2_sEAP
+                                                sc3_sEAQ
+                                                (plusAddr# sc4_sEAR 1#)
+                                                x#1_XtmG;
+                                            1# ->
+                                              jump go1_sCi5
+                                                SPEC
+                                                (SplitOnSeqYield
+                                                   ()
+                                                   (SplitOnSeqWordInit
+                                                      ()
+                                                      (UnfoldJust
+                                                         (ConcatInner
+                                                            sc1_sEAO
+                                                            (ReadUState
+                                                               sc2_sEAP
+                                                               sc3_sEAQ
+                                                               (plusAddr# sc4_sEAR 1#))))))
+                                                sc_sEAS
+                                          }
+                                          };
+                                        1# ->
+                                          case touch# sc3_sEAQ realWorld# of { __DEFAULT ->
+                                          jump $s$wgo5_sEB3 sc_sEAS sc1_sEAO sc5_sEAN
+                                          }
+                                      }; } in
+                                jump $s$wgo6_sEAT
+                                  eta_B1 ost_abKn dt_dk0d dt1_dk0e (plusAddr# dt2_dk0f 1#) x#_ataQ;
+                              1# ->
+                                jump go1_sCi5
+                                  SPEC
+                                  (SplitOnSeqYield
+                                     ()
+                                     (SplitOnSeqWordInit
+                                        ()
+                                        (UnfoldJust
+                                           (ConcatInner
+                                              ost_abKn
+                                              (ReadUState
+                                                 dt_dk0d dt1_dk0e (plusAddr# dt2_dk0f 1#))))))
+                                  eta_B1
+                            }
+                            }
+                            }
+                            };
+                          1# ->
+                            case touch# dt1_dk0e realWorld# of { __DEFAULT ->
+                            case ost_abKn of { (size_axW3, h_axW4) ->
+                            case ((readArrayUpto size_axW3 h_axW4) `cast` <Co:3>) eta_B1 of
+                            { (# ipv2_X712, ipv3_X714 #) ->
+                            case ipv3_X714 of { Array dt4_dppf dt5_dppg dt6_dpph ->
+                            case minusAddr# dt6_dpph dt4_dppf of {
+                              __DEFAULT ->
+                                jump $s$wgo3_sEBr
+                                  ipv2_X712 size_axW3 h_axW4 dt6_dpph dt5_dppg dt4_dppf ww1_sDMa;
+                              0# ->
+                                jump go1_sCi5
+                                  SPEC (SplitOnSeqWordDone patLen_rFKQ () (W# ww1_sDMa)) ipv2_X712
+                            }
+                            }
+                            }
+                            }
+                            }
+                        }
+                        }
+                    }
+                }
+                };
+              SplitOnSeqWordDone ds4_dt4z fs_asut ds5_dt4A ->
+                case ds4_dt4z of { I# ds6_dt4B ->
+                case ds6_dt4B of ds7_Xt4Q {
+                  __DEFAULT ->
+                    jump go1_sCi5
+                      SPEC (SplitOnSeqWordDone (I# (-# ds7_Xt4Q 1#)) () ds5_dt4A) eta_B1;
+                  0# ->
+                    jump go1_sCi5 SPEC (SplitOnSeqYield fs_asut SplitOnSeqDone) eta_B1
+                }
+                };
+              SplitOnSeqReinit nextGen_asus ->
+                jump go1_sCi5 SPEC (nextGen_asus ()) eta_B1
+            }
+            }; } in
+      jump $sgo4_sEDv ipv_a6WT
+      }
+
+-- RHS size: {terms: 1, types: 0, coercions: 3, joins: 0/0}
+main = main1 `cast` <Co:3>
+
+-- RHS size: {terms: 2, types: 1, coercions: 3, joins: 0/0}
+main2 = runMainIO1 (main1 `cast` <Co:3>)
+
+-- RHS size: {terms: 1, types: 0, coercions: 3, joins: 0/0}
+main = main2 `cast` <Co:3>
+
+
+------ Local rules for imported ids --------
+"SPEC/Main fromList @ Word8"
+    forall $dStorable_szWr. fromList $dStorable_szWr = $sfromList1
+

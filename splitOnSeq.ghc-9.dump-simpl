@@ -1,0 +1,2464 @@
+
+==================== Tidy Core ====================
+
+Result size of Tidy Core
+  = {terms: 3,479, types: 4,461, coercions: 133, joins: 40/111}
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+$trModule2 = "Main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+$trModule1 = TrNameS $trModule2
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+$trModule4 = "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+$trModule3 = TrNameS $trModule4
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+$trModule = Module $trModule3 $trModule1
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl3_rpSN = unpackCString# $trModule4
+
+-- RHS size: {terms: 2, types: 4, coercions: 0, joins: 0/0}
+lvl20_rpT4 = State False
+
+Rec {
+-- RHS size: {terms: 29, types: 19, coercions: 3, joins: 0/0}
+$wgo1
+  = \ w_spBX ww_spC5 @r_spBZ w1_spC2 ->
+      (w_spBX `cast` <Co:3>)
+        lvl20_rpT4
+        (\ a1_iioM x_iioN ->
+           case a1_iioM of { I# y_iioP ->
+           $wgo1 x_iioN (+# ww_spC5 y_iioP) w1_spC2
+           })
+        (\ a1_iioT ->
+           w1_spC2 (case a1_iioT of { I# y_iioV -> I# (+# ww_spC5 y_iioV) }))
+        (w1_spC2 (I# ww_spC5))
+end Rec }
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+lvl21_rpT5 = "undefined"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl22_rpT6 = unpackCString# lvl21_rpT5
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+lvl23_rpT7 = "StreamK"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl24_rpT8 = unpackCString# lvl23_rpT7
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+lvl25_rpT9 = "./StreamK.hs"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl26_rpTa = unpackCString# lvl25_rpT9
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl27_rpTb = I# 818#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl28_rpTc = I# 30#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl29_rpTd = I# 39#
+
+-- RHS size: {terms: 8, types: 0, coercions: 0, joins: 0/0}
+lvl30_rpTe
+  = SrcLoc
+      lvl3_rpSN
+      lvl24_rpT8
+      lvl26_rpTa
+      lvl27_rpTb
+      lvl28_rpTc
+      lvl27_rpTb
+      lvl29_rpTd
+
+-- RHS size: {terms: 4, types: 0, coercions: 0, joins: 0/0}
+lvl31_rpTf = PushCallStack lvl22_rpT6 lvl30_rpTe EmptyCallStack
+
+-- RHS size: {terms: 2, types: 7, coercions: 4, joins: 0/0}
+$sfromList8 = undefined (lvl31_rpTf `cast` <Co:4>)
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl32_rpTg = I# 40#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl33_rpTh = I# 49#
+
+-- RHS size: {terms: 8, types: 0, coercions: 0, joins: 0/0}
+lvl34_rpTi
+  = SrcLoc
+      lvl3_rpSN
+      lvl24_rpT8
+      lvl26_rpTa
+      lvl27_rpTb
+      lvl32_rpTg
+      lvl27_rpTb
+      lvl33_rpTh
+
+-- RHS size: {terms: 4, types: 0, coercions: 0, joins: 0/0}
+lvl35_rpTj = PushCallStack lvl22_rpT6 lvl34_rpTi EmptyCallStack
+
+-- RHS size: {terms: 2, types: 7, coercions: 4, joins: 0/0}
+$sfromList7 = undefined (lvl35_rpTj `cast` <Co:4>)
+
+-- RHS size: {terms: 5, types: 10, coercions: 0, joins: 0/0}
+$sfromList6 = \ x_iip7 s1_iip8 -> (# s1_iip8, x_iip7 #)
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl36_rpTk = I# 57#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl37_rpTl = I# 66#
+
+-- RHS size: {terms: 8, types: 0, coercions: 0, joins: 0/0}
+lvl38_rpTm
+  = SrcLoc
+      lvl3_rpSN
+      lvl24_rpT8
+      lvl26_rpTa
+      lvl27_rpTb
+      lvl36_rpTk
+      lvl27_rpTb
+      lvl37_rpTl
+
+-- RHS size: {terms: 4, types: 0, coercions: 0, joins: 0/0}
+lvl39_rpTn = PushCallStack lvl22_rpT6 lvl38_rpTm EmptyCallStack
+
+-- RHS size: {terms: 2, types: 3, coercions: 4, joins: 0/0}
+$sfromList5 = undefined (lvl39_rpTn `cast` <Co:4>)
+
+-- RHS size: {terms: 8, types: 8, coercions: 0, joins: 0/0}
+lvl40_rpTo
+  = \ arr_iilE ->
+      case arr_iilE of { Array dt_iilH dt1_iilI dt2_iilJ dt3_iilK ->
+      I# (minusAddr# dt2_iilJ dt_iilH)
+      }
+
+-- RHS size: {terms: 6, types: 21, coercions: 0, joins: 0/0}
+$sfromList3 = \ @r_ibBk _ _ _ stp_ibBo -> stp_ibBo
+
+Rec {
+-- RHS size: {terms: 45, types: 77, coercions: 5, joins: 0/3}
+$sgo_rpTp
+  = \ sc_spQL sc1_spQM sc2_spQN sc3_spQO sc4_spQP eta2_B0 ->
+      case newAlignedPinnedByteArray# 32752# 1# eta2_B0 of
+      { (# ipv_ipka, ipv1_ipkb #) ->
+      let { ipv2_ipk9 = mutableByteArrayContents# ipv1_ipkb } in
+      case $sfromList_$sgo
+             sc4_spQP
+             ipv2_ipk9
+             ipv1_ipkb
+             ipv2_ipk9
+             (plusAddr# ipv2_ipk9 32752#)
+             ipv_ipka
+      of
+      { (# ipv4_ag8Z, ipv3_ag90 #) ->
+      let { x_spRG = PlainPtr sc1_spQM } in
+      let { x1_igdp = Array sc_spQL x_spRG sc2_spQN sc3_spQO } in
+      (# ipv4_ag8Z,
+         (\ @r1_ifFw _ yld_ifFy _ _ -> yld_ifFy x1_igdp ipv3_ag90)
+         `cast` <Co:5> #)
+      }
+      }
+
+-- RHS size: {terms: 50, types: 21, coercions: 0, joins: 0/1}
+$sfromList_$sgo
+  = \ sc_spQu sc1_spQv sc2_spQw sc3_spQx sc4_spQy eta2_B0 ->
+      case sc_spQu of {
+        [] -> $sgo2_rpTr sc1_spQv sc2_spQw sc3_spQx sc4_spQy eta2_B0;
+        : x_igdP xs_igdQ ->
+          case x_igdP of { W8# x1_anY7 ->
+          case writeWord8OffAddr# sc3_spQx 0# x1_anY7 eta2_B0 of s2_anY9
+          { __DEFAULT ->
+          let { end'_spwp = plusAddr# sc3_spQx 1# } in
+          case ltAddr# end'_spwp sc4_spQy of {
+            __DEFAULT ->
+              $sgo_rpTp sc1_spQv sc2_spQw end'_spwp sc4_spQy xs_igdQ s2_anY9;
+            1# ->
+              $sfromList_$sgo
+                xs_igdQ sc1_spQv sc2_spQw end'_spwp sc4_spQy s2_anY9
+          }
+          }
+          }
+      }
+
+-- RHS size: {terms: 20, types: 20, coercions: 0, joins: 0/1}
+$sgo1_rpTq
+  = \ sc_spQr eta2_B0 ->
+      case newAlignedPinnedByteArray# 32752# 1# eta2_B0 of
+      { (# ipv_ipka, ipv1_ipkb #) ->
+      let { ipv2_ipk9 = mutableByteArrayContents# ipv1_ipkb } in
+      $sfromList_$sgo
+        sc_spQr
+        ipv2_ipk9
+        ipv1_ipkb
+        ipv2_ipk9
+        (plusAddr# ipv2_ipk9 32752#)
+        ipv_ipka
+      }
+
+-- RHS size: {terms: 30, types: 67, coercions: 5, joins: 0/2}
+$sgo2_rpTr
+  = \ sc_spQG sc1_spQH sc2_spQI sc3_spQJ eta2_B0 ->
+      case go_rpTs SPEC GroupFinish eta2_B0 of
+      { (# ipv2_ag8Z, ipv3_ag90 #) ->
+      let { x_spRH = PlainPtr sc1_spQH } in
+      let { x1_igdp = Array sc_spQG x_spRH sc2_spQI sc3_spQJ } in
+      (# ipv2_ag8Z,
+         (\ @r1_ifFw _ yld_ifFy _ _ -> yld_ifFy x1_igdp ipv3_ag90)
+         `cast` <Co:5> #)
+      }
+
+-- RHS size: {terms: 121, types: 194, coercions: 10, joins: 0/3}
+go_rpTs
+  = \ ds1_igdk st_igdl eta2_B0 ->
+      case ds1_igdk of { __DEFAULT ->
+      case st_igdl of {
+        GroupStart st1_ipjg ->
+          case newAlignedPinnedByteArray# 32752# 1# eta2_B0 of
+          { (# ipv_ipka, ipv1_ipkb #) ->
+          let { ipv2_ipk9 = mutableByteArrayContents# ipv1_ipkb } in
+          $sfromList_$sgo
+            st1_ipjg
+            ipv2_ipk9
+            ipv1_ipkb
+            ipv2_ipk9
+            (plusAddr# ipv2_ipk9 32752#)
+            ipv_ipka
+          };
+        GroupBuffer st1_ipkk start_ipkl end_ipkm bound_ipkn ->
+          case st1_ipkk of {
+            [] ->
+              go_rpTs
+                SPEC
+                (GroupYield start_ipkl end_ipkm bound_ipkn GroupFinish)
+                eta2_B0;
+            : x_igdP xs_igdQ ->
+              case end_ipkm of { Ptr a_anY4 ->
+              case x_igdP of { W8# x1_anY7 ->
+              case writeWord8OffAddr# a_anY4 0# x1_anY7 eta2_B0 of s2_anY9
+              { __DEFAULT ->
+              case bound_ipkn of wild4_ipkH { Ptr b1_ipkI ->
+              let { end'_spwp = plusAddr# a_anY4 1# } in
+              case ltAddr# end'_spwp b1_ipkI of {
+                __DEFAULT ->
+                  go_rpTs
+                    SPEC
+                    (GroupYield
+                       start_ipkl (Ptr end'_spwp) wild4_ipkH (GroupStart xs_igdQ))
+                    s2_anY9;
+                1# ->
+                  go_rpTs
+                    SPEC
+                    (GroupBuffer xs_igdQ start_ipkl (Ptr end'_spwp) wild4_ipkH)
+                    s2_anY9
+              }
+              }
+              }
+              }
+              }
+          };
+        GroupYield start_ipkO end_ipkP bound_ipkQ next_ipkR ->
+          case go_rpTs SPEC next_ipkR eta2_B0 of
+          { (# ipv2_ag8Z, ipv3_ag90 #) ->
+          let {
+            x_igdp
+              = case start_ipkO of { ForeignPtr dt1_iijc dt2_iijd ->
+                case end_ipkP of { Ptr dt4_iije ->
+                case bound_ipkQ of { Ptr dt6_iijf ->
+                Array dt1_iijc dt2_iijd dt4_iije dt6_iijf
+                }
+                }
+                } } in
+          (# ipv2_ag8Z,
+             (\ @r1_ifFw _ yld_ifFy _ _ -> yld_ifFy x_igdp ipv3_ag90)
+             `cast` <Co:5> #)
+          };
+        GroupFinish -> (# eta2_B0, $sfromList3 `cast` <Co:5> #)
+      }
+      }
+end Rec }
+
+-- RHS size: {terms: 6, types: 17, coercions: 0, joins: 0/0}
+eta1_rpTt = \ @r_ig5Q _ _ _ stp_ig5U -> stp_ig5U
+
+-- RHS size: {terms: 2, types: 5, coercions: 0, joins: 0/0}
+lvl41_rpTu = State False
+
+Rec {
+-- RHS size: {terms: 31, types: 51, coercions: 12, joins: 0/0}
+$wgo
+  = \ w_spCC @r_spCD w1_spCE w2_spCF w3_spCH ->
+      (w_spCC `cast` <Co:4>)
+        (case w1_spCE of { State ds_igda -> lvl41_rpTu })
+        (\ a1_ig6b x_ig6c ->
+           w2_spCF
+             (lvl40_rpTo a1_ig6b)
+             ((\ @r1_X1F w4_X1G w5_X1H _ w7_X1I ->
+                 $wgo x_ig6c w4_X1G w5_X1H w7_X1I)
+              `cast` <Co:4>))
+        (\ a1_ig6g ->
+           w2_spCF (lvl40_rpTo a1_ig6g) (eta1_rpTt `cast` <Co:4>))
+        w3_spCH
+end Rec }
+
+-- RHS size: {terms: 8, types: 27, coercions: 0, joins: 0/0}
+$sfromList4
+  = \ a1_ifGD x_ifGE s_afMI -> (# s_afMI, Yield a1_ifGD x_ifGE #)
+
+-- RHS size: {terms: 7, types: 23, coercions: 5, joins: 0/0}
+$sfromList2
+  = \ a1_ifGF s_afMI ->
+      (# s_afMI, Yield a1_ifGF ($sfromList3 `cast` <Co:5>) #)
+
+-- RHS size: {terms: 4, types: 21, coercions: 0, joins: 0/0}
+$sfromList1 = \ s_afMI -> (# s_afMI, Stop #)
+
+-- RHS size: {terms: 206, types: 258, coercions: 72, joins: 5/7}
+$sfromList
+  = \ xs_iioe ->
+      runRW#
+        (\ s_iiof ->
+           case noDuplicate# s_iiof of s'_iiog { __DEFAULT ->
+           case newAlignedPinnedByteArray# 32752# 1# s'_iiog of
+           { (# ipv_ipka, ipv1_ipkb #) ->
+           let { ipv2_ipk9 = mutableByteArrayContents# ipv1_ipkb } in
+           case $sfromList_$sgo
+                  xs_iioe
+                  ipv2_ipk9
+                  ipv1_ipkb
+                  ipv2_ipk9
+                  (plusAddr# ipv2_ipk9 32752#)
+                  ipv_ipka
+           of
+           { (# ipv4_iion, ipv5_iioo #) ->
+           join {
+             get1_spcv m1_iioY
+               = case (((m1_iioY `cast` <Co:3>)
+                          $sfromList8 $sfromList7 ($sfromList6 `cast` <Co:6>) $sfromList5)
+                       `cast` <Co:2>)
+                        ipv4_iion
+                 of
+                 { (# ipv6_iipg, ipv3_iiph #) ->
+                 case ipv3_iiph of { I# x_ipd8 ->
+                 case <# x_ipd8 0# of {
+                   __DEFAULT ->
+                     case newAlignedPinnedByteArray# x_ipd8 1# ipv6_iipg of
+                     { (# ipv7_ipdk, ipv8_ipdl #) ->
+                     let { ipv9_ipdj = mutableByteArrayContents# ipv8_ipdl } in
+                     join {
+                       exit_X1E ww_spCp
+                         = lazy
+                             (Array
+                                ipv9_ipdj
+                                (PlainPtr ipv8_ipdl)
+                                ww_spCp
+                                (plusAddr# ipv9_ipdj x_ipd8)) } in
+                     join {
+                       exit1_X1F ww_spCp
+                         = lazy
+                             (Array
+                                ipv9_ipdj
+                                (PlainPtr ipv8_ipdl)
+                                ww_spCp
+                                (plusAddr# ipv9_ipdj x_ipd8)) } in
+                     joinrec {
+                       $s$wgo1_spPY sc_spPT
+                                    sc1_spPS
+                                    sc2_spPO
+                                    sc3_spPP
+                                    sc4_spPQ
+                                    sc5_spPR
+                                    sc6_spPN
+                         = case <# sc1_spPS x_ipd8 of {
+                             __DEFAULT -> jump exit_X1E sc6_spPN;
+                             1# ->
+                               case eqAddr# sc5_spPR sc3_spPP of {
+                                 __DEFAULT ->
+                                   case readWord8OffAddr# sc5_spPR 0# realWorld# of
+                                   { (# ipv10_anZp, ipv11_anZq #) ->
+                                   case writeWord8OffAddr# sc6_spPN 0# ipv11_anZq sc_spPT of s2_anY9
+                                   { __DEFAULT ->
+                                   jump $s$wgo1_spPY
+                                     s2_anY9
+                                     (+# sc1_spPS 1#)
+                                     sc2_spPO
+                                     sc3_spPP
+                                     sc4_spPQ
+                                     (plusAddr# sc5_spPR 1#)
+                                     (plusAddr# sc6_spPN 1#)
+                                   }
+                                   };
+                                 1# ->
+                                   case touch# sc4_spPQ realWorld# of { __DEFAULT ->
+                                   jump $s$wgo2_spPM sc_spPT sc1_spPS sc2_spPO sc6_spPN
+                                   }
+                               }
+                           };
+                       $s$wgo2_spPM sc_spPL sc1_spPK sc2_spPJ sc3_spPI
+                         = case <# sc1_spPK x_ipd8 of {
+                             __DEFAULT -> jump exit_X1E sc3_spPI;
+                             1# ->
+                               case (((sc2_spPJ `cast` <Co:4>)
+                                        adaptState1
+                                        ($sfromList4 `cast` <Co:19>)
+                                        ($sfromList2 `cast` <Co:13>)
+                                        ($sfromList1 `cast` <Co:9>))
+                                     `cast` <Co:8>)
+                                      sc_spPL
+                               of
+                               { (# ipv10_a6bc, ipv11_a6bd #) ->
+                               case ipv11_a6bd of {
+                                 Yield a2_igcF o'_igcG ->
+                                   case a2_igcF of { Array dt_iimJ dt1_iimK dt2_iimL dt3_iimM ->
+                                   jump $s$wgo1_spPY
+                                     ipv10_a6bc sc1_spPK o'_igcG dt2_iimL dt1_iimK dt_iimJ sc3_spPI
+                                   };
+                                 Skip o'_igcK ->
+                                   jump $s$wgo2_spPM ipv10_a6bc sc1_spPK o'_igcK sc3_spPI;
+                                 Stop -> jump exit1_X1F sc3_spPI
+                               }
+                               }
+                           }; } in
+                     jump $s$wgo2_spPM ipv7_ipdk 0# ipv5_iioo ipv9_ipdj
+                     };
+                   1# -> case mallocPlainForeignPtrAlignedBytes2 of wild1_00 { }
+                 }
+                 }
+                 } } in
+           jump get1_spcv
+             ((\ @r_spBZ _ _ w2_spC2 _ ->
+                 $wgo1
+                   ((\ @r1_spCD w4_spCE w5_spCF _ w7_spCH ->
+                       $wgo ipv5_iioo w4_spCE w5_spCF w7_spCH)
+                    `cast` <Co:4>)
+                   0#
+                   w2_spC2)
+              `cast` <Co:4>)
+           }
+           }
+           })
+
+Rec {
+-- RHS size: {terms: 20, types: 5, coercions: 0, joins: 0/0}
+go1_rpTv
+  = \ addr_d2f5 z_d2f6 ->
+      case indexCharOffAddr# addr_d2f5 0# of ch_d2f7 {
+        __DEFAULT ->
+          : (W8# (wordToWord8# (int2Word# (ord# ch_d2f7))))
+            (go1_rpTv (plusAddr# addr_d2f5 1#) z_d2f6);
+        '\NUL'# -> z_d2f6
+      }
+end Rec }
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+lvl42_rpTw = "aa"#
+
+-- RHS size: {terms: 3, types: 1, coercions: 0, joins: 0/0}
+lvl43_rpTx = go1_rpTv lvl42_rpTw []
+
+-- RHS size: {terms: 8, types: 7, coercions: 0, joins: 0/0}
+eta_rpTy
+  = case $sfromList lvl43_rpTx of
+    { Array dt_ioEj dt1_ioEk dt2_ioEl dt3_ioEm ->
+    Array dt_ioEj dt1_ioEk dt2_ioEl
+    }
+
+-- RHS size: {terms: 7, types: 5, coercions: 0, joins: 0/0}
+patLen_rpTz
+  = case eta_rpTy of { Array dt_ioUc dt1_ioUd dt2_ioUe ->
+    I# (minusAddr# dt2_ioUe dt_ioUc)
+    }
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl44_rpTA = W# 18446744073709551615##
+
+-- RHS size: {terms: 28, types: 7, coercions: 0, joins: 0/1}
+wordMask_rpTB
+  = case patLen_rpTz of { I# y_ioUy ->
+    let { i#_ioUx = *# 8# y_ioUy } in
+    case >=# i#_ioUx 0# of {
+      __DEFAULT -> case overflowError of wild_00 { };
+      1# ->
+        case >=# i#_ioUx 64# of {
+          __DEFAULT -> W# (minusWord# (uncheckedShiftL# 1## i#_ioUx) 1##);
+          1# -> lvl44_rpTA
+        }
+    }
+    }
+
+-- RHS size: {terms: 49, types: 30, coercions: 0, joins: 1/1}
+wordPat_rpTC
+  = case wordMask_rpTB of { W# x#_ioUH ->
+    case eta_rpTy of { Array dt_ioVa dt1_ioVb dt2_ioVc ->
+    joinrec {
+      $s$wgo1_spPA sc_spPz sc1_spPy
+        = case eqAddr# sc_spPz dt2_ioVc of {
+            __DEFAULT ->
+              case readWord8OffAddr# sc_spPz 0# realWorld# of
+              { (# ipv_anZp, ipv1_anZq #) ->
+              case touch# dt1_ioVb ipv_anZp of { __DEFAULT ->
+              case integerToWord# (IS (word2Int# (word8ToWord# ipv1_anZq)))
+              of wild6_ioUU
+              { __DEFAULT ->
+              jump $s$wgo1_spPA
+                (plusAddr# sc_spPz 1#)
+                (or# (uncheckedShiftL# sc1_spPy 8#) wild6_ioUU)
+              }
+              }
+              };
+            1# -> W# (and# x#_ioUH sc1_spPy)
+          }; } in
+    jump $s$wgo1_spPA dt_ioVa 0##
+    }
+    }
+
+-- RHS size: {terms: 7, types: 2, coercions: 0, joins: 0/0}
+maxIndex_rpTD
+  = case patLen_rpTz of { I# x_ioUq -> I# (-# x_ioUq 1#) }
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+lvl45_rpTE = "input.txt"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl46_rpTF = unpackCString# lvl45_rpTE
+
+-- RHS size: {terms: 2,631,
+              types: 3,205,
+              coercions: 0,
+              joins: 34/92}
+main1
+  = \ s_a6ba ->
+      case openFile1 lvl46_rpTF ReadMode s_a6ba of
+      { (# ipv_a6bc, ipv1_a6bd #) ->
+      joinrec {
+        $sgo3_spLA sc_spLz = jump $sgo7_spLC sc_spLz;
+        $sgo4_spNj sc_spNc = jump go2_spBg SPEC SplitOnSeqDone sc_spNc;
+        go2_spBg ds2_ilbh st_ilbi eta2_B0
+          = case ds2_ilbh of { __DEFAULT ->
+            case st_ilbi of {
+              SplitOnSeqInit -> jump $sgo7_spLC eta2_B0;
+              SplitOnSeqYield x1_ip7f next_ip7g ->
+                jump go2_spBg SPEC next_ip7g eta2_B0;
+              SplitOnSeqDone -> (# eta2_B0, () #);
+              SplitOnSeqWordInit fs_ip7o st0_ip7p ->
+                join {
+                  $sexit_spJa sc_spIT sc1_spIS sc2_spIR sc3_spIQ
+                    = case integerToWord# (IS (word2Int# (word8ToWord# sc1_spIS)))
+                      of wild6_ip7O
+                      { __DEFAULT ->
+                      case wordMask_rpTB of { W# y#_ip81 ->
+                      case wordPat_rpTC of { W# y1_ip84 ->
+                      let { x#_ip7Y = or# (uncheckedShiftL# sc3_spIQ 8#) wild6_ip7O } in
+                      case eqWord# (and# x#_ip7Y y#_ip81) y1_ip84 of {
+                        __DEFAULT ->
+                          jump go2_spBg
+                            SPEC (SplitOnSeqWordLoop (W# x#_ip7Y) sc_spIT fs_ip7o) sc2_spIR;
+                        1# ->
+                          jump go2_spBg
+                            SPEC
+                            (SplitOnSeqYield fs_ip7o (SplitOnSeqWordInit () sc_spIT))
+                            sc2_spIR
+                      }
+                      }
+                      }
+                      } } in
+                join {
+                  exit_X1J ww_spDc ww1_spDf ipv2_X1G
+                    = case ww_spDc of wild4_ip8b {
+                        __DEFAULT ->
+                          jump go2_spBg
+                            SPEC
+                            (SplitOnSeqWordDone (I# wild4_ip8b) fs_ip7o (W# ww1_spDf))
+                            ipv2_X1G;
+                        0# ->
+                          jump go2_spBg
+                            SPEC (SplitOnSeqYield fs_ip7o SplitOnSeqDone) ipv2_X1G
+                      } } in
+                joinrec {
+                  $s$wgo_spHI sc_spHv sc1_spHt sc2_spHu sc3_spHs sc4_spHr
+                    = case $wreadArrayUpto sc1_spHt sc2_spHu sc_spHv of
+                      { (# ipv2_X1H, ipv3_X1K #) ->
+                      case ipv3_X1K of { Array dt_ip6m dt1_ip6n dt2_ip6o ->
+                      let { x_ip6l = minusAddr# dt2_ip6o dt_ip6m } in
+                      let { c0#_ip6q = andI# (<# x_ip6l 0#) -1# } in
+                      case -# (+# x_ip6l c0#_ip6q) c0#_ip6q of {
+                        __DEFAULT ->
+                          jump $s$wgo1_spHJ
+                            ipv2_X1H
+                            sc1_spHt
+                            sc2_spHu
+                            dt2_ip6o
+                            dt1_ip6n
+                            dt_ip6m
+                            sc3_spHs
+                            sc4_spHr;
+                        0# -> jump exit_X1J sc4_spHr sc3_spHs ipv2_X1H
+                      }
+                      }
+                      };
+                  $s$wgo1_spHJ sc_spHD
+                               sc1_spHy
+                               sc2_spHz
+                               sc3_spHA
+                               sc4_spHB
+                               sc5_spHC
+                               sc6_spHx
+                               sc7_spHw
+                    = case eqAddr# sc5_spHC sc3_spHA of {
+                        __DEFAULT ->
+                          case readWord8OffAddr# sc5_spHC 0# realWorld# of
+                          { (# ipv2_anZp, ipv3_anZq #) ->
+                          case maxIndex_rpTD of { I# y_ip7U ->
+                          case ==# sc7_spHw y_ip7U of {
+                            __DEFAULT ->
+                              case integerToWord# (IS (word2Int# (word8ToWord# ipv3_anZq)))
+                              of wild6_ip7O
+                              { __DEFAULT ->
+                              joinrec {
+                                $s$wgo2_spI6 sc8_spI5 sc9_spI3 sc10_spI4 sc11_spI2 sc12_spI1
+                                  = case $wreadArrayUpto sc9_spI3 sc10_spI4 sc8_spI5 of
+                                    { (# ipv4_X1H, ipv5_X1U #) ->
+                                    case ipv5_X1U of { Array dt_ip6m dt1_ip6n dt2_ip6o ->
+                                    let { x_ip6l = minusAddr# dt2_ip6o dt_ip6m } in
+                                    let { c0#_ip6q = andI# (<# x_ip6l 0#) -1# } in
+                                    case -# (+# x_ip6l c0#_ip6q) c0#_ip6q of {
+                                      __DEFAULT ->
+                                        jump $s$wgo3_spHS
+                                          ipv4_X1H
+                                          sc9_spI3
+                                          sc10_spI4
+                                          dt2_ip6o
+                                          dt1_ip6n
+                                          dt_ip6m
+                                          sc11_spI2
+                                          sc12_spI1;
+                                      0# -> jump exit_X1J sc12_spI1 sc11_spI2 ipv4_X1H
+                                    }
+                                    }
+                                    };
+                                $s$wgo3_spHS sc8_spHR
+                                             sc9_spHM
+                                             sc10_spHN
+                                             sc11_spHO
+                                             sc12_spHP
+                                             sc13_spHQ
+                                             sc14_spHL
+                                             sc15_spHK
+                                  = case eqAddr# sc13_spHQ sc11_spHO of {
+                                      __DEFAULT ->
+                                        case readWord8OffAddr# sc13_spHQ 0# realWorld# of
+                                        { (# ipv4_X22, ipv5_X23 #) ->
+                                        case ==# sc15_spHK y_ip7U of {
+                                          __DEFAULT ->
+                                            case integerToWord#
+                                                   (IS (word2Int# (word8ToWord# ipv5_X23)))
+                                            of wild1_X26
+                                            { __DEFAULT ->
+                                            jump $s$wgo3_spHS
+                                              sc8_spHR
+                                              sc9_spHM
+                                              sc10_spHN
+                                              sc11_spHO
+                                              sc12_spHP
+                                              (plusAddr# sc13_spHQ 1#)
+                                              (or# (uncheckedShiftL# sc14_spHL 8#) wild1_X26)
+                                              (+# sc15_spHK 1#)
+                                            };
+                                          1# ->
+                                            jump $sexit_spJa
+                                              (UnfoldJust
+                                                 (ConcatInner
+                                                    (I# sc9_spHM, sc10_spHN)
+                                                    (ReadUState
+                                                       sc11_spHO
+                                                       sc12_spHP
+                                                       (plusAddr# sc13_spHQ 1#))))
+                                              ipv5_X23
+                                              sc8_spHR
+                                              sc14_spHL
+                                        }
+                                        };
+                                      1# ->
+                                        case touch# sc12_spHP realWorld# of { __DEFAULT ->
+                                        jump $s$wgo2_spI6
+                                          sc8_spHR sc9_spHM sc10_spHN sc14_spHL sc15_spHK
+                                        }
+                                    }; } in
+                              jump $s$wgo3_spHS
+                                sc_spHD
+                                sc1_spHy
+                                sc2_spHz
+                                sc3_spHA
+                                sc4_spHB
+                                (plusAddr# sc5_spHC 1#)
+                                (or# (uncheckedShiftL# sc6_spHx 8#) wild6_ip7O)
+                                (+# sc7_spHw 1#)
+                              };
+                            1# ->
+                              case integerToWord# (IS (word2Int# (word8ToWord# ipv3_anZq)))
+                              of wild6_ip7O
+                              { __DEFAULT ->
+                              case wordMask_rpTB of { W# y#_ip81 ->
+                              case wordPat_rpTC of { W# y1_ip84 ->
+                              let { x#_ip7Y = or# (uncheckedShiftL# sc6_spHx 8#) wild6_ip7O } in
+                              case eqWord# (and# x#_ip7Y y#_ip81) y1_ip84 of {
+                                __DEFAULT ->
+                                  jump go2_spBg
+                                    SPEC
+                                    (SplitOnSeqWordLoop
+                                       (W# x#_ip7Y)
+                                       (UnfoldJust
+                                          (ConcatInner
+                                             (I# sc1_spHy, sc2_spHz)
+                                             (ReadUState
+                                                sc3_spHA sc4_spHB (plusAddr# sc5_spHC 1#))))
+                                       fs_ip7o)
+                                    sc_spHD;
+                                1# ->
+                                  jump go2_spBg
+                                    SPEC
+                                    (SplitOnSeqYield
+                                       fs_ip7o
+                                       (SplitOnSeqWordInit
+                                          ()
+                                          (UnfoldJust
+                                             (ConcatInner
+                                                (I# sc1_spHy, sc2_spHz)
+                                                (ReadUState
+                                                   sc3_spHA sc4_spHB (plusAddr# sc5_spHC 1#))))))
+                                    sc_spHD
+                              }
+                              }
+                              }
+                              }
+                          }
+                          }
+                          };
+                        1# ->
+                          case touch# sc4_spHB realWorld# of { __DEFAULT ->
+                          jump $s$wgo_spHI sc_spHD sc1_spHy sc2_spHz sc6_spHx sc7_spHw
+                          }
+                      }; } in
+                case st0_ip7p of {
+                  UnfoldNothing ->
+                    case $wreadArrayUpto 32752# ipv1_a6bd eta2_B0 of
+                    { (# ipv2_X1H, ipv3_X1K #) ->
+                    case ipv3_X1K of { Array dt_ip6m dt1_ip6n dt2_ip6o ->
+                    let { x_ip6l = minusAddr# dt2_ip6o dt_ip6m } in
+                    let { c0#_ip6q = andI# (<# x_ip6l 0#) -1# } in
+                    case -# (+# x_ip6l c0#_ip6q) c0#_ip6q of {
+                      __DEFAULT ->
+                        jump $s$wgo1_spHJ
+                          ipv2_X1H 32752# ipv1_a6bd dt2_ip6o dt1_ip6n dt_ip6m 0## 0#;
+                      0# ->
+                        jump go2_spBg
+                          SPEC (SplitOnSeqYield fs_ip7o SplitOnSeqDone) ipv2_X1H
+                    }
+                    }
+                    };
+                  UnfoldJust st1_ilkN ->
+                    case st1_ilkN of {
+                      ConcatOuter st2_inYo ->
+                        case st2_inYo of { (size_ip6g, h_ip6h) ->
+                        case size_ip6g of { I# ww_iplQ ->
+                        case $wreadArrayUpto ww_iplQ h_ip6h eta2_B0 of
+                        { (# ipv2_X1H, ipv3_X1K #) ->
+                        case ipv3_X1K of { Array dt_ip6m dt1_ip6n dt2_ip6o ->
+                        let { x_ip6l = minusAddr# dt2_ip6o dt_ip6m } in
+                        let { c0#_ip6q = andI# (<# x_ip6l 0#) -1# } in
+                        case -# (+# x_ip6l c0#_ip6q) c0#_ip6q of {
+                          __DEFAULT ->
+                            jump $s$wgo1_spHJ
+                              ipv2_X1H ww_iplQ h_ip6h dt2_ip6o dt1_ip6n dt_ip6m 0## 0#;
+                          0# ->
+                            jump go2_spBg
+                              SPEC (SplitOnSeqYield fs_ip7o SplitOnSeqDone) ipv2_X1H
+                        }
+                        }
+                        }
+                        }
+                        };
+                      ConcatInner ost_inYz ist_inYA ->
+                        case ist_inYA of { ReadUState dt_inZ5 dt1_inZ6 dt2_inZ7 ->
+                        case eqAddr# dt2_inZ7 dt_inZ5 of {
+                          __DEFAULT ->
+                            case readWord8OffAddr# dt2_inZ7 0# realWorld# of
+                            { (# ipv2_anZp, ipv3_anZq #) ->
+                            case maxIndex_rpTD of { I# y_ip7U ->
+                            case y_ip7U of wild6_X1K {
+                              __DEFAULT ->
+                                case integerToWord# (IS (word2Int# (word8ToWord# ipv3_anZq)))
+                                of wild7_ip7O
+                                { __DEFAULT ->
+                                joinrec {
+                                  $s$wgo2_spHq sc_spHp
+                                               sc1_spHk
+                                               sc2_spHl
+                                               sc3_spHm
+                                               sc4_spHn
+                                               sc5_spHo
+                                               sc6_spHj
+                                               sc7_spHi
+                                    = case eqAddr# sc5_spHo sc3_spHm of {
+                                        __DEFAULT ->
+                                          case readWord8OffAddr# sc5_spHo 0# realWorld# of
+                                          { (# ipv4_X22, ipv5_X23 #) ->
+                                          case ==# sc7_spHi wild6_X1K of {
+                                            __DEFAULT ->
+                                              case integerToWord#
+                                                     (IS (word2Int# (word8ToWord# ipv5_X23)))
+                                              of wild8_X26
+                                              { __DEFAULT ->
+                                              jump $s$wgo2_spHq
+                                                sc_spHp
+                                                sc1_spHk
+                                                sc2_spHl
+                                                sc3_spHm
+                                                sc4_spHn
+                                                (plusAddr# sc5_spHo 1#)
+                                                (or# (uncheckedShiftL# sc6_spHj 8#) wild8_X26)
+                                                (+# sc7_spHi 1#)
+                                              };
+                                            1# ->
+                                              jump $sexit_spJa
+                                                (UnfoldJust
+                                                   (ConcatInner
+                                                      (I# sc1_spHk, sc2_spHl)
+                                                      (ReadUState
+                                                         sc3_spHm
+                                                         sc4_spHn
+                                                         (plusAddr# sc5_spHo 1#))))
+                                                ipv5_X23
+                                                sc_spHp
+                                                sc6_spHj
+                                          }
+                                          };
+                                        1# ->
+                                          case touch# sc4_spHn realWorld# of { __DEFAULT ->
+                                          case $wreadArrayUpto sc1_spHk sc2_spHl sc_spHp of
+                                          { (# ipv4_X1H, ipv5_X1U #) ->
+                                          case ipv5_X1U of { Array dt4_ip6m dt5_ip6n dt6_ip6o ->
+                                          let { x_ip6l = minusAddr# dt6_ip6o dt4_ip6m } in
+                                          let { c0#_ip6q = andI# (<# x_ip6l 0#) -1# } in
+                                          case -# (+# x_ip6l c0#_ip6q) c0#_ip6q of {
+                                            __DEFAULT ->
+                                              jump $s$wgo2_spHq
+                                                ipv4_X1H
+                                                sc1_spHk
+                                                sc2_spHl
+                                                dt6_ip6o
+                                                dt5_ip6n
+                                                dt4_ip6m
+                                                sc6_spHj
+                                                sc7_spHi;
+                                            0# -> jump exit_X1J sc7_spHi sc6_spHj ipv4_X1H
+                                          }
+                                          }
+                                          }
+                                          }
+                                      }; } in
+                                join {
+                                  $s$wgo3_spHh sc_spHg sc1_spHf sc2_spHe sc3_spHd
+                                    = case sc1_spHf of { (size_ip6g, h_ip6h) ->
+                                      case size_ip6g of { I# ww_iplQ ->
+                                      case $wreadArrayUpto ww_iplQ h_ip6h sc_spHg of
+                                      { (# ipv4_X1H, ipv5_X1U #) ->
+                                      case ipv5_X1U of { Array dt4_ip6m dt5_ip6n dt6_ip6o ->
+                                      let { x_ip6l = minusAddr# dt6_ip6o dt4_ip6m } in
+                                      let { c0#_ip6q = andI# (<# x_ip6l 0#) -1# } in
+                                      case -# (+# x_ip6l c0#_ip6q) c0#_ip6q of {
+                                        __DEFAULT ->
+                                          jump $s$wgo2_spHq
+                                            ipv4_X1H
+                                            ww_iplQ
+                                            h_ip6h
+                                            dt6_ip6o
+                                            dt5_ip6n
+                                            dt4_ip6m
+                                            sc2_spHe
+                                            sc3_spHd;
+                                        0# -> jump exit_X1J sc3_spHd sc2_spHe ipv4_X1H
+                                      }
+                                      }
+                                      }
+                                      }
+                                      } } in
+                                joinrec {
+                                  $s$wgo4_spH5 sc_spH4
+                                               sc1_spH0
+                                               sc2_spH1
+                                               sc3_spH2
+                                               sc4_spH3
+                                               sc5_spGZ
+                                               sc6_spGY
+                                    = case eqAddr# sc4_spH3 sc2_spH1 of {
+                                        __DEFAULT ->
+                                          case readWord8OffAddr# sc4_spH3 0# realWorld# of
+                                          { (# ipv4_X22, ipv5_X23 #) ->
+                                          case ==# sc6_spGY wild6_X1K of {
+                                            __DEFAULT ->
+                                              case integerToWord#
+                                                     (IS (word2Int# (word8ToWord# ipv5_X23)))
+                                              of wild8_X26
+                                              { __DEFAULT ->
+                                              jump $s$wgo4_spH5
+                                                sc_spH4
+                                                sc1_spH0
+                                                sc2_spH1
+                                                sc3_spH2
+                                                (plusAddr# sc4_spH3 1#)
+                                                (or# (uncheckedShiftL# sc5_spGZ 8#) wild8_X26)
+                                                (+# sc6_spGY 1#)
+                                              };
+                                            1# ->
+                                              jump $sexit_spJa
+                                                (UnfoldJust
+                                                   (ConcatInner
+                                                      sc1_spH0
+                                                      (ReadUState
+                                                         sc2_spH1
+                                                         sc3_spH2
+                                                         (plusAddr# sc4_spH3 1#))))
+                                                ipv5_X23
+                                                sc_spH4
+                                                sc5_spGZ
+                                          }
+                                          };
+                                        1# ->
+                                          case touch# sc3_spH2 realWorld# of { __DEFAULT ->
+                                          jump $s$wgo3_spHh sc_spH4 sc1_spH0 sc5_spGZ sc6_spGY
+                                          }
+                                      }; } in
+                                jump $s$wgo4_spH5
+                                  eta2_B0
+                                  ost_inYz
+                                  dt_inZ5
+                                  dt1_inZ6
+                                  (plusAddr# dt2_inZ7 1#)
+                                  wild7_ip7O
+                                  1#
+                                };
+                              0# ->
+                                jump $sexit_spJa
+                                  (UnfoldJust
+                                     (ConcatInner
+                                        ost_inYz
+                                        (ReadUState dt_inZ5 dt1_inZ6 (plusAddr# dt2_inZ7 1#))))
+                                  ipv3_anZq
+                                  eta2_B0
+                                  0##
+                            }
+                            }
+                            };
+                          1# ->
+                            case touch# dt1_inZ6 realWorld# of { __DEFAULT ->
+                            case ost_inYz of { (size_ip6g, h_ip6h) ->
+                            case size_ip6g of { I# ww_iplQ ->
+                            case $wreadArrayUpto ww_iplQ h_ip6h eta2_B0 of
+                            { (# ipv2_X1H, ipv3_X1K #) ->
+                            case ipv3_X1K of { Array dt4_ip6m dt5_ip6n dt6_ip6o ->
+                            let { x_ip6l = minusAddr# dt6_ip6o dt4_ip6m } in
+                            let { c0#_ip6q = andI# (<# x_ip6l 0#) -1# } in
+                            case -# (+# x_ip6l c0#_ip6q) c0#_ip6q of {
+                              __DEFAULT ->
+                                jump $s$wgo1_spHJ
+                                  ipv2_X1H ww_iplQ h_ip6h dt6_ip6o dt5_ip6n dt4_ip6m 0## 0#;
+                              0# ->
+                                jump go2_spBg
+                                  SPEC (SplitOnSeqYield fs_ip7o SplitOnSeqDone) ipv2_X1H
+                            }
+                            }
+                            }
+                            }
+                            }
+                            }
+                        }
+                        }
+                    }
+                };
+              SplitOnSeqWordLoop wrd0_ip8i st0_ip8j fs0_ip8k ->
+                case wrd0_ip8i of wild_spFh { W# ww_spFi ->
+                joinrec {
+                  $s$wgo_spKt sc_spKi sc1_spKg sc2_spKh sc3_spKf
+                    = case $wreadArrayUpto sc1_spKg sc2_spKh sc_spKi of
+                      { (# ipv2_X1H, ipv3_X1K #) ->
+                      case ipv3_X1K of { Array dt_ip6m dt1_ip6n dt2_ip6o ->
+                      let { x_ip6l = minusAddr# dt2_ip6o dt_ip6m } in
+                      let { c0#_ip6q = andI# (<# x_ip6l 0#) -1# } in
+                      case -# (+# x_ip6l c0#_ip6q) c0#_ip6q of {
+                        __DEFAULT ->
+                          jump $s$wgo1_spKu
+                            ipv2_X1H sc1_spKg sc2_spKh dt2_ip6o dt1_ip6n dt_ip6m sc3_spKf;
+                        0# ->
+                          jump go2_spBg
+                            SPEC (SplitOnSeqWordDone patLen_rpTz () (W# sc3_spKf)) ipv2_X1H
+                      }
+                      }
+                      };
+                  $s$wgo1_spKu sc_spKp
+                               sc1_spKk
+                               sc2_spKl
+                               sc3_spKm
+                               sc4_spKn
+                               sc5_spKo
+                               sc6_spKj
+                    = case eqAddr# sc5_spKo sc3_spKm of {
+                        __DEFAULT ->
+                          case readWord8OffAddr# sc5_spKo 0# realWorld# of
+                          { (# ipv2_anZp, ipv3_anZq #) ->
+                          case integerToWord# (IS (word2Int# (word8ToWord# ipv3_anZq)))
+                          of wild6_ip8H
+                          { __DEFAULT ->
+                          case wordMask_rpTB of { W# y#_ip9u ->
+                          case wordPat_rpTC of { W# y_ip9x ->
+                          let { x#_ip9r = or# (uncheckedShiftL# sc6_spKj 8#) wild6_ip8H } in
+                          case eqWord# (and# x#_ip9r y#_ip9u) y_ip9x of {
+                            __DEFAULT ->
+                              joinrec {
+                                $s$wgo2_spKO sc7_spKN sc8_spKL sc9_spKM sc10_spKK
+                                  = case $wreadArrayUpto sc8_spKL sc9_spKM sc7_spKN of
+                                    { (# ipv4_X1H, ipv5_X1T #) ->
+                                    case ipv5_X1T of { Array dt_ip6m dt1_ip6n dt2_ip6o ->
+                                    let { x_ip6l = minusAddr# dt2_ip6o dt_ip6m } in
+                                    let { c0#_ip6q = andI# (<# x_ip6l 0#) -1# } in
+                                    case -# (+# x_ip6l c0#_ip6q) c0#_ip6q of {
+                                      __DEFAULT ->
+                                        jump $s$wgo3_spKC
+                                          ipv4_X1H
+                                          sc8_spKL
+                                          sc9_spKM
+                                          dt2_ip6o
+                                          dt1_ip6n
+                                          dt_ip6m
+                                          sc10_spKK;
+                                      0# ->
+                                        jump go2_spBg
+                                          SPEC
+                                          (SplitOnSeqWordDone patLen_rpTz () (W# sc10_spKK))
+                                          ipv4_X1H
+                                    }
+                                    }
+                                    };
+                                $s$wgo3_spKC sc7_spKB
+                                             sc8_spKw
+                                             sc9_spKx
+                                             sc10_spKy
+                                             sc11_spKz
+                                             sc12_spKA
+                                             sc13_spKv
+                                  = case eqAddr# sc12_spKA sc10_spKy of {
+                                      __DEFAULT ->
+                                        case readWord8OffAddr# sc12_spKA 0# realWorld# of
+                                        { (# ipv4_X21, ipv5_X22 #) ->
+                                        case integerToWord# (IS (word2Int# (word8ToWord# ipv5_X22)))
+                                        of wild3_X23
+                                        { __DEFAULT ->
+                                        let {
+                                          x#1_X26
+                                            = or# (uncheckedShiftL# sc13_spKv 8#) wild3_X23 } in
+                                        case eqWord# (and# x#1_X26 y#_ip9u) y_ip9x of {
+                                          __DEFAULT ->
+                                            jump $s$wgo3_spKC
+                                              sc7_spKB
+                                              sc8_spKw
+                                              sc9_spKx
+                                              sc10_spKy
+                                              sc11_spKz
+                                              (plusAddr# sc12_spKA 1#)
+                                              x#1_X26;
+                                          1# ->
+                                            jump $sgo6_spPx
+                                              sc7_spKB
+                                              (UnfoldJust
+                                                 (ConcatInner
+                                                    (I# sc8_spKw, sc9_spKx)
+                                                    (ReadUState
+                                                       sc10_spKy
+                                                       sc11_spKz
+                                                       (plusAddr# sc12_spKA 1#))))
+                                        }
+                                        }
+                                        };
+                                      1# ->
+                                        case touch# sc11_spKz realWorld# of { __DEFAULT ->
+                                        jump $s$wgo2_spKO sc7_spKB sc8_spKw sc9_spKx sc13_spKv
+                                        }
+                                    }; } in
+                              jump $s$wgo3_spKC
+                                sc_spKp
+                                sc1_spKk
+                                sc2_spKl
+                                sc3_spKm
+                                sc4_spKn
+                                (plusAddr# sc5_spKo 1#)
+                                x#_ip9r;
+                            1# ->
+                              jump $sgo6_spPx
+                                sc_spKp
+                                (UnfoldJust
+                                   (ConcatInner
+                                      (I# sc1_spKk, sc2_spKl)
+                                      (ReadUState sc3_spKm sc4_spKn (plusAddr# sc5_spKo 1#))))
+                          }
+                          }
+                          }
+                          }
+                          };
+                        1# ->
+                          case touch# sc4_spKn realWorld# of { __DEFAULT ->
+                          jump $s$wgo_spKt sc_spKp sc1_spKk sc2_spKl sc6_spKj
+                          }
+                      }; } in
+                case st0_ip8j of {
+                  UnfoldNothing ->
+                    case $wreadArrayUpto 32752# ipv1_a6bd eta2_B0 of
+                    { (# ipv2_X1H, ipv3_X1K #) ->
+                    case ipv3_X1K of { Array dt_ip6m dt1_ip6n dt2_ip6o ->
+                    let { x_ip6l = minusAddr# dt2_ip6o dt_ip6m } in
+                    let { c0#_ip6q = andI# (<# x_ip6l 0#) -1# } in
+                    case -# (+# x_ip6l c0#_ip6q) c0#_ip6q of {
+                      __DEFAULT ->
+                        jump $s$wgo1_spKu
+                          ipv2_X1H 32752# ipv1_a6bd dt2_ip6o dt1_ip6n dt_ip6m ww_spFi;
+                      0# ->
+                        jump go2_spBg
+                          SPEC (SplitOnSeqWordDone patLen_rpTz () wild_spFh) ipv2_X1H
+                    }
+                    }
+                    };
+                  UnfoldJust st1_ilkN ->
+                    case st1_ilkN of {
+                      ConcatOuter st2_inYo ->
+                        case st2_inYo of { (size_ip6g, h_ip6h) ->
+                        case size_ip6g of { I# ww1_iplQ ->
+                        case $wreadArrayUpto ww1_iplQ h_ip6h eta2_B0 of
+                        { (# ipv2_X1H, ipv3_X1K #) ->
+                        case ipv3_X1K of { Array dt_ip6m dt1_ip6n dt2_ip6o ->
+                        let { x_ip6l = minusAddr# dt2_ip6o dt_ip6m } in
+                        let { c0#_ip6q = andI# (<# x_ip6l 0#) -1# } in
+                        case -# (+# x_ip6l c0#_ip6q) c0#_ip6q of {
+                          __DEFAULT ->
+                            jump $s$wgo1_spKu
+                              ipv2_X1H ww1_iplQ h_ip6h dt2_ip6o dt1_ip6n dt_ip6m ww_spFi;
+                          0# ->
+                            jump go2_spBg
+                              SPEC (SplitOnSeqWordDone patLen_rpTz () wild_spFh) ipv2_X1H
+                        }
+                        }
+                        }
+                        }
+                        };
+                      ConcatInner ost_inYz ist_inYA ->
+                        case ist_inYA of { ReadUState dt_inZ5 dt1_inZ6 dt2_inZ7 ->
+                        case eqAddr# dt2_inZ7 dt_inZ5 of {
+                          __DEFAULT ->
+                            case readWord8OffAddr# dt2_inZ7 0# realWorld# of
+                            { (# ipv2_anZp, ipv3_anZq #) ->
+                            case integerToWord# (IS (word2Int# (word8ToWord# ipv3_anZq)))
+                            of wild6_ip8H
+                            { __DEFAULT ->
+                            case wordMask_rpTB of { W# y#_ip9u ->
+                            case wordPat_rpTC of { W# y_ip9x ->
+                            let { x#_ip9r = or# (uncheckedShiftL# ww_spFi 8#) wild6_ip8H } in
+                            case eqWord# (and# x#_ip9r y#_ip9u) y_ip9x of {
+                              __DEFAULT ->
+                                joinrec {
+                                  $s$wgo2_spK6 sc_spK5 sc1_spK4 sc2_spK3
+                                    = case sc1_spK4 of { (size_ip6g, h_ip6h) ->
+                                      case size_ip6g of { I# ww1_iplQ ->
+                                      case $wreadArrayUpto ww1_iplQ h_ip6h sc_spK5 of
+                                      { (# ipv4_X1H, ipv5_X1T #) ->
+                                      case ipv5_X1T of { Array dt4_ip6m dt5_ip6n dt6_ip6o ->
+                                      let { x_ip6l = minusAddr# dt6_ip6o dt4_ip6m } in
+                                      let { c0#_ip6q = andI# (<# x_ip6l 0#) -1# } in
+                                      case -# (+# x_ip6l c0#_ip6q) c0#_ip6q of {
+                                        __DEFAULT ->
+                                          jump $s$wgo3_spKe
+                                            ipv4_X1H
+                                            ww1_iplQ
+                                            h_ip6h
+                                            dt6_ip6o
+                                            dt5_ip6n
+                                            dt4_ip6m
+                                            sc2_spK3;
+                                        0# ->
+                                          jump go2_spBg
+                                            SPEC
+                                            (SplitOnSeqWordDone patLen_rpTz () (W# sc2_spK3))
+                                            ipv4_X1H
+                                      }
+                                      }
+                                      }
+                                      }
+                                      };
+                                  $s$wgo3_spKe sc_spKd
+                                               sc1_spK8
+                                               sc2_spK9
+                                               sc3_spKa
+                                               sc4_spKb
+                                               sc5_spKc
+                                               sc6_spK7
+                                    = case eqAddr# sc5_spKc sc3_spKa of {
+                                        __DEFAULT ->
+                                          case readWord8OffAddr# sc5_spKc 0# realWorld# of
+                                          { (# ipv4_X21, ipv5_X22 #) ->
+                                          case integerToWord#
+                                                 (IS (word2Int# (word8ToWord# ipv5_X22)))
+                                          of wild9_X23
+                                          { __DEFAULT ->
+                                          let {
+                                            x#1_X26
+                                              = or# (uncheckedShiftL# sc6_spK7 8#) wild9_X23 } in
+                                          case eqWord# (and# x#1_X26 y#_ip9u) y_ip9x of {
+                                            __DEFAULT ->
+                                              jump $s$wgo3_spKe
+                                                sc_spKd
+                                                sc1_spK8
+                                                sc2_spK9
+                                                sc3_spKa
+                                                sc4_spKb
+                                                (plusAddr# sc5_spKc 1#)
+                                                x#1_X26;
+                                            1# ->
+                                              jump $sgo6_spPx
+                                                sc_spKd
+                                                (UnfoldJust
+                                                   (ConcatInner
+                                                      (I# sc1_spK8, sc2_spK9)
+                                                      (ReadUState
+                                                         sc3_spKa
+                                                         sc4_spKb
+                                                         (plusAddr# sc5_spKc 1#))))
+                                          }
+                                          }
+                                          };
+                                        1# ->
+                                          case touch# sc4_spKb realWorld# of { __DEFAULT ->
+                                          jump $s$wgo2_spK6 sc_spKd (I# sc1_spK8, sc2_spK9) sc6_spK7
+                                          }
+                                      }; } in
+                                joinrec {
+                                  $s$wgo4_spJW sc_spJV sc1_spJR sc2_spJS sc3_spJT sc4_spJU sc5_spJQ
+                                    = case eqAddr# sc4_spJU sc2_spJS of {
+                                        __DEFAULT ->
+                                          case readWord8OffAddr# sc4_spJU 0# realWorld# of
+                                          { (# ipv4_X21, ipv5_X22 #) ->
+                                          case integerToWord#
+                                                 (IS (word2Int# (word8ToWord# ipv5_X22)))
+                                          of wild9_X23
+                                          { __DEFAULT ->
+                                          let {
+                                            x#1_X26
+                                              = or# (uncheckedShiftL# sc5_spJQ 8#) wild9_X23 } in
+                                          case eqWord# (and# x#1_X26 y#_ip9u) y_ip9x of {
+                                            __DEFAULT ->
+                                              jump $s$wgo4_spJW
+                                                sc_spJV
+                                                sc1_spJR
+                                                sc2_spJS
+                                                sc3_spJT
+                                                (plusAddr# sc4_spJU 1#)
+                                                x#1_X26;
+                                            1# ->
+                                              jump $sgo6_spPx
+                                                sc_spJV
+                                                (UnfoldJust
+                                                   (ConcatInner
+                                                      sc1_spJR
+                                                      (ReadUState
+                                                         sc2_spJS
+                                                         sc3_spJT
+                                                         (plusAddr# sc4_spJU 1#))))
+                                          }
+                                          }
+                                          };
+                                        1# ->
+                                          case touch# sc3_spJT realWorld# of { __DEFAULT ->
+                                          jump $s$wgo2_spK6 sc_spJV sc1_spJR sc5_spJQ
+                                          }
+                                      }; } in
+                                jump $s$wgo4_spJW
+                                  eta2_B0 ost_inYz dt_inZ5 dt1_inZ6 (plusAddr# dt2_inZ7 1#) x#_ip9r;
+                              1# ->
+                                jump $sgo6_spPx
+                                  eta2_B0
+                                  (UnfoldJust
+                                     (ConcatInner
+                                        ost_inYz
+                                        (ReadUState dt_inZ5 dt1_inZ6 (plusAddr# dt2_inZ7 1#))))
+                            }
+                            }
+                            }
+                            }
+                            };
+                          1# ->
+                            case touch# dt1_inZ6 realWorld# of { __DEFAULT ->
+                            case ost_inYz of { (size_ip6g, h_ip6h) ->
+                            case size_ip6g of { I# ww1_iplQ ->
+                            case $wreadArrayUpto ww1_iplQ h_ip6h eta2_B0 of
+                            { (# ipv2_X1H, ipv3_X1K #) ->
+                            case ipv3_X1K of { Array dt4_ip6m dt5_ip6n dt6_ip6o ->
+                            let { x_ip6l = minusAddr# dt6_ip6o dt4_ip6m } in
+                            let { c0#_ip6q = andI# (<# x_ip6l 0#) -1# } in
+                            case -# (+# x_ip6l c0#_ip6q) c0#_ip6q of {
+                              __DEFAULT ->
+                                jump $s$wgo1_spKu
+                                  ipv2_X1H ww1_iplQ h_ip6h dt6_ip6o dt5_ip6n dt4_ip6m ww_spFi;
+                              0# ->
+                                jump go2_spBg
+                                  SPEC (SplitOnSeqWordDone patLen_rpTz () wild_spFh) ipv2_X1H
+                            }
+                            }
+                            }
+                            }
+                            }
+                            }
+                        }
+                        }
+                    }
+                }
+                };
+              SplitOnSeqWordDone ds4_ip9L fs_ip9M ds5_ip9N ->
+                case ds4_ip9L of { I# ds6_ip9Q ->
+                case ds6_ip9Q of ds7_ip9S {
+                  __DEFAULT ->
+                    jump go2_spBg
+                      SPEC
+                      (SplitOnSeqWordDone (I# (-# ds7_ip9S 1#)) () ds5_ip9N)
+                      eta2_B0;
+                  0# ->
+                    jump go2_spBg SPEC (SplitOnSeqYield fs_ip9M SplitOnSeqDone) eta2_B0
+                }
+                };
+              SplitOnSeqReinit nextGen_ipal ->
+                jump go2_spBg SPEC (nextGen_ipal ()) eta2_B0
+            }
+            };
+        $sgo5_spNk sc_spNf sc1_spNd sc2_spNe
+          = joinrec {
+              $s$wgo_spOr sc3_spOg sc4_spOe sc5_spOf sc6_spOd
+                = case $wreadArrayUpto sc4_spOe sc5_spOf sc3_spOg of
+                  { (# ipv2_X1H, ipv3_X1K #) ->
+                  case ipv3_X1K of { Array dt_ip6m dt1_ip6n dt2_ip6o ->
+                  let { x_ip6l = minusAddr# dt2_ip6o dt_ip6m } in
+                  let { c0#_ip6q = andI# (<# x_ip6l 0#) -1# } in
+                  case -# (+# x_ip6l c0#_ip6q) c0#_ip6q of {
+                    __DEFAULT ->
+                      jump $s$wgo1_spOs
+                        ipv2_X1H sc4_spOe sc5_spOf dt2_ip6o dt1_ip6n dt_ip6m sc6_spOd;
+                    0# ->
+                      jump go2_spBg
+                        SPEC (SplitOnSeqWordDone patLen_rpTz () (W# sc6_spOd)) ipv2_X1H
+                  }
+                  }
+                  };
+              $s$wgo1_spOs sc3_spOn
+                           sc4_spOi
+                           sc5_spOj
+                           sc6_spOk
+                           sc7_spOl
+                           sc8_spOm
+                           sc9_spOh
+                = case eqAddr# sc8_spOm sc6_spOk of {
+                    __DEFAULT ->
+                      case readWord8OffAddr# sc8_spOm 0# realWorld# of
+                      { (# ipv2_anZp, ipv3_anZq #) ->
+                      case integerToWord# (IS (word2Int# (word8ToWord# ipv3_anZq)))
+                      of wild6_ip8H
+                      { __DEFAULT ->
+                      case wordMask_rpTB of { W# y#_ip9u ->
+                      case wordPat_rpTC of { W# y_ip9x ->
+                      let { x#_ip9r = or# (uncheckedShiftL# sc9_spOh 8#) wild6_ip8H } in
+                      case eqWord# (and# x#_ip9r y#_ip9u) y_ip9x of {
+                        __DEFAULT ->
+                          joinrec {
+                            $s$wgo2_spOM sc10_spOL sc11_spOJ sc12_spOK sc13_spOI
+                              = case $wreadArrayUpto sc11_spOJ sc12_spOK sc10_spOL of
+                                { (# ipv4_X1H, ipv5_X1T #) ->
+                                case ipv5_X1T of { Array dt_ip6m dt1_ip6n dt2_ip6o ->
+                                let { x_ip6l = minusAddr# dt2_ip6o dt_ip6m } in
+                                let { c0#_ip6q = andI# (<# x_ip6l 0#) -1# } in
+                                case -# (+# x_ip6l c0#_ip6q) c0#_ip6q of {
+                                  __DEFAULT ->
+                                    jump $s$wgo3_spOA
+                                      ipv4_X1H
+                                      sc11_spOJ
+                                      sc12_spOK
+                                      dt2_ip6o
+                                      dt1_ip6n
+                                      dt_ip6m
+                                      sc13_spOI;
+                                  0# ->
+                                    jump go2_spBg
+                                      SPEC
+                                      (SplitOnSeqWordDone patLen_rpTz () (W# sc13_spOI))
+                                      ipv4_X1H
+                                }
+                                }
+                                };
+                            $s$wgo3_spOA sc10_spOz
+                                         sc11_spOu
+                                         sc12_spOv
+                                         sc13_spOw
+                                         sc14_spOx
+                                         sc15_spOy
+                                         sc16_spOt
+                              = case eqAddr# sc15_spOy sc13_spOw of {
+                                  __DEFAULT ->
+                                    case readWord8OffAddr# sc15_spOy 0# realWorld# of
+                                    { (# ipv4_X21, ipv5_X22 #) ->
+                                    case integerToWord# (IS (word2Int# (word8ToWord# ipv5_X22)))
+                                    of wild2_X23
+                                    { __DEFAULT ->
+                                    let {
+                                      x#1_X26 = or# (uncheckedShiftL# sc16_spOt 8#) wild2_X23 } in
+                                    case eqWord# (and# x#1_X26 y#_ip9u) y_ip9x of {
+                                      __DEFAULT ->
+                                        jump $s$wgo3_spOA
+                                          sc10_spOz
+                                          sc11_spOu
+                                          sc12_spOv
+                                          sc13_spOw
+                                          sc14_spOx
+                                          (plusAddr# sc15_spOy 1#)
+                                          x#1_X26;
+                                      1# ->
+                                        jump $sgo6_spPx
+                                          sc10_spOz
+                                          (UnfoldJust
+                                             (ConcatInner
+                                                (I# sc11_spOu, sc12_spOv)
+                                                (ReadUState
+                                                   sc13_spOw sc14_spOx (plusAddr# sc15_spOy 1#))))
+                                    }
+                                    }
+                                    };
+                                  1# ->
+                                    case touch# sc14_spOx realWorld# of { __DEFAULT ->
+                                    jump $s$wgo2_spOM sc10_spOz sc11_spOu sc12_spOv sc16_spOt
+                                    }
+                                }; } in
+                          jump $s$wgo3_spOA
+                            sc3_spOn
+                            sc4_spOi
+                            sc5_spOj
+                            sc6_spOk
+                            sc7_spOl
+                            (plusAddr# sc8_spOm 1#)
+                            x#_ip9r;
+                        1# ->
+                          jump $sgo6_spPx
+                            sc3_spOn
+                            (UnfoldJust
+                               (ConcatInner
+                                  (I# sc4_spOi, sc5_spOj)
+                                  (ReadUState sc6_spOk sc7_spOl (plusAddr# sc8_spOm 1#))))
+                      }
+                      }
+                      }
+                      }
+                      };
+                    1# ->
+                      case touch# sc7_spOl realWorld# of { __DEFAULT ->
+                      jump $s$wgo_spOr sc3_spOn sc4_spOi sc5_spOj sc9_spOh
+                      }
+                  }; } in
+            case sc2_spNe of {
+              UnfoldNothing ->
+                case $wreadArrayUpto 32752# ipv1_a6bd sc_spNf of
+                { (# ipv2_X1H, ipv3_X1K #) ->
+                case ipv3_X1K of { Array dt_ip6m dt1_ip6n dt2_ip6o ->
+                let { x_ip6l = minusAddr# dt2_ip6o dt_ip6m } in
+                let { c0#_ip6q = andI# (<# x_ip6l 0#) -1# } in
+                case -# (+# x_ip6l c0#_ip6q) c0#_ip6q of {
+                  __DEFAULT ->
+                    jump $s$wgo1_spOs
+                      ipv2_X1H 32752# ipv1_a6bd dt2_ip6o dt1_ip6n dt_ip6m sc1_spNd;
+                  0# ->
+                    jump go2_spBg
+                      SPEC (SplitOnSeqWordDone patLen_rpTz () (W# sc1_spNd)) ipv2_X1H
+                }
+                }
+                };
+              UnfoldJust st_ilkN ->
+                case st_ilkN of {
+                  ConcatOuter st1_inYo ->
+                    case st1_inYo of { (size_ip6g, h_ip6h) ->
+                    case size_ip6g of { I# ww_iplQ ->
+                    case $wreadArrayUpto ww_iplQ h_ip6h sc_spNf of
+                    { (# ipv2_X1H, ipv3_X1K #) ->
+                    case ipv3_X1K of { Array dt_ip6m dt1_ip6n dt2_ip6o ->
+                    let { x_ip6l = minusAddr# dt2_ip6o dt_ip6m } in
+                    let { c0#_ip6q = andI# (<# x_ip6l 0#) -1# } in
+                    case -# (+# x_ip6l c0#_ip6q) c0#_ip6q of {
+                      __DEFAULT ->
+                        jump $s$wgo1_spOs
+                          ipv2_X1H ww_iplQ h_ip6h dt2_ip6o dt1_ip6n dt_ip6m sc1_spNd;
+                      0# ->
+                        jump go2_spBg
+                          SPEC (SplitOnSeqWordDone patLen_rpTz () (W# sc1_spNd)) ipv2_X1H
+                    }
+                    }
+                    }
+                    }
+                    };
+                  ConcatInner ost_inYz ist_inYA ->
+                    case ist_inYA of { ReadUState dt_inZ5 dt1_inZ6 dt2_inZ7 ->
+                    case eqAddr# dt2_inZ7 dt_inZ5 of {
+                      __DEFAULT ->
+                        case readWord8OffAddr# dt2_inZ7 0# realWorld# of
+                        { (# ipv2_anZp, ipv3_anZq #) ->
+                        case integerToWord# (IS (word2Int# (word8ToWord# ipv3_anZq)))
+                        of wild6_ip8H
+                        { __DEFAULT ->
+                        case wordMask_rpTB of { W# y#_ip9u ->
+                        case wordPat_rpTC of { W# y_ip9x ->
+                        let { x#_ip9r = or# (uncheckedShiftL# sc1_spNd 8#) wild6_ip8H } in
+                        case eqWord# (and# x#_ip9r y#_ip9u) y_ip9x of {
+                          __DEFAULT ->
+                            joinrec {
+                              $s$wgo2_spOc sc3_spOb
+                                           sc4_spO6
+                                           sc5_spO7
+                                           sc6_spO8
+                                           sc7_spO9
+                                           sc8_spOa
+                                           sc9_spO5
+                                = case eqAddr# sc8_spOa sc6_spO8 of {
+                                    __DEFAULT ->
+                                      case readWord8OffAddr# sc8_spOa 0# realWorld# of
+                                      { (# ipv4_X21, ipv5_X22 #) ->
+                                      case integerToWord# (IS (word2Int# (word8ToWord# ipv5_X22)))
+                                      of wild5_X23
+                                      { __DEFAULT ->
+                                      let {
+                                        x#1_X26 = or# (uncheckedShiftL# sc9_spO5 8#) wild5_X23 } in
+                                      case eqWord# (and# x#1_X26 y#_ip9u) y_ip9x of {
+                                        __DEFAULT ->
+                                          jump $s$wgo2_spOc
+                                            sc3_spOb
+                                            sc4_spO6
+                                            sc5_spO7
+                                            sc6_spO8
+                                            sc7_spO9
+                                            (plusAddr# sc8_spOa 1#)
+                                            x#1_X26;
+                                        1# ->
+                                          jump $sgo6_spPx
+                                            sc3_spOb
+                                            (UnfoldJust
+                                               (ConcatInner
+                                                  (I# sc4_spO6, sc5_spO7)
+                                                  (ReadUState
+                                                     sc6_spO8 sc7_spO9 (plusAddr# sc8_spOa 1#))))
+                                      }
+                                      }
+                                      };
+                                    1# ->
+                                      case touch# sc7_spO9 realWorld# of { __DEFAULT ->
+                                      case $wreadArrayUpto sc4_spO6 sc5_spO7 sc3_spOb of
+                                      { (# ipv4_X1H, ipv5_X1T #) ->
+                                      case ipv5_X1T of { Array dt4_ip6m dt5_ip6n dt6_ip6o ->
+                                      let { x_ip6l = minusAddr# dt6_ip6o dt4_ip6m } in
+                                      let { c0#_ip6q = andI# (<# x_ip6l 0#) -1# } in
+                                      case -# (+# x_ip6l c0#_ip6q) c0#_ip6q of {
+                                        __DEFAULT ->
+                                          jump $s$wgo2_spOc
+                                            ipv4_X1H
+                                            sc4_spO6
+                                            sc5_spO7
+                                            dt6_ip6o
+                                            dt5_ip6n
+                                            dt4_ip6m
+                                            sc9_spO5;
+                                        0# ->
+                                          jump go2_spBg
+                                            SPEC
+                                            (SplitOnSeqWordDone patLen_rpTz () (W# sc9_spO5))
+                                            ipv4_X1H
+                                      }
+                                      }
+                                      }
+                                      }
+                                  }; } in
+                            join {
+                              $s$wgo3_spO4 sc3_spO3 sc4_spO2 sc5_spO1
+                                = case sc4_spO2 of { (size_ip6g, h_ip6h) ->
+                                  case size_ip6g of { I# ww_iplQ ->
+                                  case $wreadArrayUpto ww_iplQ h_ip6h sc3_spO3 of
+                                  { (# ipv4_X1H, ipv5_X1T #) ->
+                                  case ipv5_X1T of { Array dt4_ip6m dt5_ip6n dt6_ip6o ->
+                                  let { x_ip6l = minusAddr# dt6_ip6o dt4_ip6m } in
+                                  let { c0#_ip6q = andI# (<# x_ip6l 0#) -1# } in
+                                  case -# (+# x_ip6l c0#_ip6q) c0#_ip6q of {
+                                    __DEFAULT ->
+                                      jump $s$wgo2_spOc
+                                        ipv4_X1H ww_iplQ h_ip6h dt6_ip6o dt5_ip6n dt4_ip6m sc5_spO1;
+                                    0# ->
+                                      jump go2_spBg
+                                        SPEC
+                                        (SplitOnSeqWordDone patLen_rpTz () (W# sc5_spO1))
+                                        ipv4_X1H
+                                  }
+                                  }
+                                  }
+                                  }
+                                  } } in
+                            joinrec {
+                              $s$wgo4_spNU sc3_spNT sc4_spNP sc5_spNQ sc6_spNR sc7_spNS sc8_spNO
+                                = case eqAddr# sc7_spNS sc5_spNQ of {
+                                    __DEFAULT ->
+                                      case readWord8OffAddr# sc7_spNS 0# realWorld# of
+                                      { (# ipv4_X21, ipv5_X22 #) ->
+                                      case integerToWord# (IS (word2Int# (word8ToWord# ipv5_X22)))
+                                      of wild5_X23
+                                      { __DEFAULT ->
+                                      let {
+                                        x#1_X26 = or# (uncheckedShiftL# sc8_spNO 8#) wild5_X23 } in
+                                      case eqWord# (and# x#1_X26 y#_ip9u) y_ip9x of {
+                                        __DEFAULT ->
+                                          jump $s$wgo4_spNU
+                                            sc3_spNT
+                                            sc4_spNP
+                                            sc5_spNQ
+                                            sc6_spNR
+                                            (plusAddr# sc7_spNS 1#)
+                                            x#1_X26;
+                                        1# ->
+                                          jump $sgo6_spPx
+                                            sc3_spNT
+                                            (UnfoldJust
+                                               (ConcatInner
+                                                  sc4_spNP
+                                                  (ReadUState
+                                                     sc5_spNQ sc6_spNR (plusAddr# sc7_spNS 1#))))
+                                      }
+                                      }
+                                      };
+                                    1# ->
+                                      case touch# sc6_spNR realWorld# of { __DEFAULT ->
+                                      jump $s$wgo3_spO4 sc3_spNT sc4_spNP sc8_spNO
+                                      }
+                                  }; } in
+                            jump $s$wgo4_spNU
+                              sc_spNf ost_inYz dt_inZ5 dt1_inZ6 (plusAddr# dt2_inZ7 1#) x#_ip9r;
+                          1# ->
+                            jump $sgo6_spPx
+                              sc_spNf
+                              (UnfoldJust
+                                 (ConcatInner
+                                    ost_inYz (ReadUState dt_inZ5 dt1_inZ6 (plusAddr# dt2_inZ7 1#))))
+                        }
+                        }
+                        }
+                        }
+                        };
+                      1# ->
+                        case touch# dt1_inZ6 realWorld# of { __DEFAULT ->
+                        case ost_inYz of { (size_ip6g, h_ip6h) ->
+                        case size_ip6g of { I# ww_iplQ ->
+                        case $wreadArrayUpto ww_iplQ h_ip6h sc_spNf of
+                        { (# ipv2_X1H, ipv3_X1K #) ->
+                        case ipv3_X1K of { Array dt4_ip6m dt5_ip6n dt6_ip6o ->
+                        let { x_ip6l = minusAddr# dt6_ip6o dt4_ip6m } in
+                        let { c0#_ip6q = andI# (<# x_ip6l 0#) -1# } in
+                        case -# (+# x_ip6l c0#_ip6q) c0#_ip6q of {
+                          __DEFAULT ->
+                            jump $s$wgo1_spOs
+                              ipv2_X1H ww_iplQ h_ip6h dt6_ip6o dt5_ip6n dt4_ip6m sc1_spNd;
+                          0# ->
+                            jump go2_spBg
+                              SPEC (SplitOnSeqWordDone patLen_rpTz () (W# sc1_spNd)) ipv2_X1H
+                        }
+                        }
+                        }
+                        }
+                        }
+                        }
+                    }
+                    }
+                }
+            };
+        $sgo6_spPx sc_spNh sc1_spNg
+          = jump go2_spBg SPEC (SplitOnSeqWordInit () sc1_spNg) sc_spNh;
+        $sgo7_spLC sc_spLB
+          = joinrec {
+              $s$wgo_spMo sc1_spMn
+                          sc2_spMi
+                          sc3_spMj
+                          sc4_spMk
+                          sc5_spMl
+                          sc6_spMm
+                          sc7_spMh
+                          sc8_spMg
+                = case eqAddr# sc6_spMm sc4_spMk of {
+                    __DEFAULT ->
+                      case readWord8OffAddr# sc6_spMm 0# realWorld# of
+                      { (# ipv2_anZp, ipv3_anZq #) ->
+                      case maxIndex_rpTD of { I# y_ip7U ->
+                      case ==# sc8_spMg y_ip7U of {
+                        __DEFAULT ->
+                          case integerToWord# (IS (word2Int# (word8ToWord# ipv3_anZq)))
+                          of wild6_ip7O
+                          { __DEFAULT ->
+                          joinrec {
+                            $s$wgo2_spML sc9_spMK sc10_spMI sc11_spMJ sc12_spMH sc13_spMG
+                              = case $wreadArrayUpto sc10_spMI sc11_spMJ sc9_spMK of
+                                { (# ipv4_X1H, ipv5_X1U #) ->
+                                case ipv5_X1U of { Array dt_ip6m dt1_ip6n dt2_ip6o ->
+                                let { x_ip6l = minusAddr# dt2_ip6o dt_ip6m } in
+                                let { c0#_ip6q = andI# (<# x_ip6l 0#) -1# } in
+                                case -# (+# x_ip6l c0#_ip6q) c0#_ip6q of {
+                                  __DEFAULT ->
+                                    jump $s$wgo3_spMx
+                                      ipv4_X1H
+                                      sc10_spMI
+                                      sc11_spMJ
+                                      dt2_ip6o
+                                      dt1_ip6n
+                                      dt_ip6m
+                                      sc12_spMH
+                                      sc13_spMG;
+                                  0# ->
+                                    case sc13_spMG of wild2_ip8b {
+                                      __DEFAULT -> jump $sgo8_spNi ipv4_X1H wild2_ip8b sc12_spMH;
+                                      0# -> jump $sgo4_spNj ipv4_X1H
+                                    }
+                                }
+                                }
+                                };
+                            $s$wgo3_spMx sc9_spMw
+                                         sc10_spMr
+                                         sc11_spMs
+                                         sc12_spMt
+                                         sc13_spMu
+                                         sc14_spMv
+                                         sc15_spMq
+                                         sc16_spMp
+                              = case eqAddr# sc14_spMv sc12_spMt of {
+                                  __DEFAULT ->
+                                    case readWord8OffAddr# sc14_spMv 0# realWorld# of
+                                    { (# ipv4_X22, ipv5_X23 #) ->
+                                    case ==# sc16_spMp y_ip7U of {
+                                      __DEFAULT ->
+                                        case integerToWord# (IS (word2Int# (word8ToWord# ipv5_X23)))
+                                        of wild1_X26
+                                        { __DEFAULT ->
+                                        jump $s$wgo3_spMx
+                                          sc9_spMw
+                                          sc10_spMr
+                                          sc11_spMs
+                                          sc12_spMt
+                                          sc13_spMu
+                                          (plusAddr# sc14_spMv 1#)
+                                          (or# (uncheckedShiftL# sc15_spMq 8#) wild1_X26)
+                                          (+# sc16_spMp 1#)
+                                        };
+                                      1# ->
+                                        case integerToWord# (IS (word2Int# (word8ToWord# ipv5_X23)))
+                                        of wild1_X26
+                                        { __DEFAULT ->
+                                        case wordMask_rpTB of { W# y#_ip81 ->
+                                        case wordPat_rpTC of { W# y1_ip84 ->
+                                        let {
+                                          x#_ip7Y
+                                            = or# (uncheckedShiftL# sc15_spMq 8#) wild1_X26 } in
+                                        case eqWord# (and# x#_ip7Y y#_ip81) y1_ip84 of {
+                                          __DEFAULT ->
+                                            jump $sgo5_spNk
+                                              sc9_spMw
+                                              x#_ip7Y
+                                              (UnfoldJust
+                                                 (ConcatInner
+                                                    (I# sc10_spMr, sc11_spMs)
+                                                    (ReadUState
+                                                       sc12_spMt
+                                                       sc13_spMu
+                                                       (plusAddr# sc14_spMv 1#))));
+                                          1# ->
+                                            jump $sgo6_spPx
+                                              sc9_spMw
+                                              (UnfoldJust
+                                                 (ConcatInner
+                                                    (I# sc10_spMr, sc11_spMs)
+                                                    (ReadUState
+                                                       sc12_spMt
+                                                       sc13_spMu
+                                                       (plusAddr# sc14_spMv 1#))))
+                                        }
+                                        }
+                                        }
+                                        }
+                                    }
+                                    };
+                                  1# ->
+                                    case touch# sc13_spMu realWorld# of { __DEFAULT ->
+                                    jump $s$wgo2_spML
+                                      sc9_spMw sc10_spMr sc11_spMs sc15_spMq sc16_spMp
+                                    }
+                                }; } in
+                          jump $s$wgo3_spMx
+                            sc1_spMn
+                            sc2_spMi
+                            sc3_spMj
+                            sc4_spMk
+                            sc5_spMl
+                            (plusAddr# sc6_spMm 1#)
+                            (or# (uncheckedShiftL# sc7_spMh 8#) wild6_ip7O)
+                            (+# sc8_spMg 1#)
+                          };
+                        1# ->
+                          case integerToWord# (IS (word2Int# (word8ToWord# ipv3_anZq)))
+                          of wild6_ip7O
+                          { __DEFAULT ->
+                          case wordMask_rpTB of { W# y#_ip81 ->
+                          case wordPat_rpTC of { W# y1_ip84 ->
+                          let { x#_ip7Y = or# (uncheckedShiftL# sc7_spMh 8#) wild6_ip7O } in
+                          case eqWord# (and# x#_ip7Y y#_ip81) y1_ip84 of {
+                            __DEFAULT ->
+                              jump $sgo5_spNk
+                                sc1_spMn
+                                x#_ip7Y
+                                (UnfoldJust
+                                   (ConcatInner
+                                      (I# sc2_spMi, sc3_spMj)
+                                      (ReadUState sc4_spMk sc5_spMl (plusAddr# sc6_spMm 1#))));
+                            1# ->
+                              jump $sgo6_spPx
+                                sc1_spMn
+                                (UnfoldJust
+                                   (ConcatInner
+                                      (I# sc2_spMi, sc3_spMj)
+                                      (ReadUState sc4_spMk sc5_spMl (plusAddr# sc6_spMm 1#))))
+                          }
+                          }
+                          }
+                          }
+                      }
+                      }
+                      };
+                    1# ->
+                      case touch# sc5_spMl realWorld# of { __DEFAULT ->
+                      jump $s$wgo1_spMf sc1_spMn sc2_spMi sc3_spMj sc7_spMh sc8_spMg
+                      }
+                  };
+              $s$wgo1_spMf sc1_spMe sc2_spMc sc3_spMd sc4_spMb sc5_spMa
+                = case $wreadArrayUpto sc2_spMc sc3_spMd sc1_spMe of
+                  { (# ipv2_X1H, ipv3_X1K #) ->
+                  case ipv3_X1K of { Array dt_ip6m dt1_ip6n dt2_ip6o ->
+                  let { x_ip6l = minusAddr# dt2_ip6o dt_ip6m } in
+                  let { c0#_ip6q = andI# (<# x_ip6l 0#) -1# } in
+                  case -# (+# x_ip6l c0#_ip6q) c0#_ip6q of {
+                    __DEFAULT ->
+                      jump $s$wgo_spMo
+                        ipv2_X1H
+                        sc2_spMc
+                        sc3_spMd
+                        dt2_ip6o
+                        dt1_ip6n
+                        dt_ip6m
+                        sc4_spMb
+                        sc5_spMa;
+                    0# ->
+                      case sc5_spMa of wild4_ip8b {
+                        __DEFAULT -> jump $sgo8_spNi ipv2_X1H wild4_ip8b sc4_spMb;
+                        0# -> jump $sgo4_spNj ipv2_X1H
+                      }
+                  }
+                  }
+                  }; } in
+            jump $s$wgo1_spMf sc_spLB 32752# ipv1_a6bd 0## 0#;
+        $sgo8_spNi sc_spNb sc1_spN9 sc2_spNa
+          = case sc1_spN9 of ds5_ip9S {
+              __DEFAULT -> jump $sgo8_spNi sc_spNb (-# ds5_ip9S 1#) sc2_spNa;
+              0# -> jump $sgo4_spNj sc_spNb
+            }; } in
+      jump $sgo7_spLC ipv_a6bc
+      }
+
+-- RHS size: {terms: 1, types: 0, coercions: 3, joins: 0/0}
+main = main1 `cast` <Co:3>
+
+-- RHS size: {terms: 2, types: 1, coercions: 3, joins: 0/0}
+main2 = runMainIO1 (main1 `cast` <Co:3>)
+
+-- RHS size: {terms: 1, types: 0, coercions: 3, joins: 0/0}
+main = main2 `cast` <Co:3>
+
+
+------ Local rules for imported ids --------
+"SPEC/Main readChunksWithBufferOf @IO" [1]
+    forall $dMonadIO_sp6s.
+      readChunksWithBufferOf $dMonadIO_sp6s
+      = let {
+          step1_ioZv
+            = \ @m1_ioZx $dMonadIO1_ioZy eta2_ioZz ->
+                let { $dMonad_ioZA = $p1MonadIO $dMonadIO1_ioZy } in
+                case eta2_ioZz of { (size_ioZC, h_ioZD) ->
+                >>=
+                  $dMonad_ioZA
+                  (liftIO $dMonadIO1_ioZy (readArrayUpto size_ioZC h_ioZD))
+                  (\ arr_ioZF ->
+                     return
+                       $dMonad_ioZA
+                       (case arr_ioZF of wild1_ioZG { Array dt_ioZH dt1_ioZI dt2_ioZJ ->
+                        case minusAddr# dt2_ioZJ dt_ioZH of {
+                          __DEFAULT -> Yield wild1_ioZG (size_ioZC, h_ioZD);
+                          0# -> Stop
+                        }
+                        }))
+                } } in
+        Unfold (step1_ioZv $fMonadIOIO) ($fApplicativeIO4 `cast` <Co:10>)
+"SPEC/Main read @IO @Word8" [1]
+    forall $dMonad_sp6C $dStorable_sp6D.
+      read $dMonad_sp6C $dStorable_sp6D
+      = let {
+          step_inO1
+            = \ @m1_inO4 @a1_inO5 $dMonad1_inO6 $dStorable1_inO7 eta2_inO8 ->
+                case eta2_inO8 of { ReadUState dt_inOa dt1_inOb dt2_inOc ->
+                case eqAddr# dt2_inOc dt_inOa of {
+                  __DEFAULT ->
+                    case ((peek $dStorable1_inO7 (Ptr dt2_inOc)) `cast` <Co:2>)
+                           realWorld#
+                    of
+                    { (# ipv_inOg, ipv1_inOh #) ->
+                    case ipv1_inOh of x_inOj { __DEFAULT ->
+                    return
+                      $dMonad1_inO6
+                      (Yield
+                         x_inOj
+                         ($WReadUState
+                            (ForeignPtr dt_inOa dt1_inOb) (Ptr (plusAddr# dt2_inOc 1#))))
+                    }
+                    };
+                  1# ->
+                    case touch# dt1_inOb realWorld# of { __DEFAULT ->
+                    return $dMonad1_inO6 Stop
+                    }
+                }
+                } } in
+        Unfold
+          (step_inO1 $fMonadIO $fStorableWord8)
+          (\ x_inOo ->
+             case x_inOo of { Array dt_inOq dt1_inOr dt2_inOs ->
+             (\ s_X1U ->
+                (# s_X1U,
+                   $WReadUState (ForeignPtr dt2_inOs dt1_inOr) (Ptr dt_inOq) #))
+             `cast` <Co:4>
+             })
+"SPEC/Main splitOnSeqD @IO @Word8 _" [1]
+    forall @b_X1U $dMonadIO_spby $dStorable_spbz $dEnum_spbA $dEq_spbB.
+      splitOnSeqD $dMonadIO_spby $dStorable_spbz $dEnum_spbA $dEq_spbB
+      = \ eta2_ioSm eta3_ioSn eta4_ioSo ->
+          case eta3_ioSn of
+          { Fold @s_X1V fstep_ioSs initial_ioSt done_ioSu ->
+          case eta4_ioSo of { UnStream @s1_X1W step1_ioSZ state_ioT0 ->
+          let {
+            nextAfterInit1_ioSx
+              = \ @k_ioSL
+                  @k1_ioSM
+                  @k2_ioSN
+                  @k3_ioSO
+                  @fs_ioSP
+                  @rb_ioSQ
+                  @rh_ioSR
+                  @ck_ioSS
+                  @w_ioST
+                  @s2_ioSU
+                  @b1_ioSV
+                  @x_ioSW
+                  nextGen_ioSX
+                  stepRes_ioSY ->
+                  case stepRes_ioSY of {
+                    Partial s3_ioT3 -> nextGen_ioSX s3_ioT3;
+                    Done b2_ioTp ->
+                      SplitOnSeqYield b2_ioTp (SplitOnSeqReinit nextGen_ioSX)
+                  } } in
+          let {
+            patLen1_ioU6
+              = case eta2_ioSm of { Array dt_ioUc dt1_ioUd dt2_ioUe ->
+                I# (minusAddr# dt2_ioUe dt_ioUc)
+                } } in
+          let {
+            maxIndex1_ioUo
+              = case patLen1_ioU6 of { I# x_ioUq -> I# (-# x_ioUq 1#) } } in
+          let {
+            wordMask1_ioUs
+              = case patLen1_ioU6 of { I# y_ioUy ->
+                let { i#_ioUx = *# 8# y_ioUy } in
+                case >=# i#_ioUx 0# of {
+                  __DEFAULT -> case overflowError of wild2_00 { };
+                  1# ->
+                    case >=# i#_ioUx 64# of {
+                      __DEFAULT -> W# (minusWord# (uncheckedShiftL# 1## i#_ioUx) 1##);
+                      1# -> W# 18446744073709551615##
+                    }
+                }
+                } } in
+          let {
+            wordPat1_ioUC
+              = case wordMask1_ioUs of { W# x#_ioUH ->
+                case eta2_ioSm of { Array dt_ioVa dt1_ioVb dt2_ioVc ->
+                let {
+                  step_ioV0
+                    = \ @m1_ioV4 @p_ioV5 @b1_ioV6 $dMonad1_ioV7 _ eta6_ioV9 ->
+                        case eta6_ioV9 of { Ptr a1_ioVf ->
+                        case eqAddr# a1_ioVf dt2_ioVc of {
+                          __DEFAULT ->
+                            case readWord8OffAddr# a1_ioVf 0# realWorld# of
+                            { (# ipv_anZp, ipv1_anZq #) ->
+                            case touch# dt1_ioVb ipv_anZp of { __DEFAULT ->
+                            return
+                              $dMonad1_ioV7 (Yield (W8# ipv1_anZq) (Ptr (plusAddr# a1_ioVf 1#)))
+                            }
+                            };
+                          1# -> return $dMonad1_ioV7 Stop
+                        }
+                        } } in
+                let {
+                  go2_ioVr
+                    = \ eta5_ioVs eta6_ioVt eta7_ioVu ->
+                        joinrec {
+                          go3_ioVv ds1_ioVw acc1_ioVx st_ioVy
+                            = case ds1_ioVw of { __DEFAULT ->
+                              case acc1_ioVx of acc2_ioVA { W# ipv_ioVB ->
+                              case (step_ioV0 $fMonadIdentity adaptState1 st_ioVy) `cast` <Co:5>
+                              of {
+                                Yield x_ioVE s2_ioVF ->
+                                  jump go3_ioVv
+                                    SPEC
+                                    (case x_ioVE of { W8# x#1_apuy ->
+                                     case integerToWord# (IS (word2Int# (word8ToWord# x#1_apuy)))
+                                     of wild6_ioUU
+                                     { __DEFAULT ->
+                                     W# (or# (uncheckedShiftL# ipv_ioVB 8#) wild6_ioUU)
+                                     }
+                                     })
+                                    s2_ioVF;
+                                Skip s2_ioVH -> jump go3_ioVv SPEC acc2_ioVA s2_ioVH;
+                                Stop -> acc2_ioVA `cast` <Co:3>
+                              }
+                              }
+                              }; } in
+                        jump go3_ioVv eta5_ioVs eta6_ioVt eta7_ioVu } in
+                case (go2_ioVr SPEC (W# 0##) (Ptr dt_ioVa)) `cast` <Co:2> of
+                { W# y#_ioVL ->
+                W# (and# x#_ioUH y#_ioVL)
+                }
+                }
+                } } in
+          let {
+            stepOuter_ioVN
+              = \ @k1_ioVZ
+                  @k_X1X
+                  @k2_X1Y
+                  @k3_X1Z
+                  @k4_X20
+                  @m1_ioW4
+                  @a1_ioW5
+                  @rb_X21
+                  @rh_X22
+                  @ck_X23
+                  @x_X24
+                  eta5_ioWa
+                  eta6_ioWb ->
+                  case eta6_ioWb of {
+                    SplitOnSeqInit ->
+                      (\ s2_a6ba ->
+                         case (initial_ioSt `cast` <Co:4>) s2_a6ba of
+                         { (# ipv_a6bc, ipv1_a6bd #) ->
+                         case ipv1_a6bd of {
+                           Partial acc1_ioWg ->
+                             (# ipv_a6bc, Skip ($WSplitOnSeqWordInit acc1_ioWg state_ioT0) #);
+                           Done b1_ioWi ->
+                             (# ipv_a6bc, Skip (SplitOnSeqYield b1_ioWi SplitOnSeqInit) #)
+                         }
+                         })
+                      `cast` <Co:17>;
+                    SplitOnSeqYield x1_ioWk next_ioWl ->
+                      (\ s2_X25 -> (# s2_X25, Yield x1_ioWk next_ioWl #)) `cast` <Co:17>;
+                    SplitOnSeqDone -> (\ s2_X25 -> (# s2_X25, Stop #)) `cast` <Co:17>;
+                    SplitOnSeqWordInit fs_ioWt st0_ioWu ->
+                      letrec {
+                        go2_ioWo
+                          = \ ds_ioWp idx_ioWq wrd_ioWr st_ioWs ->
+                              case ds_ioWp of { __DEFAULT ->
+                              case idx_ioWq of idx1_ioWx { I# ipv_ioWy ->
+                              case wrd_ioWr of wrd1_ioWA { W# ipv1_ioWB ->
+                              case st_ioWs of st1_ioWD { __DEFAULT ->
+                              (\ s2_a6ba ->
+                                 case ((step1_ioSZ
+                                          (case eta5_ioWa of { State ds2_ip6Q -> adaptState1 })
+                                          st1_ioWD)
+                                       `cast` <Co:4>)
+                                        s2_a6ba
+                                 of
+                                 { (# ipv2_a6bc, ipv3_a6bd #) ->
+                                 case ipv3_a6bd of {
+                                   Yield x1_ioWI s3_ioWJ ->
+                                     case maxIndex1_ioUo of { I# y_ioWZ ->
+                                     case ==# ipv_ioWy y_ioWZ of {
+                                       __DEFAULT ->
+                                         ((go2_ioWo
+                                             SPEC
+                                             (I# (+# ipv_ioWy 1#))
+                                             (case x1_ioWI of { W8# x#_apuy ->
+                                              case integerToWord#
+                                                     (IS (word2Int# (word8ToWord# x#_apuy)))
+                                              of wild6_ioWT
+                                              { __DEFAULT ->
+                                              W# (or# (uncheckedShiftL# ipv1_ioWB 8#) wild6_ioWT)
+                                              }
+                                              })
+                                             s3_ioWJ)
+                                          `cast` <Co:16>)
+                                           ipv2_a6bc;
+                                       1# ->
+                                         case x1_ioWI of { W8# x#_apuy ->
+                                         case integerToWord# (IS (word2Int# (word8ToWord# x#_apuy)))
+                                         of wild6_ioWT
+                                         { __DEFAULT ->
+                                         let {
+                                           x#1_ioX3
+                                             = or# (uncheckedShiftL# ipv1_ioWB 8#) wild6_ioWT } in
+                                         case wordMask1_ioUs of { W# y#_ioX6 ->
+                                         case wordPat1_ioUC of { W# y1_ioX9 ->
+                                         case eqWord# (and# x#1_ioX3 y#_ioX6) y1_ioX9 of {
+                                           __DEFAULT ->
+                                             (# ipv2_a6bc,
+                                                Skip
+                                                  ($WSplitOnSeqWordLoop
+                                                     (W# x#1_ioX3) s3_ioWJ fs_ioWt) #);
+                                           1# ->
+                                             case ((done_ioSu fs_ioWt) `cast` <Co:2>) ipv2_a6bc of
+                                             { (# ipv4_X26, ipv5_X27 #) ->
+                                             case (initial_ioSt `cast` <Co:4>) ipv4_X26 of
+                                             { (# ipv6_X29, ipv7_X2a #) ->
+                                             (# ipv6_X29,
+                                                Skip
+                                                  (SplitOnSeqYield
+                                                     ipv5_X27
+                                                     (case ipv7_X2a of {
+                                                        Partial s4_ioT3 ->
+                                                          $WSplitOnSeqWordInit s4_ioT3 s3_ioWJ;
+                                                        Done b2_ioTp ->
+                                                          SplitOnSeqYield
+                                                            b2_ioTp
+                                                            (SplitOnSeqReinit
+                                                               (\ c_ioXc ->
+                                                                  $WSplitOnSeqWordInit
+                                                                    c_ioXc s3_ioWJ))
+                                                      })) #)
+                                             }
+                                             }
+                                         }
+                                         }
+                                         }
+                                         }
+                                         }
+                                     }
+                                     };
+                                   Skip s3_ioXd ->
+                                     ((go2_ioWo SPEC idx1_ioWx wrd1_ioWA s3_ioXd) `cast` <Co:16>)
+                                       ipv2_a6bc;
+                                   Stop ->
+                                     case ipv_ioWy of {
+                                       __DEFAULT ->
+                                         (# ipv2_a6bc,
+                                            Skip
+                                              ($WSplitOnSeqWordDone idx1_ioWx fs_ioWt wrd1_ioWA) #);
+                                       0# ->
+                                         case ((done_ioSu fs_ioWt) `cast` <Co:2>) ipv2_a6bc of
+                                         { (# ipv4_X26, ipv5_X27 #) ->
+                                         (# ipv4_X26,
+                                            Skip (SplitOnSeqYield ipv5_X27 SplitOnSeqDone) #)
+                                         }
+                                     }
+                                 }
+                                 })
+                              `cast` <Co:17>
+                              }
+                              }
+                              }
+                              }; } in
+                      go2_ioWo SPEC (I# 0#) (W# 0##) st0_ioWu;
+                    SplitOnSeqWordLoop wrd0_ioXn st0_ioXo fs0_ioXp ->
+                      letrec {
+                        go2_ioXi
+                          = \ ds_ioXj wrd_ioXk st_ioXl fs_ioXm ->
+                              case ds_ioXj of { __DEFAULT ->
+                              case wrd_ioXk of wrd1_ioXs { W# ipv_ioXt ->
+                              case st_ioXl of st1_ioXv { __DEFAULT ->
+                              case fs_ioXm of fs1_ioXw { __DEFAULT ->
+                              (\ s2_a6ba ->
+                                 case ((step1_ioSZ
+                                          (case eta5_ioWa of { State ds2_ip6S -> adaptState1 })
+                                          st1_ioXv)
+                                       `cast` <Co:4>)
+                                        s2_a6ba
+                                 of
+                                 { (# ipv1_a6bc, ipv2_a6bd #) ->
+                                 case ipv2_a6bd of {
+                                   Yield x1_ioXB s3_ioXC ->
+                                     case ((fstep_ioSs
+                                              fs1_ioXw
+                                              (case wordMask1_ioUs of { W# x#_ioYg ->
+                                               case patLen1_ioU6 of { I# x3_ioYn ->
+                                               let { i#_ioYm = -# (*# 8# x3_ioYn) 8# } in
+                                               case >=# i#_ioYm 0# of {
+                                                 __DEFAULT -> case overflowError of wild7_00 { };
+                                                 1# ->
+                                                   join {
+                                                     $j_spv1 i#1_apuM _
+                                                       = case >=# i#1_apuM 0# of {
+                                                           __DEFAULT -> $wlvl3 i#1_apuM;
+                                                           1# ->
+                                                             case <=# i#1_apuM 255# of {
+                                                               __DEFAULT -> $wlvl3 i#1_apuM;
+                                                               1# ->
+                                                                 W8#
+                                                                   (wordToWord8#
+                                                                      (int2Word# i#1_apuM))
+                                                             }
+                                                         } } in
+                                                   case >=# i#_ioYm 64# of {
+                                                     __DEFAULT ->
+                                                       let {
+                                                         i#1_apuM
+                                                           = word2Int#
+                                                               (uncheckedShiftRL#
+                                                                  (and# x#_ioYg ipv_ioXt)
+                                                                  i#_ioYm) } in
+                                                       case >=# i#1_apuM 0# of {
+                                                         __DEFAULT -> $wlvl3 i#1_apuM;
+                                                         1# ->
+                                                           case <=# i#1_apuM 255# of {
+                                                             __DEFAULT -> $wlvl3 i#1_apuM;
+                                                             1# ->
+                                                               W8#
+                                                                 (wordToWord8# (int2Word# i#1_apuM))
+                                                           }
+                                                       };
+                                                     1# -> W8# 0##8
+                                                   }
+                                               }
+                                               }
+                                               }))
+                                           `cast` <Co:4>)
+                                            ipv1_a6bc
+                                     of
+                                     { (# ipv3_X26, ipv4_X27 #) ->
+                                     case ipv4_X27 of {
+                                       Partial fs2_ioYt ->
+                                         case x1_ioXB of { W8# x#_apuy ->
+                                         case integerToWord# (IS (word2Int# (word8ToWord# x#_apuy)))
+                                         of wild6_ioXM
+                                         { __DEFAULT ->
+                                         let {
+                                           x#1_ioYw
+                                             = or# (uncheckedShiftL# ipv_ioXt 8#) wild6_ioXM } in
+                                         case wordMask1_ioUs of { W# y#_ioYz ->
+                                         case wordPat1_ioUC of { W# y_ioYC ->
+                                         case eqWord# (and# x#1_ioYw y#_ioYz) y_ioYC of {
+                                           __DEFAULT ->
+                                             ((go2_ioXi SPEC (W# x#1_ioYw) s3_ioXC fs2_ioYt)
+                                              `cast` <Co:16>)
+                                               ipv3_X26;
+                                           1# ->
+                                             case ((done_ioSu fs2_ioYt) `cast` <Co:2>) ipv3_X26 of
+                                             { (# ipv5_X29, ipv6_X2a #) ->
+                                             case (initial_ioSt `cast` <Co:4>) ipv5_X29 of
+                                             { (# ipv7_X2c, ipv8_X2d #) ->
+                                             (# ipv7_X2c,
+                                                Skip
+                                                  (SplitOnSeqYield
+                                                     ipv6_X2a
+                                                     (case ipv8_X2d of {
+                                                        Partial s4_ioT3 ->
+                                                          $WSplitOnSeqWordInit s4_ioT3 s3_ioXC;
+                                                        Done b2_ioTp ->
+                                                          SplitOnSeqYield
+                                                            b2_ioTp
+                                                            (SplitOnSeqReinit
+                                                               (\ c_ioYe ->
+                                                                  $WSplitOnSeqWordInit
+                                                                    c_ioYe s3_ioXC))
+                                                      })) #)
+                                             }
+                                             }
+                                         }
+                                         }
+                                         }
+                                         }
+                                         };
+                                       Done b1_ioYF ->
+                                         case (initial_ioSt `cast` <Co:4>) ipv3_X26 of
+                                         { (# ipv5_X29, ipv6_X2a #) ->
+                                         (# ipv5_X29,
+                                            Skip
+                                              (SplitOnSeqYield
+                                                 b1_ioYF
+                                                 (case ipv6_X2a of {
+                                                    Partial s4_ioYJ ->
+                                                      $WSplitOnSeqWordInit s4_ioYJ s3_ioXC;
+                                                    Done b2_ioYL ->
+                                                      SplitOnSeqYield
+                                                        b2_ioYL
+                                                        (SplitOnSeqReinit
+                                                           (\ c_ioYe ->
+                                                              $WSplitOnSeqWordInit c_ioYe s3_ioXC))
+                                                  })) #)
+                                         }
+                                     }
+                                     };
+                                   Skip s3_ioYN ->
+                                     ((go2_ioXi SPEC wrd1_ioXs s3_ioYN fs1_ioXw) `cast` <Co:16>)
+                                       ipv1_a6bc;
+                                   Stop ->
+                                     (# ipv1_a6bc,
+                                        Skip
+                                          ($WSplitOnSeqWordDone patLen1_ioU6 fs1_ioXw wrd1_ioXs) #)
+                                 }
+                                 })
+                              `cast` <Co:17>
+                              }
+                              }
+                              }
+                              }; } in
+                      go2_ioXi SPEC wrd0_ioXn st0_ioXo fs0_ioXp;
+                    SplitOnSeqWordDone ds_ioYQ fs_ioYR ds1_ioYS ->
+                      case ds_ioYQ of { I# ds2_ioYV ->
+                      case ds2_ioYV of ds3_ioYX {
+                        __DEFAULT ->
+                          (\ s2_a6ba ->
+                             case ((fstep_ioSs
+                                      fs_ioYR
+                                      (case ds1_ioYS of { W# x#1_ioZ2 ->
+                                       let { i#_ioZ5 = -# (*# 8# ds3_ioYX) 8# } in
+                                       case >=# i#_ioZ5 0# of {
+                                         __DEFAULT -> case overflowError of wild4_00 { };
+                                         1# ->
+                                           join {
+                                             $j_spv2 i#1_apuM _
+                                               = case >=# i#1_apuM 0# of {
+                                                   __DEFAULT -> $wlvl3 i#1_apuM;
+                                                   1# ->
+                                                     case <=# i#1_apuM 255# of {
+                                                       __DEFAULT -> $wlvl3 i#1_apuM;
+                                                       1# -> W8# (wordToWord8# (int2Word# i#1_apuM))
+                                                     }
+                                                 } } in
+                                           case >=# i#_ioZ5 64# of {
+                                             __DEFAULT ->
+                                               case integerToInt#
+                                                      (integerFromWord#
+                                                         (and#
+                                                            255##
+                                                            (uncheckedShiftRL# x#1_ioZ2 i#_ioZ5)))
+                                               of wild7_ioZa
+                                               { __DEFAULT ->
+                                               case >=# wild7_ioZa 0# of {
+                                                 __DEFAULT -> $wlvl3 wild7_ioZa;
+                                                 1# ->
+                                                   case <=# wild7_ioZa 255# of {
+                                                     __DEFAULT -> $wlvl3 wild7_ioZa;
+                                                     1# -> W8# (wordToWord8# (int2Word# wild7_ioZa))
+                                                   }
+                                               }
+                                               };
+                                             1# -> W8# 0##8
+                                           }
+                                       }
+                                       }))
+                                   `cast` <Co:4>)
+                                    s2_a6ba
+                             of
+                             { (# ipv_a6bc, ipv1_a6bd #) ->
+                             case ipv1_a6bd of {
+                               Partial fs1_ioZd ->
+                                 (# ipv_a6bc,
+                                    Skip
+                                      ($WSplitOnSeqWordDone
+                                         (I# (-# ds3_ioYX 1#)) fs1_ioZd ds1_ioYS) #);
+                               Done b1_ioZh ->
+                                 case (initial_ioSt `cast` <Co:4>) ipv_a6bc of
+                                 { (# ipv2_X26, ipv3_X27 #) ->
+                                 (# ipv2_X26,
+                                    Skip
+                                      (SplitOnSeqYield
+                                         b1_ioZh
+                                         (case ipv3_X27 of {
+                                            Partial s3_ioZl ->
+                                              $WSplitOnSeqWordDone
+                                                (I# (-# ds3_ioYX 1#)) s3_ioZl ds1_ioYS;
+                                            Done b2_ioZn ->
+                                              SplitOnSeqYield
+                                                b2_ioZn
+                                                (SplitOnSeqReinit
+                                                   (\ c_ioZg ->
+                                                      $WSplitOnSeqWordDone
+                                                        (I# (-# ds3_ioYX 1#)) c_ioZg ds1_ioYS))
+                                          })) #)
+                                 }
+                             }
+                             })
+                          `cast` <Co:17>;
+                        0# ->
+                          (\ s2_a6ba ->
+                             case ((done_ioSu fs_ioYR) `cast` <Co:2>) s2_a6ba of
+                             { (# ipv_a6bc, ipv1_a6bd #) ->
+                             (# ipv_a6bc, Skip (SplitOnSeqYield ipv1_a6bd SplitOnSeqDone) #)
+                             })
+                          `cast` <Co:17>
+                      }
+                      };
+                    SplitOnSeqReinit nextGen_ioZq ->
+                      (\ s2_a6ba ->
+                         case (initial_ioSt `cast` <Co:4>) s2_a6ba of
+                         { (# ipv_a6bc, ipv1_a6bd #) ->
+                         (# ipv_a6bc, Skip (nextAfterInit1_ioSx nextGen_ioZq ipv1_a6bd) #)
+                         })
+                      `cast` <Co:17>
+                  } } in
+          UnStream stepOuter_ioVN SplitOnSeqInit
+          }
+          }
+"SPEC/Main fromStreamK @IO _" [0]
+    forall @a_X1U $dMonad_spcX.
+      fromStreamK $dMonad_spcX
+      = \ eta2_ifGA ->
+          UnStream
+            (\ gst_ifGB m1_ifGC ->
+               (m1_ifGC `cast` <Co:3>)
+                 gst_ifGB
+                 ((\ a1_X1V x_X1W s_X1X -> (# s_X1X, Yield a1_X1V x_X1W #))
+                  `cast` <Co:15>)
+                 ((\ a1_X1V s_X1W ->
+                     (# s_X1W,
+                        Yield
+                          a1_X1V ((\ @r_ifGG _ _ _ stp_ifGK -> stp_ifGK) `cast` <Co:4>) #))
+                  `cast` <Co:10>)
+                 ((\ s_X1V -> (# s_X1V, Stop #)) `cast` <Co:7>))
+            eta2_ifGA
+"SPEC/Main fromList @IO _" [0]
+    forall @a_ifDd $dApplicative_splb.
+      fromList $dApplicative_splb
+      = \ eta2_ifDf ->
+          let {
+            step1_ifDg
+              = \ @f_ifDk @p_ifDl @a1_ifDm $dApplicative1_ifDn _ eta4_ifDp ->
+                  case eta4_ifDp of {
+                    [] -> pure $dApplicative1_ifDn Stop;
+                    : x_ifDs xs_ifDt -> pure $dApplicative1_ifDn (Yield x_ifDs xs_ifDt)
+                  } } in
+          UnStream (step1_ifDg $fApplicativeIO) eta2_ifDf
+"SPEC/Main fromList @Word8"
+    forall $dStorable_spcr. fromList $dStorable_spcr = $sfromList
+
