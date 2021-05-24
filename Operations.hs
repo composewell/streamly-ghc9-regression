@@ -4,10 +4,13 @@
 {-# LANGUAGE ScopedTypeVariables #-}
 
 module Operations (unfoldrM, drain, postscan, after_, replicate, fold, unfold,
-        splitOnSeq) where
+        splitOnSeq, unfoldr) where
 
 import Control.Monad.IO.Class (MonadIO(..))
 import Data.Bits (shiftR, shiftL, (.|.), (.&.))
+import Data.Maybe (fromMaybe)
+import Data.Foldable (foldr, foldl')
+import Data.Semigroup (Endo(..))
 import Data.Word (Word, Word32)
 import Fold (Fold(..))
 import Foreign.Storable (Storable(..))
@@ -25,7 +28,13 @@ import qualified Serial
 import qualified Fold as FL
 import qualified Array as A
 import qualified Ring as RB
-import Prelude hiding (replicate)
+import Prelude hiding (replicate, foldr)
+import qualified Data.Foldable
+import Data.Coerce (Coercible, coerce)
+
+{-# INLINE (#.) #-}
+(#.) :: Coercible b c => (b -> c) -> (a -> b) -> (a -> c)
+(#.) _f = coerce
 
 {-# INLINE [2] unfoldrM #-}
 unfoldrM :: (IsStream t, MonadAsync m) => (b -> m (Maybe (a, b))) -> b -> t m a
@@ -35,6 +44,12 @@ unfoldrM = K.unfoldrM
 {-# INLINE [2] unfoldrMSerial #-}
 unfoldrMSerial :: MonadAsync m => (b -> m (Maybe (a, b))) -> b -> K.Stream m a
 unfoldrMSerial = Serial.unfoldrM
+
+{-# INLINE [2] unfoldr #-}
+unfoldr :: (Monad m, IsStream t) => (b -> Maybe (a, b)) -> b -> t m a
+unfoldr step seed = D.fromStreamD (D.unfoldr step seed)
+-- {-# RULES "unfoldr fallback to StreamK" [1]
+    -- forall a b. S.toStreamK (S.unfoldr a b) = K.unfoldr a b #-}
 
 {-# INLINE [2] drain #-}
 drain :: (Monad m) => K.Stream m a -> m ()
@@ -63,6 +78,14 @@ fold :: Monad m => Fold m a b -> K.Stream m a -> m b
 fold fl strm = do
     (b, _) <- fold_ fl strm
     return $! b
+
+{-# INLINE foldrM #-}
+foldrM :: Monad m => (a -> m b -> m b) -> m b -> K.Stream m a -> m b
+foldrM step acc m = D.foldrM step acc $ D.toStreamD m
+
+{-# INLINE foldrX #-}
+foldrX :: Monad m => (a -> b -> b) -> b -> K.Stream m a -> m b
+foldrX f z = foldrM (\a b -> f a <$> b) (return z)
 
 {-# INLINE after_ #-}
 after_ :: (IsStream t, Monad m) => m b -> t m a -> t m a
@@ -219,3 +242,56 @@ splitOnSeq
     :: (IsStream t, MonadIO m, Storable a, Enum a, Eq a)
     => Array a -> Fold m a b -> t m a -> t m b
 splitOnSeq patt f m = D.fromStreamD $ splitOnSeqD patt f (D.toStreamD m)
+
+-- | A strict 'Maybe'
+data Maybe' a = Just' !a | Nothing' deriving Show
+
+{-# INLINABLE toMaybe #-}
+toMaybe :: Maybe' a -> Maybe a
+toMaybe  Nothing' = Nothing
+toMaybe (Just' a) = Just a
+
+instance (Foldable m, Monad m) => Foldable (K.Stream m) where
+
+    {-# INLINE foldMap #-}
+    foldMap f = Data.Foldable.fold . foldrX (mappend . f) mempty
+
+    {-# INLINE foldr #-}
+    foldr f z t = appEndo (foldMap (Endo #. f) t) z
+
+    {-# INLINE foldl' #-}
+    foldl' f z0 xs = foldr f' id xs z0
+          where f' x k z = k $! f z x
+
+    {-
+    {-# INLINE length #-};                                                    \
+    length = foldl' (\n _ -> n + 1) 0;                                        \
+                                                                              \
+    {-# INLINE elem #-};                                                      \
+    elem = any . (==);                                                        \
+                                                                              \
+    {-# INLINE maximum #-};                                                   \
+    maximum =                                                                 \
+          fromMaybe (errorWithoutStackTrace $ "maximum: empty stream")        \
+        . toMaybe                                                             \
+        . foldl' getMax Nothing' where {                                      \
+            getMax Nothing' x = Just' x;                                      \
+            getMax (Just' mx) x = Just' $! max mx x };                        \
+    -}
+
+    {-# INLINE minimum #-}
+    minimum =
+          fromMaybe (errorWithoutStackTrace $ "minimum: empty stream")
+        . toMaybe
+        . foldl' getMin Nothing' where
+            getMin Nothing' x = Just' x
+            getMin (Just' mn) x = Just' $! min mn x
+
+{-
+    {-# INLINE sum #-};                                                       \
+    sum = foldl' (+) 0;                                                       \
+                                                                              \
+    {-# INLINE product #-};                                                   \
+    product = foldl' (*) 1 }
+
+-}

@@ -1,0 +1,73 @@
+
+==================== Tidy Core ====================
+
+Result size of Tidy Core
+  = {terms: 93, types: 79, coercions: 3, joins: 0/2}
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+lvl = "minimum: empty stream"#
+
+-- RHS size: {terms: 3, types: 2, coercions: 0, joins: 0/0}
+main2 = errorWithoutStackTrace (unpackCString# lvl)
+
+Rec {
+-- RHS size: {terms: 38, types: 21, coercions: 0, joins: 0/2}
+main_$s$wgo
+  = \ sc sc1 ->
+      case ># sc1 100001# of {
+        __DEFAULT ->
+          let { k = main_$s$wgo sc (+# sc1 1#) } in
+          let { lvl5 = k (Just' (I# sc1)) } in
+          \ z ->
+            case z of wild {
+              Just' mn ->
+                case mn of { I# x1 ->
+                case <=# x1 sc1 of {
+                  __DEFAULT -> lvl5;
+                  1# -> k wild
+                }
+                };
+              Nothing' -> lvl5
+            };
+        1# -> sc
+      }
+end Rec }
+
+-- RHS size: {terms: 3, types: 2, coercions: 0, joins: 0/0}
+main3 = main_$s$wgo id 1#
+
+-- RHS size: {terms: 19, types: 18, coercions: 0, joins: 0/0}
+main1
+  = case main3 Nothing' of {
+      Just' a1 ->
+        case a1 of { I# ww3 ->
+        case $wshowSignedInt 0# ww3 [] of { (# ww5, ww6 #) -> : ww5 ww6 }
+        };
+      Nothing' -> case main2 of wild1 { }
+    }
+
+-- RHS size: {terms: 4, types: 0, coercions: 0, joins: 0/0}
+main = hPutStr' stdout main1 True
+
+-- RHS size: {terms: 2, types: 1, coercions: 0, joins: 0/0}
+main4 = runMainIO1 main
+
+-- RHS size: {terms: 1, types: 0, coercions: 3, joins: 0/0}
+main = main4 `cast` <Co:3>
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+$trModule2 = "Main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+$trModule1 = TrNameS $trModule2
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+$trModule4 = "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+$trModule3 = TrNameS $trModule4
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+$trModule = Module $trModule3 $trModule1
+
+

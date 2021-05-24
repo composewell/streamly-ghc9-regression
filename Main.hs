@@ -1,26 +1,24 @@
 module Main (main) where
 
-import Data.Char (ord)
-import Data.Word (Word8)
-import System.IO (openFile, IOMode(..), Handle)
-import StreamK (IsStream, MonadAsync)
+import Data.Functor.Identity (Identity)
 import qualified Operations
 import qualified StreamK
-import qualified Fold
-import qualified Handle
-import qualified Array
-import Array (Array)
 
-toarr :: String -> Array Word8
-toarr = Array.fromList . map (fromIntegral . ord)
+{-# INLINE sourceUnfoldr #-}
+sourceUnfoldr :: Monad m => Int -> Int -> StreamK.Stream m Int
+sourceUnfoldr count start = Operations.unfoldr step start
+    where
+    step cnt =
+        if cnt > start + count
+        then Nothing
+        else Just (cnt, cnt + 1)
 
--- | Split on a word8 sequence.
-splitOnSeq :: String -> Handle -> IO ()
-splitOnSeq str inh =
-    Operations.drain $ Operations.splitOnSeq (toarr str) Fold.drain
-        $ Operations.unfold Handle.read inh
+{-# INLINE foldableMin #-}
+foldableMin :: Int -> Int -> Int
+foldableMin value n =
+    Prelude.minimum (sourceUnfoldr value n :: StreamK.Stream Identity Int)
 
 main :: IO ()
 main = do
-    inh <- openFile "input.txt" ReadMode
-    splitOnSeq "aa" inh
+    let r = foldableMin 100000 1
+    print r

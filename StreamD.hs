@@ -36,6 +36,7 @@ module StreamD
     -- * From Unfold
     , unfold
     , unfoldrM
+    , unfoldr
     , drain
 
     -- * From Values
@@ -1002,6 +1003,10 @@ unfoldrM next state = Stream step state
         return $ case r of
             Just (x, s) -> Yield x s
             Nothing     -> Stop
+
+{-# INLINE_LATE unfoldr #-}
+unfoldr :: Monad m => (s -> Maybe (a, s)) -> s -> Stream m a
+unfoldr f = unfoldrM (return . f)
 
 {-# INLINE_LATE drain #-}
 drain :: Monad m => Stream m a -> m ()

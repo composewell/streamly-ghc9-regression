@@ -1,0 +1,61 @@
+
+==================== Tidy Core ====================
+
+Result size of Tidy Core
+  = {terms: 84, types: 61, coercions: 3, joins: 0/0}
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+lvl = "minimum: empty stream"#
+
+-- RHS size: {terms: 3, types: 2, coercions: 0, joins: 0/0}
+main2 = errorWithoutStackTrace (unpackCString# lvl)
+
+Rec {
+-- RHS size: {terms: 31, types: 9, coercions: 0, joins: 0/0}
+main_$s$wgo
+  = \ sc sc1 sc2 ->
+      case ># sc2 100001# of {
+        __DEFAULT ->
+          case <=# sc sc2 of {
+            __DEFAULT -> main_$s$wgo sc2 sc1 (+# sc2 1#);
+            1# -> main_$s$wgo sc sc1 (+# sc2 1#)
+          };
+        1# -> sc1 (Just' (I# sc))
+      }
+end Rec }
+
+-- RHS size: {terms: 21, types: 19, coercions: 0, joins: 0/0}
+main1
+  = case main_$s$wgo 1# id 2# of {
+      Just' a1 ->
+        case a1 of { I# ww3 ->
+        case $wshowSignedInt 0# ww3 [] of { (# ww5, ww6 #) -> : ww5 ww6 }
+        };
+      Nothing' -> case main2 of wild1 { }
+    }
+
+-- RHS size: {terms: 4, types: 0, coercions: 0, joins: 0/0}
+main = hPutStr' stdout main1 True
+
+-- RHS size: {terms: 2, types: 1, coercions: 0, joins: 0/0}
+main3 = runMainIO1 main
+
+-- RHS size: {terms: 1, types: 0, coercions: 3, joins: 0/0}
+main = main3 `cast` <Co:3>
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+$trModule2 = "Main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+$trModule1 = TrNameS $trModule2
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+$trModule4 = "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+$trModule3 = TrNameS $trModule4
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+$trModule = Module $trModule3 $trModule1
+
+
