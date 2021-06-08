@@ -1,3 +1,4 @@
+{-# LANGUAGE CPP #-}
 {-# LANGUAGE RankNTypes #-}
 {-# LANGUAGE RecordWildCards #-}
 module Handle
@@ -11,9 +12,13 @@ import Control.Monad.IO.Class (MonadIO(..))
 import Data.Word (Word8)
 import Foreign.Storable (Storable(..))
 import Foreign.ForeignPtr.Unsafe (unsafeForeignPtrToPtr)
-import Foreign.ForeignPtr (withForeignPtr)
 import Foreign.Ptr (plusPtr, minusPtr, castPtr, nullPtr)
 import GHC.ForeignPtr (ForeignPtr(..), newForeignPtr_)
+#if MIN_VERSION_base(4,15,0)
+import GHC.ForeignPtr (unsafeWithForeignPtr)
+#else
+import Foreign.ForeignPtr (withForeignPtr)
+#endif
 import GHC.Ptr (Ptr(..))
 import System.IO (Handle, hGetBufSome, hPutBuf, stdin, stdout)
 import Fold (Fold(..))
@@ -47,7 +52,11 @@ length arr =  MA.length (unsafeThaw arr)
 {-# INLINABLE writeArray #-}
 writeArray :: Storable a => Handle -> Array a -> IO ()
 writeArray _ arr | length arr == 0 = return ()
+#if MIN_VERSION_base(4,15,0)
+writeArray h Array{..} = unsafeWithForeignPtr aStart $ \p -> hPutBuf h p aLen
+#else
 writeArray h Array{..} = withForeignPtr aStart $ \p -> hPutBuf h p aLen
+#endif
     where
     aLen =
         let p = unsafeForeignPtrToPtr aStart
