@@ -226,7 +226,7 @@ many (Fold sstep sinitial sextract) (Fold cstep cinitial cextract) =
             Partial ss1 -> return $ Partial $ branch ss1 cs
             Done sb -> runCollector ManyFirst cs sb
 
-    {-# INLINE handleCollectStep #-}
+    -- {-# INLINE handleCollectStep #-}
     handleCollectStep branch cres =
         case cres of
             Partial cs -> do
@@ -235,6 +235,7 @@ many (Fold sstep sinitial sextract) (Fold cstep cinitial cextract) =
             Done cb -> return $ Done cb
 
     -- Do not inline this
+    {-# INLINE runCollector #-}
     runCollector branch cs sb = cstep cs sb >>= handleCollectStep branch
 
     initial = cinitial >>= handleCollectStep ManyFirst
