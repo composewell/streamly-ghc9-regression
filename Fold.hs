@@ -158,6 +158,9 @@ foldl' step initial =
 sum :: (Monad m, Num a) => Fold m a a
 sum =  foldl' (+) 0
 
+#ifdef FUSION_PLUGIN
+{-# ANN type Tuple' Fuse #-}
+#endif
 data Tuple' a b = Tuple' !a !b deriving Show
 
 {-# INLINE take #-}
